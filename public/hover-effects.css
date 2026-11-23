@@ -201,10 +201,12 @@ a[class*="rounded-[22px]"]:hover > div.w-13.h-13 svg {
   stroke: #071912 !important;
 }
 
-/* High-Contrast Hover for Top-Border Text Pill Badges ("SEND US A MESSAGE", "Call Us", "Email Us", etc.) */
+/* High-Contrast Hover for Top-Border Text Pill Badges ("SEND US A MESSAGE", "Call Us", "Happy Reviews", etc.) */
 .contact-form-glow:hover > div.rounded-full,
 a[class*="rounded-[22px]"]:hover > div.left-20,
-div[class*="rounded-[22px]"]:hover > div.left-20 {
+div[class*="rounded-[22px]"]:hover > div.left-20,
+.group:hover > .stat-top-pill,
+.stat-top-pill:hover {
   background: linear-gradient(135deg, #f6e09e 0%, #e8c468 55%, #cfa13d 100%) !important;
   border-color: #fff1be !important;
   color: #071912 !important;
