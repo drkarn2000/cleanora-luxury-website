@@ -214,7 +214,11 @@ div[class*="rounded-[22px]"]:hover > div.left-20,
 }
 .contact-form-glow:hover > div.rounded-full span,
 a[class*="rounded-[22px]"]:hover > div.left-20 span,
-div[class*="rounded-[22px]"]:hover > div.left-20 span {
+div[class*="rounded-[22px]"]:hover > div.left-20 span,
+.group:hover > .stat-top-pill span,
+.group:hover > .stat-top-pill h3,
+.stat-top-pill:hover span,
+.stat-top-pill:hover h3 {
   color: #071912 !important;
 }
 .contact-form-glow:hover > div.rounded-full span.h-\[1px\] {

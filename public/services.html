@@ -322,12 +322,18 @@
   <!-- =====================================================================
        3. FEATURED SERVICE BANNER (CURVED GOLD PHOTO, CHECKLIST & PERFECT FOR)
        ===================================================================== -->
-  <section id="featured-service" class="relative w-full py-10 lg:py-14 bg-[#081d15]">
+  <section id="featured-service" class="relative w-full py-12 lg:py-16 bg-[#081d15]">
     <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
-      <div class="relative rounded-[30px] overflow-hidden bg-[#0c271d] border border-[#e8c468]/45 shadow-[0_28px_70px_rgba(0,0,0,0.55)]">
+      <div class="group relative rounded-[30px] bg-[#0c271d] border border-[#e8c468]/45 shadow-[0_28px_70px_rgba(0,0,0,0.55)]">
+        <!-- Main Title Pill Straddling Top Border (50% Inside / 50% Outside) -->
+        <div class="stat-top-pill absolute top-0 left-1/2 lg:left-[64%] -translate-x-1/2 -translate-y-1/2 z-30 px-7 py-2 rounded-2xl bg-[#0e2c21] border-2 border-[#e8c468] shadow-[0_10px_25px_rgba(0,0,0,0.65)] flex items-center gap-3 whitespace-nowrap">
+          <span class="text-[10.5px] tracking-[0.22em] uppercase text-[#e8c468] font-semibold hidden sm:inline">FEATURED SERVICE •</span>
+          <h3 id="featuredTitle" class="font-serif-luxury text-[26px] sm:text-[32px] leading-none text-white font-semibold">Home Cleaning</h3>
+        </div>
+
         <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
           <!-- Left Curved Gold Cleaner Image -->
-          <div class="lg:col-span-5 relative min-h-[340px] sm:min-h-[420px] overflow-hidden">
+          <div class="lg:col-span-5 relative min-h-[340px] sm:min-h-[420px] overflow-hidden rounded-t-[29px] lg:rounded-tr-none lg:rounded-l-[29px]">
             <img id="featuredImg" src="/images/difference-pro.jpg" alt="Featured Service" class="w-full h-full object-cover object-center" />
             <svg viewBox="0 0 120 500" preserveAspectRatio="none" class="hidden lg:block absolute top-0 right-0 bottom-0 w-24 h-full pointer-events-none">
               <path d="M120 0 L40 0 C110 160, 110 340, 40 500 L120 500 Z" fill="#0c271d" />
@@ -336,13 +342,12 @@
           </div>
 
           <!-- Right Content -->
-          <div class="lg:col-span-7 p-7 sm:p-10 lg:p-12 flex flex-col justify-center">
-            <div class="flex items-center gap-3 mb-2.5">
+          <div class="lg:col-span-7 pt-10 pb-8 px-7 sm:px-10 lg:px-12 flex flex-col justify-center">
+            <div class="flex items-center gap-3 mb-2">
               <span class="w-7 h-[1px] bg-[#e8c468]/75"></span>
-              <span class="text-[11px] tracking-[0.24em] uppercase text-[#e8c468] font-medium">FEATURED SERVICE</span>
+              <span class="text-[11px] tracking-[0.24em] uppercase text-[#e8c468] font-medium">SIGNATURE CARE PACKAGE</span>
             </div>
 
-            <h3 id="featuredTitle" class="font-serif-luxury text-[38px] sm:text-[46px] leading-[1.08] text-white font-normal mb-3">Home Cleaning</h3>
             <p id="featuredDesc" class="text-[14.5px] sm:text-[15.5px] leading-[1.65] text-[#d5ddd8]/85 font-light max-w-[540px] mb-7">
               A reliable and detailed cleaning service that keeps your home spotless, comfortable and healthy for your family.
             </p>
