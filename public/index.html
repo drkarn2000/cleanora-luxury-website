@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLEANORA® | Professional Luxury Cleaning Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/hover-effects.css" />
+  <style>
+    :root {
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    body {
+      background-color: #0b231b;
+      color: #f8f6f0;
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-serif-luxury {
+      font-family: var(--font-serif);
+    }
+    .btn-gold-luxury {
+      background: linear-gradient(135deg, #f3d88c 0%, #e4be62 48%, #d4a644 100%);
+      color: #0d2219;
+      box-shadow:
+        0 8px 28px -4px rgba(232, 196, 104, 0.42),
+        0 2px 10px rgba(232, 196, 104, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.65);
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .btn-gold-luxury:hover {
+      background: linear-gradient(135deg, #f7e1a0 0%, #ebc86e 50%, #dcaf4d 100%);
+      box-shadow:
+        0 12px 34px -4px rgba(232, 196, 104, 0.58),
+        0 4px 14px rgba(232, 196, 104, 0.35),
+        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+      transform: translateY(-1.5px);
+    }
+    .btn-glass-emerald {
+      background: rgba(16, 46, 36, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .btn-glass-emerald:hover {
+      background: rgba(24, 66, 52, 0.75);
+      border-color: rgba(232, 196, 104, 0.55);
+      box-shadow: 0 6px 22px -4px rgba(0, 0, 0, 0.35);
+      transform: translateY(-1.5px);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#0a2119] text-[#f8f6f0] selection:bg-[#e8c468] selection:text-[#0b231b]">
+
+  <!-- =====================================================================
+       1. STICKY LUXURY HEADER / NAVIGATION
+       ===================================================================== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-[#0a1f18]/65 backdrop-blur-md border-b border-white/[0.08] py-4">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14 flex items-center justify-between">
+      <!-- CLEANORA Brand Logo -->
+      <a href="#home" class="group flex items-center gap-3.5 focus:outline-none">
+        <div class="relative w-11 h-11 flex items-center justify-center shrink-0">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11 transition-transform duration-500 group-hover:scale-105">
+            <defs>
+              <linearGradient id="cleanoraGoldGrad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#F5DF9E" />
+                <stop offset="50%" stop-color="#E4BE62" />
+                <stop offset="100%" stop-color="#C89B3C" />
+              </linearGradient>
+            </defs>
+            <path d="M11 38.5C6.8 34.8 4.2 29.4 4.2 23.4C4.2 12.4 13.1 3.5 24.1 3.5C35.1 3.5 44 12.4 44 23.4C44 33.6 36.3 42 26.4 43.2" stroke="url(#cleanoraGoldGrad)" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M16 7.8C18.5 6.6 21.2 6 24.1 6C33.7 6 41.5 13.8 41.5 23.4" stroke="url(#cleanoraGoldGrad)" stroke-width="0.75" stroke-opacity="0.55" stroke-linecap="round" />
+            <path d="M14.5 34.5C15.5 24.5 22.5 14.5 34.5 12.5C33.5 24.5 26.5 32.5 14.5 34.5Z" fill="url(#cleanoraGoldGrad)" fill-opacity="0.18" stroke="url(#cleanoraGoldGrad)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M11.5 38.5C15.5 33.5 21.5 25.5 29.5 17.5" stroke="url(#cleanoraGoldGrad)" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M15.2 33.5C12.2 31.2 11.8 27.2 13.8 24.2C16.2 26.2 16.8 30.2 15.2 33.5Z" fill="url(#cleanoraGoldGrad)" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-baseline">
+            <span class="font-serif-luxury text-[24px] sm:text-[26px] font-semibold tracking-[0.11em] text-white leading-none">CLEANORA</span>
+            <span class="text-[10px] text-[#e8c468] ml-0.5 font-sans align-top">®</span>
+          </div>
+          <span class="text-[8.5px] sm:text-[9px] tracking-[0.23em] uppercase text-[#d8d5cc]/75 font-medium mt-1">Professional Cleaning Services</span>
+        </div>
+      </a>
+
+      <!-- Center Navigation Links -->
+      <nav class="hidden xl:flex items-center gap-8">
+        <a href="#home" class="relative py-2 text-[14.5px] font-medium tracking-[0.015em] text-white flex items-center gap-1.5">
+          <span>Home</span>
+          <span class="absolute -bottom-[3px] left-0 right-0 h-[2px] bg-gradient-to-r from-[#e8c468] via-[#f3d88c] to-[#d4a644] rounded-full shadow-[0_0_8px_rgba(232,196,104,0.7)]"></span>
+        </a>
+        <div class="relative group">
+          <a href="/services" class="py-2 text-[14.5px] font-normal tracking-[0.015em] text-[#e5e7e4]/80 hover:text-white flex items-center gap-1.5 transition-colors">
+            <span>Services</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-[#e8c468]/85"></i>
+          </a>
+          <div class="hidden group-hover:block absolute top-full left-0 pt-3 w-64 z-50">
+            <div class="bg-[#0c261d]/95 backdrop-blur-xl border border-[#e8c468]/25 rounded-2xl p-2 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Home Cleaning</a>
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Deep Cleaning</a>
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Commercial Cleaning</a>
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Move In / Move Out</a>
+            </div>
+          </div>
+        </div>
+        <a href="/pricing" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Pricing</a>
+        <a href="/about" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">About</a>
+        <a href="/gallery" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Gallery</a>
+        <a href="/reviews" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Reviews</a>
+        <a href="/contact" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Actions: Phone Pill + Gold CTA -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:+420600123456" class="flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#0f2c22]/75 border border-white/[0.15] hover:border-[#e8c468]/45 text-[14px] text-[#f4f1ea] tracking-wide transition-all">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-[#e8c468]"></i>
+          <span>+420 600 123 456</span>
+        </a>
+        <button onclick="openBookingModal()" class="btn-gold-luxury cursor-pointer flex items-center gap-2.5 px-6 py-2.5 rounded-full text-[14.5px] font-semibold">
+          <span>Book a Cleaning</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="flex items-center gap-3 xl:hidden">
+        <button onclick="toggleMobileMenu()" aria-label="Menu" class="p-2.5 rounded-full bg-white/[0.06] border border-white/[0.14] text-[#f3d88c]">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden xl:hidden bg-[#0a2119]/98 backdrop-blur-2xl border-b border-[#e8c468]/20 px-6 pt-5 pb-8 space-y-4 mt-4">
+      <div class="flex flex-col space-y-2">
+        <a href="#home" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl bg-[#e8c468]/15 text-[#f3d88c] font-medium border border-[#e8c468]/30">Home</a>
+        <a href="#services" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Services</a>
+        <a href="#services" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Pricing</a>
+        <a href="#about" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">About</a>
+        <a href="#reviews" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Reviews</a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Contact</a>
+      </div>
+      <div class="pt-3 border-t border-white/10 flex flex-col sm:flex-row gap-3">
+        <a href="tel:+420600123456" class="flex items-center justify-center gap-2.5 py-3 px-5 rounded-full bg-white/[0.05] border border-white/15 text-white text-[14.5px]">
+          <i data-lucide="phone" class="w-4 h-4 text-[#e8c468]"></i>
+          <span>+420 600 123 456</span>
+        </a>
+        <button onclick="toggleMobileMenu(); openBookingModal();" class="btn-gold-luxury flex items-center justify-center gap-2.5 py-3 px-6 rounded-full text-[15px] font-semibold">
+          <span>Book a Cleaning</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       2. HERO SECTION (TWO-COLUMN LAYOUT + RIGHT ARCHED LUXURY INTERIOR)
+       ===================================================================== -->
+  <section id="home" class="relative min-h-screen w-full overflow-hidden bg-[#0a2119] pt-[84px] flex items-center">
+    <!-- Layered Deep Emerald & Botanical Silk Wave Backgrounds -->
+    <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 90% 80% at 24% 38%, #163d2f 0%, #0d281f 45%, #081a14 100%);"></div>
+      <svg viewBox="0 0 900 900" fill="none" class="absolute -top-24 -left-24 w-[650px] sm:w-[820px] h-[820px] opacity-80">
+        <defs>
+          <linearGradient id="emeraldWaveTop" x1="0" y1="0" x2="520" y2="550" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#356f56" stop-opacity="0.58" />
+            <stop offset="45%" stop-color="#1d4938" stop-opacity="0.28" />
+            <stop offset="100%" stop-color="#0b231b" stop-opacity="0" />
+          </linearGradient>
+          <linearGradient id="emeraldWaveInner" x1="40" y1="20" x2="380" y2="460" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4c8c6e" stop-opacity="0.38" />
+            <stop offset="65%" stop-color="#1b4434" stop-opacity="0.12" />
+            <stop offset="100%" stop-color="#0b231b" stop-opacity="0" />
+          </linearGradient>
+          <linearGradient id="emeraldWaveBottom" x1="0" y1="900" x2="650" y2="520" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#2f664f" stop-opacity="0.5" />
+            <stop offset="55%" stop-color="#173b2d" stop-opacity="0.25" />
+            <stop offset="100%" stop-color="#091d16" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <path d="M-60 -40 C160 -40, 390 20, 480 120 C310 90, 120 200, -40 420 Z" fill="url(#emeraldWaveTop)" />
+        <path d="M-50 40 C90 20, 250 70, 330 165 C180 165, 50 260, -50 450 Z" fill="url(#emeraldWaveInner)" />
+        <path d="M-80 620 C80 690, 290 790, 560 900 L-80 900 Z" fill="url(#emeraldWaveBottom)" />
+        <path d="M-80 710 C60 760, 210 830, 390 900 L-80 900 Z" fill="url(#emeraldWaveInner)" />
+      </svg>
+      <div class="hidden lg:block absolute top-[8%] left-[41%] w-[420px] h-[680px] rounded-full blur-[95px] opacity-35" style="background: radial-gradient(circle, rgba(232,196,104,0.45) 0%, rgba(232,196,104,0) 70%);"></div>
+    </div>
+
+    <!-- Right Side Arched Luxury Living Room Photograph (Desktop) -->
+    <div class="hidden lg:block absolute top-0 right-0 bottom-0 w-[59.5%] z-10 pointer-events-none select-none overflow-hidden">
+      <div class="relative w-full h-full">
+        <img src="/images/hero-interior.jpg" alt="Luxury Spotless Living Room Interior by CLEANORA" class="w-full h-full object-cover object-center scale-[1.01]" />
+        <div class="absolute inset-x-0 top-0 h-32" style="background: linear-gradient(to bottom, rgba(9,29,22,0.75) 0%, rgba(9,29,22,0.28) 55%, transparent 100%);"></div>
+        <div class="absolute bottom-0 left-0 w-[55%] h-36" style="background: linear-gradient(15deg, #0b221a 8%, rgba(11,34,26,0.68) 45%, transparent 90%);"></div>
+      </div>
+
+      <svg viewBox="0 0 1000 900" preserveAspectRatio="none" class="absolute inset-0 w-full h-full pointer-events-none">
+        <defs>
+          <linearGradient id="archEmeraldFill" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#123529" />
+            <stop offset="50%" stop-color="#0e2b21" />
+            <stop offset="100%" stop-color="#0a2018" />
+          </linearGradient>
+          <linearGradient id="archGoldStroke" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e8c468" stop-opacity="0.1" />
+            <stop offset="16%" stop-color="#f6df9e" stop-opacity="0.85" />
+            <stop offset="45%" stop-color="#e8c468" stop-opacity="0.95" />
+            <stop offset="76%" stop-color="#d4a644" stop-opacity="0.65" />
+            <stop offset="93%" stop-color="#e8c468" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <path d="M 0,0 L 430,0 C 195,95 62,360 65,710 L 65,900 L 0,900 Z" fill="url(#archEmeraldFill)" />
+        <path d="M 430,0 C 195,95 62,360 65,710" fill="none" stroke="#081b14" stroke-width="16" stroke-opacity="0.35" />
+        <path d="M 430,0 C 195,95 62,360 65,705" fill="none" stroke="url(#archGoldStroke)" stroke-width="2.8" stroke-linecap="round" />
+      </svg>
+    </div>
+
+    <!-- Main Two-Column Hero Content -->
+    <div class="relative z-20 max-w-[1440px] mx-auto w-full px-5 sm:px-8 lg:px-14 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <!-- Left Column -->
+        <div class="lg:col-span-6 flex flex-col items-start text-left max-w-[600px]">
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#153a2c]/70 border border-[#e8c468]/25 backdrop-blur-md mb-7">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#e8c468]"></i>
+            <span class="text-[13px] sm:text-[13.5px] font-normal tracking-[0.02em] text-[#f3f0e6]/90">Professional Cleaning Services</span>
+          </div>
+
+          <h1 class="font-serif-luxury text-[48px] sm:text-[62px] xl:text-[72px] leading-[1.06] tracking-[-0.01em] text-white font-normal mb-6">
+            <span class="block">A <span class="italic font-normal">Cleaner</span> Home,</span>
+            <span class="block text-[#e8c468] mt-1">
+              A <span class="italic font-normal text-[#edd07c]">Healthier </span>
+              <span class="relative inline-block italic font-normal text-[#edd07c]">
+                Life.
+                <svg viewBox="0 0 190 18" fill="none" class="absolute -bottom-2.5 -left-3 w-[118%] h-[14px] pointer-events-none">
+                  <path d="M4 13.5C52 6.5 126 5.5 185 12.5" stroke="#e8c468" stroke-width="3.2" stroke-linecap="round" />
+                </svg>
+              </span>
+            </span>
+          </h1>
+
+          <p class="text-[15.5px] sm:text-[16.5px] leading-[1.68] text-[#d7ded9]/85 font-light max-w-[490px] mb-9">
+            Reliable, thorough and eco-friendly cleaning for your home and business. Enjoy a spotless space while we take care of the details.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 sm:gap-5 mb-12 w-full sm:w-auto">
+            <button onclick="openBookingModal()" class="btn-gold-luxury cursor-pointer flex items-center justify-center gap-3 px-7 py-4 rounded-full text-[15.5px] font-semibold w-full sm:w-auto">
+              <i data-lucide="calendar" class="w-4 h-4 text-[#0d2219]"></i>
+              <span>Book a Cleaning</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 text-[#0d2219] ml-0.5"></i>
+            </button>
+
+            <a href="#about" class="btn-glass-emerald cursor-pointer flex items-center justify-center gap-3 px-7 py-4 rounded-full text-[15px] font-normal text-white w-full sm:w-auto">
+              <span class="w-5 h-5 rounded-full border border-white/60 flex items-center justify-center">
+                <i data-lucide="play" class="w-2.5 h-2.5 fill-white text-white ml-0.5"></i>
+              </span>
+              <span>How It Works</span>
+            </a>
+          </div>
+
+          <div class="w-full pt-2 grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-0 items-center">
+            <div class="flex items-center gap-3.5 sm:pr-4">
+              <div class="w-11 h-11 rounded-full bg-[#133528]/80 border border-white/[0.16] flex items-center justify-center shrink-0">
+                <i data-lucide="leaf" class="w-5 h-5 text-[#e6ece8]"></i>
+              </div>
+              <div class="flex flex-col text-[13px] leading-[1.35] text-[#e2e8e4]/90">
+                <span>Eco-Friendly</span><span>Products</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3.5 sm:pl-5 sm:border-l sm:border-white/[0.12]">
+              <div class="w-11 h-11 rounded-full bg-[#133528]/80 border border-white/[0.16] flex items-center justify-center shrink-0">
+                <i data-lucide="shield-check" class="w-5 h-5 text-[#e6ece8]"></i>
+              </div>
+              <div class="flex flex-col text-[13px] leading-[1.35] text-[#e2e8e4]/90">
+                <span>Vetted & Trained</span><span>Professionals</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3.5 sm:pl-5 sm:border-l sm:border-white/[0.12]">
+              <div class="w-11 h-11 rounded-full bg-[#133528]/80 border border-white/[0.16] flex items-center justify-center shrink-0">
+                <i data-lucide="calendar-check-2" class="w-5 h-5 text-[#e6ece8]"></i>
+              </div>
+              <div class="flex flex-col text-[13px] leading-[1.35] text-[#e2e8e4]/90">
+                <span>Flexible</span><span>Scheduling</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Mobile Arch & Floating Rating Card -->
+        <div class="lg:col-span-6 relative min-h-[340px] sm:min-h-[440px] lg:min-h-[560px] flex items-end justify-end">
+          <div class="lg:hidden relative w-full h-[380px] sm:h-[460px] rounded-t-[180px] sm:rounded-t-[240px] rounded-b-3xl overflow-hidden border-2 border-[#e8c468]/60 shadow-[0_20px_60px_rgba(0,0,0,0.55)]">
+            <img src="/images/hero-interior.jpg" alt="Luxury Spotless Living Room Interior" class="w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#091e16]/70 via-transparent to-transparent"></div>
+          </div>
+
+          <div class="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-2 z-30">
+            <div class="flex items-center gap-4 px-6 py-4 sm:px-7 sm:py-5 rounded-[22px] bg-[#f7f3eb]/95 backdrop-blur-xl border border-white/80 shadow-[0_22px_50px_rgba(0,0,0,0.38)] transition-transform duration-500 hover:-translate-y-1">
+              <div class="w-12 h-12 rounded-full bg-[#f0e2c4] border border-[#e3c588]/60 flex items-center justify-center shrink-0">
+                <i data-lucide="home" class="w-5 h-5 text-[#c99738]"></i>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-[22px] sm:text-[24px] font-bold text-[#111815] leading-tight">4.9/5</span>
+                <span class="text-[12.5px] sm:text-[13px] text-[#4a524d] font-medium mb-1.5">Customer Rating</span>
+                <div class="flex items-center gap-1 text-[#e0a83b]">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       3. PREMIUM SERVICES SECTION
+       ===================================================================== -->
+  <section id="services" class="relative w-full py-24 lg:py-32 bg-[#092018] overflow-hidden">
+    <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(ellipse 75% 65% at 50% 15%, rgba(24, 68, 52, 0.55) 0%, rgba(10, 33, 25, 0.92) 65%, #071912 100%);"></div>
+
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14 lg:mb-16">
+        <div>
+          <div class="flex items-center gap-3.5 mb-4">
+            <span class="w-9 h-[1px] bg-[#e8c468]/75"></span>
+            <span class="text-[11.5px] sm:text-[12px] tracking-[0.24em] uppercase text-[#e8c468] font-medium">WHAT WE TAKE CARE OF</span>
+          </div>
+          <h2 class="font-serif-luxury text-[42px] sm:text-[54px] lg:text-[60px] leading-[1.06] text-white font-normal">
+            <span class="block">Every space has</span>
+            <span class="block italic text-[#e8c468] mt-1">
+              its own <span class="relative inline-block">rhythm.
+                <svg viewBox="0 0 180 14" fill="none" class="absolute -bottom-2 left-2 w-[95%] h-[11px] pointer-events-none">
+                  <path d="M3 10.5C55 4.5 125 4.5 176 9.5" stroke="#e8c468" stroke-width="2.4" stroke-linecap="round" />
+                </svg>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <p class="text-[15px] sm:text-[16px] leading-[1.7] text-[#d5ddd8]/80 font-light max-w-[440px] lg:pb-2">
+          From everyday maintenance to a complete refresh, our services are shaped around your space, your schedule and the standards that matter to you.
+        </p>
+      </div>
+
+      <!-- 3 Service Cards (Matching /services Card Layout & Hover Effects) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-7 lg:gap-8 pt-7">
+        <!-- Card 1: Residential -->
+        <div onclick="openBookingModal('Home Cleaning')" class="group relative cursor-pointer rounded-[26px] border border-[#e8c468]/50 hover:border-[#e8c468] bg-[#0c271d]/95 shadow-[0_20px_50px_rgba(0,0,0,0.45)] transition-all duration-500 flex flex-col justify-between">
+          <!-- Top Border Center-Aligned Icon (50% Inside / 50% Outside Top Border) -->
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 w-13 h-13 p-3.5 rounded-2xl bg-[#0e2c21] border-2 border-[#e8c468] flex items-center justify-center shadow-[0_10px_25px_rgba(0,0,0,0.65)] group-hover:scale-110 group-hover:bg-[#e8c468] transition-all duration-300">
+            <i data-lucide="home" class="w-5 h-5 text-[#e8c468] group-hover:text-[#081d15] transition-colors duration-300"></i>
+          </div>
+
+          <div class="relative h-[250px] sm:h-[270px] w-full overflow-hidden rounded-t-[25px]">
+            <img src="/images/hero-interior.jpg" alt="Home Cleaning" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(8,26,20,0.12) 0%, rgba(8,26,20,0.28) 65%, rgba(12,39,29,0.92) 100%);"></div>
+          </div>
+
+          <div class="relative px-7 pt-7 pb-8 rounded-b-[25px] border-t border-[#e8c468]/25 bg-[#0c271d] group-hover:bg-[#174936] transition-colors duration-500 flex-1 flex flex-col justify-between overflow-hidden">
+            <svg viewBox="0 0 180 180" fill="none" class="pointer-events-none absolute bottom-0 right-0 w-36 h-36 z-0 opacity-75">
+              <path d="M35 180 C65 125, 115 75, 180 42 L180 180 Z" fill="#092219" fill-opacity="0.55" />
+              <path d="M35 180 C65 125, 115 75, 180 42" stroke="#e8c468" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <div class="relative z-10">
+              <span class="block text-[11px] tracking-[0.22em] uppercase text-[#e8c468] font-medium mb-1.5">RESIDENTIAL</span>
+              <h3 class="font-serif-luxury text-[32px] sm:text-[36px] leading-[1.08] text-white font-normal mb-3">
+                Home Cleaning
+              </h3>
+              <p class="text-[14px] sm:text-[14.5px] leading-[1.6] text-[#d5ddd8]/85 group-hover:text-white/95 font-light mb-7 transition-colors duration-300">
+                A comfortable, healthy and fresh home for you and your family.
+              </p>
+            </div>
+            <div class="relative z-10 w-full flex items-center justify-center">
+              <button type="button" onclick="event.stopPropagation(); openBookingModal('Home Cleaning')" class="btn-gold-luxury cursor-pointer inline-flex items-center justify-center gap-2.5 px-7 py-3 rounded-full text-[13.5px] font-semibold">
+                <span>Discover Service</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Deep Cleaning -->
+        <div onclick="openBookingModal('Deep Cleaning')" class="group relative cursor-pointer rounded-[26px] border border-[#e8c468]/35 hover:border-[#e8c468] bg-[#0c271d]/95 shadow-[0_20px_50px_rgba(0,0,0,0.45)] transition-all duration-500 flex flex-col justify-between">
+          <!-- Top Border Center-Aligned Icon (50% Inside / 50% Outside Top Border) -->
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 w-13 h-13 p-3.5 rounded-2xl bg-[#0e2c21] border-2 border-[#e8c468]/80 group-hover:border-[#e8c468] flex items-center justify-center shadow-[0_10px_25px_rgba(0,0,0,0.65)] group-hover:scale-110 group-hover:bg-[#e8c468] transition-all duration-300">
+            <i data-lucide="sparkles" class="w-5 h-5 text-[#e8c468] group-hover:text-[#081d15] transition-colors duration-300"></i>
+          </div>
+
+          <div class="relative h-[250px] sm:h-[270px] w-full overflow-hidden rounded-t-[25px]">
+            <img src="/images/service-deep.jpg" alt="Deep Cleaning" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(8,26,20,0.12) 0%, rgba(8,26,20,0.28) 65%, rgba(12,39,29,0.92) 100%);"></div>
+          </div>
+
+          <div class="relative px-7 pt-7 pb-8 rounded-b-[25px] border-t border-[#e8c468]/25 bg-[#0c271d] group-hover:bg-[#174936] transition-colors duration-500 flex-1 flex flex-col justify-between overflow-hidden">
+            <svg viewBox="0 0 180 180" fill="none" class="pointer-events-none absolute bottom-0 right-0 w-36 h-36 z-0 opacity-75">
+              <path d="M35 180 C65 125, 115 75, 180 42 L180 180 Z" fill="#092219" fill-opacity="0.55" />
+              <path d="M35 180 C65 125, 115 75, 180 42" stroke="#e8c468" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <div class="relative z-10">
+              <span class="block text-[11px] tracking-[0.22em] uppercase text-[#e8c468] font-medium mb-1.5">DEEP</span>
+              <h3 class="font-serif-luxury text-[32px] sm:text-[36px] leading-[1.08] text-white font-normal mb-3">
+                Deep Cleaning
+              </h3>
+              <p class="text-[14px] sm:text-[14.5px] leading-[1.6] text-[#d5ddd8]/85 group-hover:text-white/95 font-light mb-7 transition-colors duration-300">
+                A thorough, detail-focused clean that brings new life to your space.
+              </p>
+            </div>
+            <div class="relative z-10 w-full flex items-center justify-center">
+              <button type="button" onclick="event.stopPropagation(); openBookingModal('Deep Cleaning')" class="btn-gold-luxury cursor-pointer inline-flex items-center justify-center gap-2.5 px-7 py-3 rounded-full text-[13.5px] font-semibold">
+                <span>Discover Service</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Commercial Cleaning -->
+        <div onclick="openBookingModal('Commercial Cleaning')" class="group relative cursor-pointer rounded-[26px] border border-[#e8c468]/35 hover:border-[#e8c468] bg-[#0c271d]/95 shadow-[0_20px_50px_rgba(0,0,0,0.45)] transition-all duration-500 flex flex-col justify-between">
+          <!-- Top Border Center-Aligned Icon (50% Inside / 50% Outside Top Border) -->
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 w-13 h-13 p-3.5 rounded-2xl bg-[#0e2c21] border-2 border-[#e8c468]/80 group-hover:border-[#e8c468] flex items-center justify-center shadow-[0_10px_25px_rgba(0,0,0,0.65)] group-hover:scale-110 group-hover:bg-[#e8c468] transition-all duration-300">
+            <i data-lucide="briefcase" class="w-5 h-5 text-[#e8c468] group-hover:text-[#081d15] transition-colors duration-300"></i>
+          </div>
+
+          <div class="relative h-[250px] sm:h-[270px] w-full overflow-hidden rounded-t-[25px]">
+            <img src="/images/service-commercial.jpg" alt="Commercial Cleaning" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(8,26,20,0.12) 0%, rgba(8,26,20,0.28) 65%, rgba(12,39,29,0.92) 100%);"></div>
+          </div>
+
+          <div class="relative px-7 pt-7 pb-8 rounded-b-[25px] border-t border-[#e8c468]/25 bg-[#0c271d] group-hover:bg-[#174936] transition-colors duration-500 flex-1 flex flex-col justify-between overflow-hidden">
+            <svg viewBox="0 0 180 180" fill="none" class="pointer-events-none absolute bottom-0 right-0 w-36 h-36 z-0 opacity-75">
+              <path d="M35 180 C65 125, 115 75, 180 42 L180 180 Z" fill="#092219" fill-opacity="0.55" />
+              <path d="M35 180 C65 125, 115 75, 180 42" stroke="#e8c468" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <div class="relative z-10">
+              <span class="block text-[11px] tracking-[0.22em] uppercase text-[#e8c468] font-medium mb-1.5">COMMERCIAL</span>
+              <h3 class="font-serif-luxury text-[32px] sm:text-[36px] leading-[1.08] text-white font-normal mb-3">
+                Commercial Cleaning
+              </h3>
+              <p class="text-[14px] sm:text-[14.5px] leading-[1.6] text-[#d5ddd8]/85 group-hover:text-white/95 font-light mb-7 transition-colors duration-300">
+                Reliable and professional cleaning for offices, retail and business spaces.
+              </p>
+            </div>
+            <div class="relative z-10 w-full flex items-center justify-center">
+              <button type="button" onclick="event.stopPropagation(); openBookingModal('Commercial Cleaning')" class="btn-gold-luxury cursor-pointer inline-flex items-center justify-center gap-2.5 px-7 py-3 rounded-full text-[13.5px] font-semibold">
+                <span>Discover Service</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       4. THE CLEANORA DIFFERENCE SECTION (COLLAGE LEFT, CONTENT RIGHT)
+       ===================================================================== -->
+  <section id="about" class="relative w-full py-24 lg:py-32 bg-[#0a2219] overflow-hidden">
+    <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(ellipse 80% 70% at 25% 50%, rgba(22, 62, 47, 0.55) 0%, rgba(10, 34, 25, 0.95) 65%, #071912 100%);"></div>
+
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-12 items-center">
+        <!-- Left Column: Overlapping Triple Editorial Image Collage -->
+        <div class="lg:col-span-7 relative">
+          <div class="relative grid grid-cols-12 gap-4 sm:gap-5 items-stretch">
+            <!-- Large Tall Rounded Primary Image (Cleaning Specialist) -->
+            <div class="col-span-12 sm:col-span-7 relative h-[420px] sm:h-[540px] rounded-[28px] overflow-hidden border-2 border-[#e8c468]/65 shadow-[0_24px_60px_rgba(0,0,0,0.55)] group">
+              <img src="/images/difference-pro.jpg" alt="CLEANORA Vetted Cleaning Specialist" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#071a13]/75 via-transparent to-transparent"></div>
+              <div class="absolute bottom-5 left-5 right-5 sm:right-auto flex items-center gap-3.5 px-5 py-3.5 rounded-2xl bg-[#0b241b]/88 backdrop-blur-xl border border-[#e8c468]/35">
+                <div class="w-10 h-10 rounded-full bg-[#e8c468]/15 border border-[#e8c468]/45 flex items-center justify-center shrink-0">
+                  <i data-lucide="users" class="w-5 h-5 text-[#e8c468]"></i>
+                </div>
+                <div>
+                  <p class="text-[14px] font-semibold text-white leading-tight">Trusted by 1000+</p>
+                  <p class="text-[12px] text-[#d5ddd8]/80">Happy Customers</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Stacked Dual Images + Floating Gold Seal -->
+            <div class="col-span-12 sm:col-span-5 flex flex-col justify-between gap-4 sm:gap-5 sm:py-4 relative">
+              <div class="hidden sm:flex absolute -top-9 -right-4 z-30 w-28 h-28 rounded-full bg-gradient-to-br from-[#f6e09e] via-[#e5be62] to-[#c99938] p-3 flex-col items-center justify-center text-center shadow-[0_15px_35px_rgba(0,0,0,0.45)] border border-white/50">
+                <span class="text-[9.5px] font-bold tracking-[0.12em] uppercase text-[#0d2219] leading-tight">CLEAN SPACES</span>
+                <span class="text-[9.5px] font-bold tracking-[0.12em] uppercase text-[#0d2219] leading-tight mt-0.5">HAPPIER LIVES</span>
+                <i data-lucide="leaf" class="w-4 h-4 text-[#0d2219] mt-1.5"></i>
+              </div>
+
+              <div class="relative h-[220px] sm:h-[275px] rounded-[24px] overflow-hidden border border-white/25 shadow-[0_18px_45px_rgba(0,0,0,0.45)] group">
+                <img src="/images/hero-interior.jpg" alt="Spotless Luxury Residence" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              </div>
+
+              <div class="relative h-[190px] sm:h-[205px] rounded-[24px] overflow-hidden border border-white/25 shadow-[0_18px_45px_rgba(0,0,0,0.45)] group">
+                <img src="/images/service-deep.jpg" alt="Meticulous Deep Cleaning Detail" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#081d15]/65 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3.5 left-3.5 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0b241b]/90 backdrop-blur-md border border-[#e8c468]/45 text-[11.5px] text-[#f3d88c] font-medium">
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#e8c468]"></i>
+                  <span>100% Satisfaction</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom 4-Metric Strip -->
+          <div class="mt-10 pt-8 border-t border-white/[0.1] grid grid-cols-2 sm:grid-cols-4 gap-6">
+            <div class="flex items-start gap-3">
+              <i data-lucide="home" class="w-5 h-5 text-[#e8c468] shrink-0 mt-1"></i>
+              <div>
+                <div class="font-serif-luxury text-[28px] sm:text-[32px] font-semibold text-white leading-none mb-1">98%</div>
+                <div class="text-[12px] text-[#d5ddd8]/75">Customer Satisfaction</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 sm:pl-5 sm:border-l sm:border-white/[0.1]">
+              <i data-lucide="star" class="w-5 h-5 text-[#e8c468] shrink-0 mt-1"></i>
+              <div>
+                <div class="font-serif-luxury text-[28px] sm:text-[32px] font-semibold text-white leading-none mb-1">4.9/5</div>
+                <div class="text-[12px] text-[#d5ddd8]/75">Average Rating</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 sm:pl-5 sm:border-l sm:border-white/[0.1]">
+              <i data-lucide="sparkles" class="w-5 h-5 text-[#e8c468] shrink-0 mt-1"></i>
+              <div>
+                <div class="font-serif-luxury text-[28px] sm:text-[32px] font-semibold text-white leading-none mb-1">10K+</div>
+                <div class="text-[12px] text-[#d5ddd8]/75">Spaces Cleaned</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 sm:pl-5 sm:border-l sm:border-white/[0.1]">
+              <i data-lucide="leaf" class="w-5 h-5 text-[#e8c468] shrink-0 mt-1"></i>
+              <div>
+                <div class="font-serif-luxury text-[28px] sm:text-[32px] font-semibold text-white leading-none mb-1">100%</div>
+                <div class="text-[12px] text-[#d5ddd8]/75">Eco-Friendly Products</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Editorial Heading, 4 Benefits & CTAs -->
+        <div class="lg:col-span-5 flex flex-col items-start">
+          <div class="flex items-center gap-3.5 mb-3.5">
+            <span class="w-9 h-[1px] bg-[#e8c468]/75"></span>
+            <span class="text-[11.5px] sm:text-[12px] tracking-[0.24em] uppercase text-[#e8c468] font-medium">THE CLEANORA DIFFERENCE</span>
+          </div>
+          <h2 class="font-serif-luxury text-[42px] sm:text-[52px] xl:text-[58px] leading-[1.06] text-white font-normal mb-5">
+            <span class="block">More than clean.</span>
+            <span class="block italic text-[#e8c468] mt-1">It's how you feel.</span>
+          </h2>
+          <p class="text-[15px] sm:text-[15.5px] leading-[1.68] text-[#d5ddd8]/85 font-light mb-8">
+            We believe a clean space is more than just a tidy room — it's peace of mind, better health and more time for what matters. Our professional team brings care, consistency and attention to detail in every clean, every time.
+          </p>
+
+          <div class="space-y-5 mb-9 w-full">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-[#113125]/90 border border-[#e8c468]/45 flex items-center justify-center shrink-0">
+                <i data-lucide="leaf" class="w-5 h-5 text-[#e8c468]"></i>
+              </div>
+              <div>
+                <h3 class="font-serif-luxury text-[20px] sm:text-[21px] font-semibold text-white leading-snug mb-0.5">Eco-Friendly Products</h3>
+                <p class="text-[13.5px] sm:text-[14px] leading-[1.55] text-[#d5ddd8]/75 font-light">Safe for your family, pets and the planet. We use non-toxic, biodegradable cleaning products.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-[#113125]/90 border border-[#e8c468]/45 flex items-center justify-center shrink-0">
+                <i data-lucide="user-check" class="w-5 h-5 text-[#e8c468]"></i>
+              </div>
+              <div>
+                <h3 class="font-serif-luxury text-[20px] sm:text-[21px] font-semibold text-white leading-snug mb-0.5">Vetted & Trained Professionals</h3>
+                <p class="text-[13.5px] sm:text-[14px] leading-[1.55] text-[#d5ddd8]/75 font-light">Our team is background-checked, fully trained and committed to the highest standards.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-[#113125]/90 border border-[#e8c468]/45 flex items-center justify-center shrink-0">
+                <i data-lucide="calendar" class="w-5 h-5 text-[#e8c468]"></i>
+              </div>
+              <div>
+                <h3 class="font-serif-luxury text-[20px] sm:text-[21px] font-semibold text-white leading-snug mb-0.5">Flexible Scheduling</h3>
+                <p class="text-[13.5px] sm:text-[14px] leading-[1.55] text-[#d5ddd8]/75 font-light">Book at your convenience. We work around your life, not the other way around.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-[#113125]/90 border border-[#e8c468]/45 flex items-center justify-center shrink-0">
+                <i data-lucide="shield-check" class="w-5 h-5 text-[#e8c468]"></i>
+              </div>
+              <div>
+                <h3 class="font-serif-luxury text-[20px] sm:text-[21px] font-semibold text-white leading-snug mb-0.5">100% Satisfaction Guarantee</h3>
+                <p class="text-[13.5px] sm:text-[14px] leading-[1.55] text-[#d5ddd8]/75 font-light">If you're not happy, we'll make it right — that's our promise.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-5">
+            <a href="#services" class="btn-gold-luxury cursor-pointer inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-[14.5px] font-semibold">
+              <span>Discover Our Services</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <button onclick="openBookingModal()" class="group cursor-pointer inline-flex items-center gap-3 py-2 text-[14.5px] text-white/90 hover:text-[#f3d88c]">
+              <span class="w-9 h-9 rounded-full border border-white/35 flex items-center justify-center">
+                <i data-lucide="play" class="w-3.5 h-3.5 fill-white text-white ml-0.5"></i>
+              </span>
+              <span class="border-b border-[#e8c468]/70 pb-1">Watch Our Process</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       5. INTERACTIVE GLASSMORPHIC TESTIMONIAL SECTION
+       ===================================================================== -->
+  <section id="reviews" class="relative w-full py-28 lg:py-36 overflow-hidden select-none">
+    <div class="pointer-events-none absolute inset-0 bg-cover bg-center scale-105" style="background-image: url('/images/hero-interior.jpg'); filter: blur(3px);"></div>
+    <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(ellipse 85% 75% at 50% 50%, rgba(12, 39, 29, 0.78) 0%, rgba(8, 26, 20, 0.92) 70%, #071912 100%);"></div>
+
+    <div class="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-14 flex flex-col items-center">
+      <div class="flex items-center gap-4 mb-3.5">
+        <span class="w-10 sm:w-14 h-[1px] bg-[#e8c468]/70"></span>
+        <span class="text-[11.5px] sm:text-[12px] tracking-[0.26em] uppercase text-[#f3e5be] font-medium">KIND WORDS, REAL COMFORT</span>
+        <span class="w-10 sm:w-14 h-[1px] bg-[#e8c468]/70"></span>
+      </div>
+
+      <h2 class="font-serif-luxury text-[42px] sm:text-[56px] lg:text-[64px] leading-[1.08] text-white font-normal text-center mb-16 sm:mb-20">
+        What Our <span class="italic text-[#e8c468]">Clients Say</span>
+      </h2>
+
+      <div class="relative w-full max-w-[960px] flex items-center justify-center">
+        <button onclick="prevTestimonial()" aria-label="Previous Testimonial" class="hidden md:flex absolute -left-14 lg:-left-16 z-30 w-12 h-12 rounded-full bg-[#0c271d]/80 hover:bg-[#e8c468] text-[#f3e5be] hover:text-[#0b231b] border border-[#e8c468]/50 items-center justify-center transition-all cursor-pointer">
+          <i data-lucide="chevron-left" class="w-5 h-5"></i>
+        </button>
+
+        <div class="relative w-full rounded-[32px] bg-[#102e23]/70 backdrop-blur-2xl border border-[#e8c468]/45 px-6 sm:px-14 lg:px-20 pt-16 pb-11 sm:pt-20 sm:pb-14 text-center shadow-[0_30px_80px_rgba(0,0,0,0.55)]">
+          <div class="pointer-events-none absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[65%] h-[2.5px]" style="background: linear-gradient(90deg, transparent 0%, #f5df9e 35%, #e8c468 50%, #f5df9e 65%, transparent 100%); box-shadow: 0 0 18px rgba(232, 196, 104, 0.85);"></div>
+          <div class="pointer-events-none absolute -bottom-[1.5px] left-1/2 -translate-x-1/2 w-[55%] h-[2px]" style="background: linear-gradient(90deg, transparent 0%, #e8c468 50%, transparent 100%); box-shadow: 0 0 14px rgba(232, 196, 104, 0.7);"></div>
+
+          <div class="absolute -top-9 left-1/2 -translate-x-1/2 w-[70px] h-[70px] rounded-full bg-gradient-to-br from-[#f6e09e] via-[#e4be62] to-[#c89938] flex items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.45)] border border-white/60">
+            <span class="font-serif-luxury text-[54px] leading-none text-[#0d241b] font-bold translate-y-2">“</span>
+          </div>
+
+          <blockquote id="testimonialQuote" class="font-serif-luxury text-[24px] sm:text-[31px] lg:text-[34px] leading-[1.42] text-white font-normal max-w-[760px] mx-auto mb-10">
+            “The whole experience feels effortless. The team is thoughtful, punctual and the little details never go unnoticed.”
+          </blockquote>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
+            <div class="flex items-center gap-4 text-left">
+              <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-[#e8c468] p-0.5 bg-[#0c261d] shrink-0">
+                <img id="testimonialAvatar" src="/images/difference-pro.jpg" alt="Jana K." class="w-full h-full object-cover rounded-full" />
+              </div>
+              <div>
+                <div id="testimonialName" class="font-serif-luxury text-[22px] sm:text-[24px] font-semibold text-white leading-tight">Jana K.</div>
+                <div id="testimonialRole" class="text-[13px] sm:text-[13.5px] text-[#d5ddd8]/80 font-light">Residential Cleaning Client</div>
+              </div>
+            </div>
+            <div class="hidden sm:block w-[1px] h-11 bg-white/20"></div>
+            <div class="flex items-center gap-1.5 text-[#ecc566] text-xl">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="nextTestimonial()" aria-label="Next Testimonial" class="hidden md:flex absolute -right-14 lg:-right-16 z-30 w-12 h-12 rounded-full bg-[#0c271d]/80 hover:bg-[#e8c468] text-[#f3e5be] hover:text-[#0b231b] border border-[#e8c468]/50 items-center justify-center transition-all cursor-pointer">
+          <i data-lucide="chevron-right" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="mt-8 flex items-center gap-3">
+        <button onclick="setTestimonial(0)" id="dot-0" class="w-3 h-3 rounded-full bg-[#e8c468] scale-110 shadow-[0_0_10px_rgba(232,196,104,0.85)] cursor-pointer"></button>
+        <button onclick="setTestimonial(1)" id="dot-1" class="w-3 h-3 rounded-full bg-transparent border border-[#e8c468]/55 cursor-pointer"></button>
+        <button onclick="setTestimonial(2)" id="dot-2" class="w-3 h-3 rounded-full bg-transparent border border-[#e8c468]/55 cursor-pointer"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       6. ARCHED LUXURY CTA SECTION
+       ===================================================================== -->
+  <section class="relative w-full py-24 lg:py-32 bg-[#0a2219] overflow-hidden">
+    <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(ellipse 85% 75% at 22% 45%, #163f30 0%, #0c261d 55%, #071912 100%);"></div>
+
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-10 items-center">
+        <!-- Left Column -->
+        <div class="lg:col-span-5 flex flex-col items-start text-left">
+          <div class="flex items-center gap-3.5 mb-4">
+            <span class="w-9 h-[1px] bg-[#e8c468]/75"></span>
+            <span class="text-[11.5px] sm:text-[12px] tracking-[0.24em] uppercase text-[#e8c468] font-medium">SAVE TIME, LIVE BETTER</span>
+          </div>
+
+          <h2 class="font-serif-luxury text-[44px] sm:text-[56px] xl:text-[64px] leading-[1.06] text-white font-normal mb-5">
+            <span class="block">A Little More Time</span>
+            <span class="block italic text-[#e8c468] mt-1">for What Matters.</span>
+          </h2>
+
+          <p class="text-[15px] sm:text-[16px] leading-[1.68] text-[#d5ddd8]/85 font-light max-w-[460px] mb-9">
+            Take cleaning off your to-do list and focus on what you love — family, work, hobbies and more.
+          </p>
+
+          <div class="w-full max-w-[480px] grid grid-cols-3 gap-3 sm:gap-5 py-2 mb-10">
+            <div class="flex flex-col items-center text-center px-2">
+              <div class="w-12 h-12 rounded-2xl bg-[#113125]/90 border border-[#e8c468]/45 flex items-center justify-center mb-3">
+                <i data-lucide="clock" class="w-5 h-5 text-[#e8c468]"></i>
+              </div>
+              <span class="text-[12.5px] sm:text-[13px] leading-[1.35] text-[#e6ece8]/90">Save<br/>Your Time</span>
+            </div>
+            <div class="flex flex-col items-center text-center px-2 border-l border-white/[0.12]">
+              <div class="w-12 h-12 rounded-2xl bg-[#113125]/90 border border-[#e8c468]/45 flex items-center justify-center mb-3">
+                <i data-lucide="sparkles" class="w-5 h-5 text-[#e8c468]"></i>
+              </div>
+              <span class="text-[12.5px] sm:text-[13px] leading-[1.35] text-[#e6ece8]/90">A Cleaner,<br/>Healthier Space</span>
+            </div>
+            <div class="flex flex-col items-center text-center px-2 border-l border-white/[0.12]">
+              <div class="w-12 h-12 rounded-2xl bg-[#113125]/90 border border-[#e8c468]/45 flex items-center justify-center mb-3">
+                <i data-lucide="heart" class="w-5 h-5 text-[#e8c468]"></i>
+              </div>
+              <span class="text-[12.5px] sm:text-[13px] leading-[1.35] text-[#e6ece8]/90">More Time<br/>for What You Love</span>
+            </div>
+          </div>
+
+          <button onclick="openBookingModal()" class="btn-gold-luxury cursor-pointer flex items-center justify-center gap-3.5 px-9 py-4 rounded-full text-[16px] font-semibold w-full sm:w-auto">
+            <i data-lucide="calendar" class="w-4 h-4 text-[#0d2219]"></i>
+            <span>Book Your Cleaning</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-[#0d2219] ml-0.5"></i>
+          </button>
+        </div>
+
+        <!-- Right Column: Large Arched Luxury Image + Floating Card -->
+        <div class="lg:col-span-7 relative flex items-center justify-center lg:justify-end">
+          <div class="relative w-full max-w-[760px] h-[390px] sm:h-[490px] lg:h-[550px] rounded-t-[260px] sm:rounded-t-[360px] rounded-b-[28px] p-[2.5px] bg-gradient-to-b from-[#f6df9e] via-[#e8c468]/80 to-[#0c261d]/40 shadow-[0_30px_80px_rgba(0,0,0,0.6)]">
+            <div class="relative w-full h-full rounded-t-[258px] sm:rounded-t-[358px] rounded-b-[26px] overflow-hidden bg-[#0c261d]">
+              <img src="/images/cta-interior.jpg" alt="Spotless Double-Height Luxury Living Room" class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-[1.03]" />
+            </div>
+
+            <div onclick="openBookingModal()" class="cursor-pointer absolute bottom-5 right-5 sm:bottom-8 sm:right-8 z-30 flex items-center gap-4 px-5 py-4 sm:px-7 sm:py-5 rounded-[22px] bg-[#f7f3eb]/95 backdrop-blur-xl border border-white/85 shadow-[0_22px_50px_rgba(0,0,0,0.42)] transition-transform duration-500 hover:-translate-y-1">
+              <div class="w-12 h-12 rounded-2xl bg-[#efe1c1] border border-[#e0c080]/70 flex items-center justify-center shrink-0">
+                <i data-lucide="calendar-check" class="w-6 h-6 text-[#355c47]"></i>
+              </div>
+              <div class="flex flex-col text-left pr-1">
+                <span class="text-[14.5px] sm:text-[15.5px] font-medium text-[#2c3530] leading-snug">Book in</span>
+                <span class="text-[15.5px] sm:text-[17px] font-bold text-[#111815] leading-snug">Just a Few Clicks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       7. BOTANICAL LUXURY FOOTER
+       ===================================================================== -->
+  <footer id="contact" class="relative w-full pt-20 pb-12 overflow-hidden bg-[#061610] text-[#f3f0e6] border-t border-[#e8c468]/20">
+    <div class="pointer-events-none absolute inset-y-0 left-0 w-1/2 bg-cover bg-left-top opacity-85" style="background-image: url('/images/footer-botanical.jpg');"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-cover bg-left-top opacity-85 -scale-x-100" style="background-image: url('/images/footer-botanical.jpg');"></div>
+    <div class="pointer-events-none absolute inset-0" style="background: linear-gradient(90deg, rgba(6, 22, 16, 0.62) 0%, rgba(7, 25, 18, 0.88) 32%, rgba(7, 25, 18, 0.88) 68%, rgba(6, 22, 16, 0.62) 100%);"></div>
+
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 pb-16">
+        <!-- Brand Column -->
+        <div class="lg:col-span-3 lg:pr-6 lg:border-r lg:border-white/[0.1] flex flex-col items-start">
+          <a href="#home" class="flex flex-col items-start mb-5">
+            <div class="flex items-center gap-3">
+              <svg viewBox="0 0 42 42" fill="none" class="w-10 h-10 shrink-0">
+                <path d="M7 35C8 21 18 9 35 6C34 22 24 33 7 35Z" fill="#e8c468" />
+                <path d="M5 38C11 31 19 22 28 13" stroke="#071912" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+              <span class="font-serif-luxury text-[28px] sm:text-[30px] font-semibold tracking-[0.1em] text-white leading-none">CLEANORA</span>
+            </div>
+            <span class="text-[9.5px] tracking-[0.25em] uppercase text-[#e8c468] font-medium mt-2.5">PROFESSIONAL CLEANING SERVICES</span>
+          </a>
+          <p class="text-[13.5px] leading-[1.7] text-[#d5ddd8]/80 font-light mb-7 max-w-[300px]">
+            Professional, reliable and eco-friendly cleaning for homes and businesses. A cleaner space for a healthier, happier life.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-full bg-[#0d281e]/80 hover:bg-[#e8c468] text-[#f3e5be] hover:text-[#071912] border border-[#e8c468]/45 flex items-center justify-center transition-all">f</a>
+            <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-full bg-[#0d281e]/80 hover:bg-[#e8c468] text-[#f3e5be] hover:text-[#071912] border border-[#e8c468]/45 flex items-center justify-center transition-all">ig</a>
+            <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-full bg-[#0d281e]/80 hover:bg-[#e8c468] text-[#f3e5be] hover:text-[#071912] border border-[#e8c468]/45 flex items-center justify-center transition-all">in</a>
+            <a href="https://youtube.com" target="_blank" class="w-10 h-10 rounded-full bg-[#0d281e]/80 hover:bg-[#e8c468] text-[#f3e5be] hover:text-[#071912] border border-[#e8c468]/45 flex items-center justify-center transition-all">▶</a>
+          </div>
+        </div>
+
+        <!-- Quick Links & Services -->
+        <div class="lg:col-span-4 grid grid-cols-2 gap-6 sm:gap-8 lg:px-4">
+          <div>
+            <h3 class="font-serif-luxury text-[23px] font-medium text-white mb-2">Quick Links</h3>
+            <div class="w-8 h-[2px] bg-[#e8c468] mb-5"></div>
+            <ul class="space-y-2.5 text-[13.5px] text-[#d5ddd8]/80">
+              <li><a href="#home" class="hover:text-[#f3d88c]">› Home</a></li>
+              <li><a href="#about" class="hover:text-[#f3d88c]">› About Us</a></li>
+              <li><a href="#services" class="hover:text-[#f3d88c]">› Our Services</a></li>
+              <li><a href="#services" class="hover:text-[#f3d88c]">› Pricing</a></li>
+              <li><a href="#about" class="hover:text-[#f3d88c]">› Gallery</a></li>
+              <li><a href="#reviews" class="hover:text-[#f3d88c]">› Reviews</a></li>
+              <li><a href="#contact" class="hover:text-[#f3d88c]">› Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-serif-luxury text-[23px] font-medium text-white mb-2">Our Services</h3>
+            <div class="w-8 h-[2px] bg-[#e8c468] mb-5"></div>
+            <ul class="space-y-2.5 text-[13.5px] text-[#d5ddd8]/80">
+              <li><button onclick="openBookingModal('Home Cleaning')" class="hover:text-[#f3d88c]">› Home Cleaning</button></li>
+              <li><button onclick="openBookingModal('Deep Cleaning')" class="hover:text-[#f3d88c]">› Deep Cleaning</button></li>
+              <li><button onclick="openBookingModal('Commercial Cleaning')" class="hover:text-[#f3d88c]">› Commercial Cleaning</button></li>
+              <li><button onclick="openBookingModal('Move In / Move Out')" class="hover:text-[#f3d88c]">› Move In / Move Out</button></li>
+              <li><button onclick="openBookingModal('Office Cleaning')" class="hover:text-[#f3d88c]">› Office Cleaning</button></li>
+              <li><button onclick="openBookingModal('Custom Cleaning')" class="hover:text-[#f3d88c]">› Custom Cleaning</button></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact Us & Stay in the Loop -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+          <div class="grid grid-cols-1 sm:grid-cols-12 gap-8">
+            <div class="sm:col-span-6 lg:pr-4 lg:border-r lg:border-white/[0.1]">
+              <h3 class="font-serif-luxury text-[23px] font-medium text-white mb-2">Contact Us</h3>
+              <div class="w-8 h-[2px] bg-[#e8c468] mb-5"></div>
+              <div class="space-y-3.5 text-[13.5px]">
+                <a href="tel:+420000000000" class="flex items-center gap-3 pb-3 border-b border-white/[0.08] text-[#e6ece8]/90 hover:text-[#f3d88c]">
+                  <i data-lucide="phone" class="w-4 h-4 text-[#e8c468]"></i><span>+420 000 000 000</span>
+                </a>
+                <a href="mailto:hello@cleanora.cz" class="flex items-center gap-3 pb-3 border-b border-white/[0.08] text-[#e6ece8]/90 hover:text-[#f3d88c]">
+                  <i data-lucide="mail" class="w-4 h-4 text-[#e8c468]"></i><span>hello@cleanora.cz</span>
+                </a>
+                <div class="flex items-center gap-3 text-[#e6ece8]/90">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-[#e8c468]"></i><span>Prague, Czech Republic</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sm:col-span-6">
+              <h3 class="font-serif-luxury text-[23px] font-medium text-white mb-2">Stay in the Loop</h3>
+              <div class="w-8 h-[2px] bg-[#e8c468] mb-5"></div>
+              <p class="text-[13px] leading-[1.6] text-[#d5ddd8]/80 font-light mb-4">
+                Get cleaning tips, offers and updates straight to your inbox.
+              </p>
+              <form onsubmit="event.preventDefault(); document.getElementById('subMsg').classList.remove('hidden');" class="relative flex items-center w-full rounded-xl overflow-hidden bg-[#0a231a]/90 border border-[#e8c468]/40">
+                <input type="email" required placeholder="Enter your email" class="w-full px-4 py-3 bg-transparent text-[13px] text-white placeholder:text-[#d5ddd8]/50 focus:outline-none" />
+                <button type="submit" aria-label="Subscribe" class="btn-gold-luxury cursor-pointer px-4 py-3 flex items-center justify-center shrink-0">
+                  <i data-lucide="send" class="w-4 h-4 text-[#0d2219]"></i>
+                </button>
+              </form>
+              <p id="subMsg" class="hidden text-xs text-[#f3d88c] mt-2">✓ Subscribed! Welcome to CLEANORA.</p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/[0.08] grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="flex items-center gap-3">
+              <i data-lucide="leaf" class="w-6 h-6 text-[#e8c468]"></i>
+              <div class="text-[12px] leading-[1.35] text-[#e6ece8]/90"><div>Eco-Friendly</div><div>Products</div></div>
+            </div>
+            <div class="flex items-center gap-3 sm:pl-4 sm:border-l sm:border-white/[0.1]">
+              <i data-lucide="shield-check" class="w-6 h-6 text-[#e8c468]"></i>
+              <div class="text-[12px] leading-[1.35] text-[#e6ece8]/90"><div>Trusted &</div><div>Vetted Team</div></div>
+            </div>
+            <div class="flex items-center gap-3 sm:pl-4 sm:border-l sm:border-white/[0.1]">
+              <i data-lucide="calendar" class="w-6 h-6 text-[#e8c468]"></i>
+              <div class="text-[12px] leading-[1.35] text-[#e6ece8]/90"><div>Flexible</div><div>Scheduling</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full h-[1px] mb-7" style="background: linear-gradient(90deg, rgba(232,196,104,0.15) 0%, rgba(245,223,158,0.65) 28%, rgba(232,196,104,0.25) 100%);"></div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-[#d5ddd8]/75">
+        <p>© 2026 CLEANORA. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#privacy" class="hover:text-[#f3d88c]">Privacy Policy</a>
+          <span class="text-white/25">|</span>
+          <a href="#terms" class="hover:text-[#f3d88c]">Terms of Service</a>
+          <span class="text-white/25">|</span>
+          <a href="#cookies" class="hover:text-[#f3d88c]">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Booking Modal -->
+  <div id="bookingModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/75 backdrop-blur-md">
+    <div class="relative w-full max-w-lg rounded-3xl bg-[#0c261d] border border-[#e8c468]/35 p-6 sm:p-8 text-white shadow-[0_25px_70px_rgba(0,0,0,0.75)]">
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-[#e8c468]">✕</button>
+      <h3 class="font-serif-luxury text-3xl sm:text-4xl text-white mb-2">Book a <span class="italic text-[#e8c468]">Cleaning</span></h3>
+      <p class="text-xs sm:text-sm text-[#d7ded9]/75 mb-6">Select your preferred service and time for a spotless, eco-luxury space.</p>
+      <form onsubmit="event.preventDefault(); alert('Thank you! Your CLEANORA concierge booking is confirmed.'); closeBookingModal();" class="space-y-4">
+        <input type="text" required placeholder="Full Name" class="w-full px-4 py-3 rounded-xl bg-[#081b14] border border-white/15 text-sm text-white" />
+        <input type="tel" required placeholder="+420 600 123 456" class="w-full px-4 py-3 rounded-xl bg-[#081b14] border border-white/15 text-sm text-white" />
+        <select id="bookingServiceSelect" class="w-full px-4 py-3 rounded-xl bg-[#081b14] border border-white/15 text-sm text-white">
+          <option>Home Cleaning</option>
+          <option>Deep Cleaning</option>
+          <option>Commercial Cleaning</option>
+          <option>Move In / Move Out</option>
+        </select>
+        <button type="submit" class="btn-gold-luxury w-full py-3.5 rounded-full text-sm font-semibold mt-2 cursor-pointer">Confirm Priority Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    const testimonials = [
+      {
+        quote: "“The whole experience feels effortless. The team is thoughtful, punctual and the little details never go unnoticed.”",
+        name: "Jana K.",
+        role: "Residential Cleaning Client",
+        avatar: "/images/difference-pro.jpg"
+      },
+      {
+        quote: "“Walking into our residence after a CLEANORA deep refresh feels like checking into a five-star botanical sanctuary. Truly unmatched care.”",
+        name: "Martin V.",
+        role: "Penthouse Deep Cleaning Client",
+        avatar: "/images/hero-interior.jpg"
+      },
+      {
+        quote: "“Our architectural studio relies on CLEANORA every week. Their eco-friendly products leave a subtle, fresh scent and spotless glass partitions.”",
+        name: "Elena R.",
+        role: "Executive Commercial Client",
+        avatar: "/images/service-commercial.jpg"
+      }
+    ];
+    let currentSlide = 0;
+
+    function renderTestimonial() {
+      const t = testimonials[currentSlide];
+      document.getElementById('testimonialQuote').textContent = t.quote;
+      document.getElementById('testimonialName').textContent = t.name;
+      document.getElementById('testimonialRole').textContent = t.role;
+      document.getElementById('testimonialAvatar').src = t.avatar;
+      [0, 1, 2].forEach(i => {
+        const dot = document.getElementById('dot-' + i);
+        if (i === currentSlide) {
+          dot.className = "w-3 h-3 rounded-full bg-[#e8c468] scale-110 shadow-[0_0_10px_rgba(232,196,104,0.85)] cursor-pointer";
+        } else {
+          dot.className = "w-3 h-3 rounded-full bg-transparent border border-[#e8c468]/55 cursor-pointer";
+        }
+      });
+    }
+    function nextTestimonial() { currentSlide = (currentSlide + 1) % testimonials.length; renderTestimonial(); }
+    function prevTestimonial() { currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length; renderTestimonial(); }
+    function setTestimonial(idx) { currentSlide = idx; renderTestimonial(); }
+
+    function openBookingModal(srv) {
+      if (srv) document.getElementById('bookingServiceSelect').value = srv;
+      document.getElementById('bookingModal').classList.remove('hidden');
+    }
+    function closeBookingModal() {
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Elena Rostova",
+    "email": "elena.rostova@prague-estates.cz",
+    "phone": "+420 608 441 209",
+    "service": "Deep Cleaning",
+    "message": "We would love a full pre-holiday marble and chandelier detailing for our Malá Strana residence next Thursday.",
+    "createdAt": "2026-11-14T07:21:49.797Z"
+  },
+  {
+    "name": "Jakub Marek",
+    "email": "j.marek@karlinventures.cz",
+    "phone": "+420 775 910 332",
+    "service": "Commercial Cleaning",
+    "message": "Looking for daily evening eco-cleaning for our 450 m² architectural studio in Karlín.",
+    "createdAt": "2026-11-14T07:21:49.797Z"
+  }
+]

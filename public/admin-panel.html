@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Executive Command Suite — CLEANORA® Luxury Operations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --emerald-deep: #05130e;
+      --emerald-surface: #092017;
+      --gold-primary: #e8c468;
+      --gold-light: #f7e2a4;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #05130e;
+      background-image:
+        radial-gradient(circle at 18% 12%, rgba(232, 196, 104, 0.09) 0%, transparent 38%),
+        radial-gradient(circle at 88% 22%, rgba(16, 85, 58, 0.35) 0%, transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(232, 196, 104, 0.06) 0%, transparent 45%);
+      color: #f4f7f5;
+      overflow-x: hidden;
+    }
+    .font-serif-luxury { font-family: 'Cormorant Garamond', serif; }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fff1be 0%, #e8c468 45%, #c59734 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #f5dc93 0%, #e4be60 50%, #c89b3c 100%);
+      color: #061811;
+      box-shadow: 0 8px 24px -4px rgba(232, 196, 104, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.65);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 14px 32px -4px rgba(232, 196, 104, 0.7), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+    }
+
+    /* Ultra-Luxury Glass Cards with Interactive Hover Lift & Spotlight */
+    .luxury-card {
+      position: relative;
+      background: linear-gradient(155deg, rgba(15, 46, 34, 0.78) 0%, rgba(7, 23, 17, 0.92) 100%);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(232, 196, 104, 0.18);
+      box-shadow: 0 18px 40px -15px rgba(0, 0, 0, 0.65);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+    }
+    .luxury-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(247, 226, 164, 0.8), transparent);
+      transition: left 0.65s ease;
+    }
+    .luxury-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(232, 196, 104, 0.48);
+      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.75), 0 0 28px -8px rgba(232, 196, 104, 0.22);
+    }
+    .luxury-card:hover::before {
+      left: 120%;
+    }
+
+    /* Sidebar Navigation — Creative Hover & Active Indicator */
+    .nav-btn {
+      position: relative;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+    }
+    .nav-btn .nav-icon-wrap {
+      transition: all 0.28s ease;
+      background: rgba(232, 196, 104, 0.08);
+      border: 1px solid rgba(232, 196, 104, 0.15);
+    }
+    .nav-btn:hover {
+      background: linear-gradient(90deg, rgba(232, 196, 104, 0.12) 0%, rgba(232, 196, 104, 0.02) 100%);
+      color: #ffffff;
+      padding-left: 1.15rem;
+    }
+    .nav-btn:hover .nav-icon-wrap {
+      background: rgba(232, 196, 104, 0.22);
+      border-color: rgba(232, 196, 104, 0.5);
+      transform: scale(1.08) rotate(-3deg);
+      box-shadow: 0 0 14px rgba(232, 196, 104, 0.35);
+    }
+    .nav-btn.active {
+      background: linear-gradient(90deg, rgba(232, 196, 104, 0.22) 0%, rgba(232, 196, 104, 0.04) 100%);
+      border-color: rgba(232, 196, 104, 0.45);
+      color: #f7e2a4;
+      box-shadow: inset 3px 0 0 #e8c468, 0 8px 20px -6px rgba(0, 0, 0, 0.5);
+    }
+    .nav-btn.active .nav-icon-wrap {
+      background: linear-gradient(135deg, #f3d88c 0%, #cfa341 100%);
+      color: #061811;
+      border-color: transparent;
+      box-shadow: 0 0 16px rgba(232, 196, 104, 0.5);
+    }
+    .nav-btn.active .nav-icon-wrap svg {
+      color: #061811 !important;
+    }
+
+    .input-luxury {
+      background: rgba(6, 20, 14, 0.85);
+      border: 1px solid rgba(232, 196, 104, 0.24);
+      color: #ffffff;
+      transition: all 0.25s ease;
+    }
+    .input-luxury:focus {
+      outline: none;
+      border-color: #e8c468;
+      box-shadow: 0 0 0 3px rgba(232, 196, 104, 0.16);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #05130e; }
+    ::-webkit-scrollbar-thumb { background: rgba(232, 196, 104, 0.28); border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(232, 196, 104, 0.55); }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.55; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.15); }
+    }
+    .live-dot { animation: pulseGlow 2s infinite ease-in-out; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col lg:flex-row selection:bg-[#e8c468] selection:text-[#05130e]">
+
+  <!-- LEFT EXECUTIVE SIDEBAR (CLEAN CATEGORIZED MENU — NO NUMBERS) -->
+  <aside class="w-full lg:w-[290px] bg-[#04100b]/95 backdrop-blur-2xl border-b lg:border-b-0 lg:border-r border-[#e8c468]/20 p-5 flex flex-col justify-between shrink-0 lg:h-screen lg:sticky lg:top-0 overflow-y-auto z-30">
+    <div>
+      <!-- Brand Header -->
+      <div class="flex items-center justify-between mb-6 pb-5 border-b border-[#e8c468]/15">
+        <a href="/" class="flex items-center gap-3.5 group">
+          <div class="w-11 h-11 rounded-2xl border border-[#e8c468]/50 flex items-center justify-center bg-gradient-to-br from-[#123829] to-[#071912] shadow-lg shadow-[#e8c468]/10 group-hover:scale-105 group-hover:border-[#e8c468] transition">
+            <svg class="w-5 h-5 text-[#e8c468]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="font-serif-luxury text-2xl font-bold tracking-wider text-white block leading-none">CLEANORA<span class="text-[#e8c468] text-sm align-top">®</span></span>
+            <span class="text-[9px] uppercase tracking-[0.24em] text-[#e8c468]/85 font-semibold mt-1 block">Executive Command</span>
+          </div>
+        </a>
+        <span class="px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-[10px] text-emerald-300 font-semibold flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 live-dot"></span> Live
+        </span>
+      </div>
+
+      <!-- Navigation Groups (Zero Numbering) -->
+      <nav class="space-y-5 text-xs" id="adminNav">
+        <!-- Group: Executive Overview -->
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[#e8c468]/70 font-semibold px-3 mb-2">Overview & Insights</p>
+          <div class="space-y-1">
+            <button onclick="switchModule('dashboard')" data-mod="dashboard" class="nav-btn active w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="layout-dashboard" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Dashboard & Analytics</span>
+              </span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5 opacity-60"></i>
+            </button>
+            <button onclick="switchModule('calendar')" data-mod="calendar" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="calendar-range" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Calendar & Scheduling</span>
+              </span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] bg-emerald-500/15 text-emerald-300 border border-emerald-500/25">12 Today</span>
+            </button>
+            <button onclick="switchModule('jobs')" data-mod="jobs" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="briefcase" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Jobs & Assignments</span>
+              </span>
+              <span id="badgeJobs" class="px-2 py-0.5 rounded-full text-[10px] bg-[#e8c468]/20 text-[#e8c468] font-bold">2</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Group: People & Operations -->
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[#e8c468]/70 font-semibold px-3 mb-2">People & Properties</p>
+          <div class="space-y-1">
+            <button onclick="switchModule('customers')" data-mod="customers" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="users" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Customers CRM</span>
+              </span>
+            </button>
+            <button onclick="switchModule('staff')" data-mod="staff" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="user-check" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Staff Management</span>
+              </span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] bg-[#e8c468]/15 text-[#e8c468]">24 Active</span>
+            </button>
+            <button onclick="switchModule('properties')" data-mod="properties" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="key-round" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Properties & Key Vault</span>
+              </span>
+            </button>
+            <button onclick="switchModule('inventory')" data-mod="inventory" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="package-check" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Eco Supply Inventory</span>
+              </span>
+            </button>
+            <button onclick="switchModule('hours')" data-mod="hours" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="clock-4" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Working Hours & Payroll</span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Group: Communications & Finance -->
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[#e8c468]/70 font-semibold px-3 mb-2">Finance & Configuration</p>
+          <div class="space-y-1">
+            <button onclick="switchModule('messages')" data-mod="messages" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="mail" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Concierge Messages</span>
+              </span>
+              <span id="badgeMessages" class="px-2 py-0.5 rounded-full text-[10px] bg-emerald-500/20 text-emerald-300 font-bold">2</span>
+            </button>
+            <button onclick="switchModule('reports')" data-mod="reports" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="line-chart" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Financial & ESG Reports</span>
+              </span>
+            </button>
+            <button onclick="switchModule('pricing')" data-mod="pricing" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="Sliders" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Services & Pricing</span>
+              </span>
+            </button>
+            <button onclick="switchModule('payments')" data-mod="payments" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="credit-card" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Payments & Invoices</span>
+              </span>
+            </button>
+            <button onclick="switchModule('reviews')" data-mod="reviews" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="star" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Client Reviews</span>
+              </span>
+              <span class="text-[10px] text-[#e8c468] font-bold">4.9★</span>
+            </button>
+            <button onclick="switchModule('settings')" data-mod="settings" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="shield-check" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Settings & Permissions</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Bottom Quick Switcher & Sign Out -->
+    <div class="pt-5 mt-6 border-t border-[#e8c468]/15 space-y-3">
+      <div class="p-3 rounded-2xl bg-gradient-to-r from-[#0c291e] to-[#081d15] border border-[#e8c468]/25">
+        <p class="text-[10px] uppercase tracking-widest text-[#e8c468] font-semibold mb-2">Workspace Switcher</p>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <a href="/customer" class="py-1.5 px-2.5 rounded-lg bg-[#05130e]/80 border border-[#e8c468]/20 hover:border-[#e8c468] text-center text-gray-200 hover:text-[#e8c468] transition">Customer View</a>
+          <a href="/staff" class="py-1.5 px-2.5 rounded-lg bg-[#05130e]/80 border border-[#e8c468]/20 hover:border-[#e8c468] text-center text-gray-200 hover:text-[#e8c468] transition">Staff View</a>
+        </div>
+      </div>
+      <button onclick="logout()" class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-red-400/25 text-red-300 hover:bg-red-500/15 hover:border-red-400/50 text-xs font-semibold transition">
+        <i data-lucide="log-out" class="w-3.5 h-3.5"></i> Sign Out of Command Suite
+      </button>
+    </div>
+  </aside>
+
+  <!-- MAIN EXECUTIVE WORKSPACE -->
+  <main class="flex-1 p-6 lg:p-10 overflow-y-auto">
+
+    <!-- Top Glassmorphic Command Header -->
+    <div class="luxury-card rounded-3xl p-5 sm:p-6 mb-8 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <div class="hidden sm:flex w-12 h-12 rounded-2xl bg-gradient-to-br from-[#e8c468]/25 to-[#e8c468]/5 border border-[#e8c468]/40 items-center justify-center">
+          <i data-lucide="sparkles" class="w-6 h-6 text-[#e8c468]"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] uppercase tracking-[0.24em] text-[#e8c468] font-semibold">Prague Headquarters • Operations Live</span>
+          </div>
+          <h1 class="font-serif-luxury text-3xl sm:text-4xl text-white mt-0.5" id="moduleTitle">
+            Executive <span class="italic gold-gradient-text">Overview & Analytics</span>
+          </h1>
+        </div>
+      </div>
+
+      <!-- Search, Quick Dispatch & Executive Profile -->
+      <div class="flex flex-wrap items-center gap-3">
+        <div class="relative hidden xl:block">
+          <i data-lucide="search" class="w-4 h-4 text-[#e8c468] absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+          <input type="text" placeholder="Search bookings, clients, keys..." class="input-luxury pl-10 pr-4 py-2.5 rounded-full text-xs w-64" oninput="quickSearch(this.value)" />
+        </div>
+
+        <a href="/book" class="btn-gold px-5 py-2.5 rounded-full text-xs font-bold flex items-center gap-2">
+          <i data-lucide="plus-circle" class="w-4 h-4"></i> New Dispatch
+        </a>
+
+        <div class="flex items-center gap-3 bg-[#061610] border border-[#e8c468]/30 rounded-full pl-2 pr-4 py-1.5 hover:border-[#e8c468] transition cursor-pointer">
+          <img src="/images/difference-pro.jpg" alt="Lucie Nováková" class="w-8 h-8 rounded-full object-cover border border-[#e8c468]" />
+          <div class="text-xs">
+            <p class="text-white font-semibold leading-none" id="adminName">Lucie Nováková</p>
+            <p class="text-[10px] text-[#e8c468] mt-0.5">Founder & Operations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         MODULE: DASHBOARD & ANALYTICS
+         ========================================== -->
+    <section id="mod-dashboard" class="admin-mod space-y-7">
+
+      <!-- Hero Welcome Banner with Interior Photography -->
+      <div class="relative rounded-3xl overflow-hidden border border-[#e8c468]/35 shadow-2xl">
+        <img src="/images/hero-interior.jpg" alt="CLEANORA Executive Suite" class="absolute inset-0 w-full h-full object-cover opacity-30 scale-105 transition duration-700 hover:scale-100" />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#04110c] via-[#071d14]/90 to-transparent"></div>
+        <div class="relative p-7 sm:p-9 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div class="max-w-xl space-y-2">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#e8c468]/15 border border-[#e8c468]/40 text-[#f3d88c] text-[11px] font-semibold">
+              <i data-lucide="award" class="w-3.5 h-3.5"></i> 98.6% On-Time Luxury Standard Today
+            </span>
+            <h2 class="font-serif-luxury text-3xl sm:text-4xl text-white leading-tight">
+              Welcome back, <span class="italic gold-gradient-text">Lucie.</span> Every Prague residence is on schedule.
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+              12 luxury residential and commercial cleanings are active across Prague 1, Vinohrady, and Karlín today.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <button onclick="switchModule('jobs')" class="btn-gold px-5 py-3 rounded-full text-xs font-bold flex items-center gap-2">
+              <i data-lucide="briefcase" class="w-4 h-4"></i> Manage Live Bookings
+            </button>
+            <button onclick="switchModule('pricing')" class="px-5 py-3 rounded-full bg-[#071912]/90 border border-[#e8c468]/40 hover:border-[#e8c468] text-xs font-semibold text-[#f3d88c] transition flex items-center gap-2">
+              <i data-lucide="sliders" class="w-4 h-4"></i> Configure Pricing
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Interactive KPI Cards with Sparklines & Hover Lift -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+        <!-- KPI 1 -->
+        <div class="luxury-card rounded-2xl p-6 group">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <p class="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">Monthly Revenue</p>
+              <h3 class="font-serif-luxury text-4xl font-bold text-white mt-1">€48,920</h3>
+            </div>
+            <div class="w-11 h-11 rounded-2xl bg-[#e8c468]/15 border border-[#e8c468]/35 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#e8c468] group-hover:text-[#05130e] transition">
+              <i data-lucide="trending-up" class="w-5 h-5 text-[#e8c468] group-hover:text-[#05130e]"></i>
+            </div>
+          </div>
+          <svg class="w-full h-10 stroke-[#e8c468] fill-none" viewBox="0 0 200 45">
+            <path d="M0 38 Q 35 32, 60 24 T 120 18 T 165 8 T 200 4" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="flex items-center justify-between text-xs mt-2 pt-2 border-t border-white/5">
+            <span class="text-emerald-400 font-semibold flex items-center gap-1"><i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i> +18.4%</span>
+            <span class="text-gray-400">vs €41,310 last month</span>
+          </div>
+        </div>
+
+        <!-- KPI 2 -->
+        <div class="luxury-card rounded-2xl p-6 group cursor-pointer" onclick="switchModule('jobs')">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <p class="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">Completed & Active Jobs</p>
+              <h3 class="font-serif-luxury text-4xl font-bold text-white mt-1" id="kpiTotalBookings">142</h3>
+            </div>
+            <div class="w-11 h-11 rounded-2xl bg-emerald-500/15 border border-emerald-400/35 flex items-center justify-center group-hover:scale-110 transition">
+              <i data-lucide="calendar-check-2" class="w-5 h-5 text-emerald-300"></i>
+            </div>
+          </div>
+          <svg class="w-full h-10 stroke-emerald-400 fill-none" viewBox="0 0 200 45">
+            <path d="M0 35 Q 45 20, 85 25 T 145 12 T 200 6" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="flex items-center justify-between text-xs mt-2 pt-2 border-t border-white/5">
+            <span class="text-[#e8c468] font-semibold">12 Dispatched Today</span>
+            <span class="text-gray-400 underline group-hover:text-white">View Queue →</span>
+          </div>
+        </div>
+
+        <!-- KPI 3 -->
+        <div class="luxury-card rounded-2xl p-6 group cursor-pointer" onclick="switchModule('staff')">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <p class="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">Vetted Specialists</p>
+              <h3 class="font-serif-luxury text-4xl font-bold text-white mt-1">24 <span class="text-lg text-gray-400 font-normal">/ 28</span></h3>
+            </div>
+            <div class="w-11 h-11 rounded-2xl bg-[#e8c468]/15 border border-[#e8c468]/35 flex items-center justify-center group-hover:scale-110 transition">
+              <i data-lucide="users" class="w-5 h-5 text-[#e8c468]"></i>
+            </div>
+          </div>
+          <div class="flex -space-x-2 my-2.5">
+            <img src="/images/difference-pro.jpg" class="w-8 h-8 rounded-full object-cover border-2 border-[#071912]" alt="Staff" />
+            <img src="/images/services-deep-gloves.jpg" class="w-8 h-8 rounded-full object-cover border-2 border-[#071912]" alt="Staff" />
+            <img src="/images/hero-interior.jpg" class="w-8 h-8 rounded-full object-cover border-2 border-[#071912]" alt="Staff" />
+            <div class="w-8 h-8 rounded-full bg-[#e8c468] text-[#05130e] font-bold text-[10px] flex items-center justify-center border-2 border-[#071912]">+21</div>
+          </div>
+          <div class="flex items-center justify-between text-xs mt-2 pt-2 border-t border-white/5">
+            <span class="text-emerald-400 font-semibold">98.6% Punctuality</span>
+            <span class="text-gray-400">GPS Verified</span>
+          </div>
+        </div>
+
+        <!-- KPI 4 -->
+        <div class="luxury-card rounded-2xl p-6 group cursor-pointer" onclick="switchModule('reviews')">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <p class="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">Client Satisfaction</p>
+              <h3 class="font-serif-luxury text-4xl font-bold text-white mt-1">4.94 <span class="text-xl text-[#e8c468]">★</span></h3>
+            </div>
+            <div class="w-11 h-11 rounded-2xl bg-[#e8c468]/15 border border-[#e8c468]/35 flex items-center justify-center group-hover:scale-110 transition">
+              <i data-lucide="heart-handshake" class="w-5 h-5 text-[#e8c468]"></i>
+            </div>
+          </div>
+          <div class="w-full bg-[#04100b] h-2.5 rounded-full overflow-hidden my-3 border border-[#e8c468]/20">
+            <div class="bg-gradient-to-r from-[#f3d88c] to-[#cfa341] h-full w-[98%]"></div>
+          </div>
+          <div class="flex items-center justify-between text-xs mt-2 pt-2 border-t border-white/5">
+            <span class="text-[#e8c468] font-semibold">1,240+ Verified Reviews</span>
+            <span class="text-emerald-300">0 Escalations</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Revenue Trajectory Chart & Top Specialists Leaderboard -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Left 2 Cols: Interactive Revenue Trajectory & Category Mix -->
+        <div class="lg:col-span-2 luxury-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+              <div>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-[#e8c468] font-semibold">Financial Performance</span>
+                <h3 class="font-serif-luxury text-2xl sm:text-3xl text-white mt-0.5">Revenue & Booking Growth</h3>
+              </div>
+              <div class="flex items-center gap-1.5 bg-[#05130e] p-1 rounded-full border border-[#e8c468]/25 text-xs">
+                <button class="px-3 py-1 rounded-full bg-[#e8c468] text-[#05130e] font-bold">Monthly</button>
+                <button class="px-3 py-1 rounded-full text-gray-300 hover:text-white">Quarterly</button>
+                <button class="px-3 py-1 rounded-full text-gray-300 hover:text-white">Annual</button>
+              </div>
+            </div>
+
+            <!-- Interactive Bar Visual Chart -->
+            <div class="grid grid-cols-6 gap-3 sm:gap-5 items-end h-44 pt-6 pb-2 px-2 border-b border-[#e8c468]/15">
+              <div class="flex flex-col items-center gap-2 group cursor-pointer">
+                <span class="text-[10px] text-[#e8c468] opacity-0 group-hover:opacity-100 transition font-bold">€31.2k</span>
+                <div class="w-full max-w-[44px] h-20 rounded-t-xl bg-gradient-to-t from-[#0f3526] to-[#e8c468]/50 group-hover:to-[#e8c468] transition-all duration-300"></div>
+                <span class="text-[11px] text-gray-400">Jun</span>
+              </div>
+              <div class="flex flex-col items-center gap-2 group cursor-pointer">
+                <span class="text-[10px] text-[#e8c468] opacity-0 group-hover:opacity-100 transition font-bold">€34.8k</span>
+                <div class="w-full max-w-[44px] h-24 rounded-t-xl bg-gradient-to-t from-[#0f3526] to-[#e8c468]/55 group-hover:to-[#e8c468] transition-all duration-300"></div>
+                <span class="text-[11px] text-gray-400">Jul</span>
+              </div>
+              <div class="flex flex-col items-center gap-2 group cursor-pointer">
+                <span class="text-[10px] text-[#e8c468] opacity-0 group-hover:opacity-100 transition font-bold">€37.9k</span>
+                <div class="w-full max-w-[44px] h-28 rounded-t-xl bg-gradient-to-t from-[#0f3526] to-[#e8c468]/65 group-hover:to-[#e8c468] transition-all duration-300"></div>
+                <span class="text-[11px] text-gray-400">Aug</span>
+              </div>
+              <div class="flex flex-col items-center gap-2 group cursor-pointer">
+                <span class="text-[10px] text-[#e8c468] opacity-0 group-hover:opacity-100 transition font-bold">€40.1k</span>
+                <div class="w-full max-w-[44px] h-32 rounded-t-xl bg-gradient-to-t from-[#0f3526] to-[#e8c468]/75 group-hover:to-[#e8c468] transition-all duration-300"></div>
+                <span class="text-[11px] text-gray-400">Sep</span>
+              </div>
+              <div class="flex flex-col items-center gap-2 group cursor-pointer">
+                <span class="text-[10px] text-[#e8c468] opacity-0 group-hover:opacity-100 transition font-bold">€43.5k</span>
+                <div class="w-full max-w-[44px] h-36 rounded-t-xl bg-gradient-to-t from-[#0f3526] to-[#e8c468]/85 group-hover:to-[#e8c468] transition-all duration-300"></div>
+                <span class="text-[11px] text-gray-400">Oct</span>
+              </div>
+              <div class="flex flex-col items-center gap-2 group cursor-pointer">
+                <span class="text-[10px] text-[#f3d88c] font-bold">€48.9k</span>
+                <div class="w-full max-w-[44px] h-40 rounded-t-xl bg-gradient-to-t from-[#cfa341] to-[#fae5a5] shadow-lg shadow-[#e8c468]/30"></div>
+                <span class="text-[11px] text-[#e8c468] font-bold">Nov</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Category Revenue Pills -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-5 text-xs">
+            <div class="p-3 rounded-2xl bg-[#05130e]/70 border border-[#e8c468]/20">
+              <p class="text-gray-400 text-[11px]">Home & Standard</p>
+              <p class="text-white font-bold text-base mt-0.5">€22,503 <span class="text-[10px] text-[#e8c468]">(46%)</span></p>
+            </div>
+            <div class="p-3 rounded-2xl bg-[#05130e]/70 border border-[#e8c468]/20">
+              <p class="text-gray-400 text-[11px]">Deep Cleaning</p>
+              <p class="text-white font-bold text-base mt-0.5">€15,165 <span class="text-[10px] text-emerald-300">(31%)</span></p>
+            </div>
+            <div class="p-3 rounded-2xl bg-[#05130e]/70 border border-[#e8c468]/20">
+              <p class="text-gray-400 text-[11px]">Commercial</p>
+              <p class="text-white font-bold text-base mt-0.5">€7,338 <span class="text-[10px] text-[#e8c468]">(15%)</span></p>
+            </div>
+            <div class="p-3 rounded-2xl bg-[#05130e]/70 border border-[#e8c468]/20">
+              <p class="text-gray-400 text-[11px]">Move-In / Out</p>
+              <p class="text-white font-bold text-base mt-0.5">€3,914 <span class="text-[10px] text-amber-300">(8%)</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Col: Top Specialists & Live Dispatch Pulse -->
+        <div class="luxury-card rounded-3xl p-6 sm:p-7 flex flex-col justify-between space-y-6">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-[#e8c468] font-semibold">Excellence Board</span>
+                <h3 class="font-serif-luxury text-2xl text-white">Top Specialists</h3>
+              </div>
+              <button onclick="switchModule('staff')" class="text-xs text-[#e8c468] hover:underline">All Staff →</button>
+            </div>
+
+            <div class="space-y-3 text-xs">
+              <div class="p-3.5 rounded-2xl bg-[#05130e]/80 border border-[#e8c468]/25 hover:border-[#e8c468] transition flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img src="/images/difference-pro.jpg" class="w-10 h-10 rounded-xl object-cover border border-[#e8c468]" alt="Markéta" />
+                  <div>
+                    <p class="font-bold text-white">Markéta Svobodová</p>
+                    <p class="text-[11px] text-gray-400">Residential Lead • 64 Jobs</p>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-[#e8c468]/20 text-[#f3d88c] font-bold">4.98 ★</span>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-[#05130e]/80 border border-[#e8c468]/20 hover:border-[#e8c468] transition flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img src="/images/services-deep-gloves.jpg" class="w-10 h-10 rounded-xl object-cover border border-[#e8c468]/60" alt="Petr" />
+                  <div>
+                    <p class="font-bold text-white">Petr Dvořák</p>
+                    <p class="text-[11px] text-gray-400">Deep Clean Specialist • 52 Jobs</p>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-[#e8c468]/20 text-[#f3d88c] font-bold">4.95 ★</span>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-[#05130e]/80 border border-[#e8c468]/20 hover:border-[#e8c468] transition flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img src="/images/service-commercial.jpg" class="w-10 h-10 rounded-xl object-cover border border-[#e8c468]/60" alt="Tomáš" />
+                  <div>
+                    <p class="font-bold text-white">Tomáš Černý</p>
+                    <p class="text-[11px] text-gray-400">Commercial Lead • 48 Jobs</p>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-[#e8c468]/20 text-[#f3d88c] font-bold">4.92 ★</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-gradient-to-br from-[#103426] to-[#071a12] border border-[#e8c468]/35 text-xs space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-[#f3d88c] flex items-center gap-1.5"><i data-lucide="leaf" class="w-4 h-4"></i> Eco-Botanical Impact</span>
+              <span class="text-[10px] uppercase tracking-wider text-emerald-300">100% Non-Toxic</span>
+            </div>
+            <p class="text-gray-300 leading-relaxed">420L of single-use plastic eliminated in 2026 across our Prague client residences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE: CALENDAR & SCHEDULING
+         ========================================== -->
+    <section id="mod-calendar" class="admin-mod hidden space-y-6">
+      <div class="luxury-card rounded-3xl p-6 sm:p-8">
+        <div class="flex flex-wrap justify-between items-center gap-4 mb-6">
+          <div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-[#e8c468] font-semibold">Prague Dispatch Board</span>
+            <h3 class="font-serif-luxury text-3xl text-white mt-0.5">Weekly Specialist Schedule</h3>
+          </div>
+          <div class="flex flex-wrap items-center gap-3 text-xs">
+            <span class="px-3 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300">● Confirmed Dispatch</span>
+            <span class="px-3 py-1.5 rounded-full bg-[#e8c468]/15 border border-[#e8c468]/30 text-[#f3d88c]">● VIP Priority</span>
+            <a href="/book" class="btn-gold px-4 py-2 rounded-full font-bold">+ Schedule Slot</a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 space-y-3">
+            <div class="flex justify-between items-center border-b border-[#e8c468]/15 pb-2.5">
+              <span class="font-bold text-white">Monday</span>
+              <span class="text-[#e8c468] font-semibold">16 Nov</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-gradient-to-br from-emerald-950/90 to-[#071912] border border-emerald-400/35 hover:border-[#e8c468] transition cursor-pointer space-y-1.5">
+              <span class="text-[10px] text-emerald-300 font-semibold">09:00 – 13:00</span>
+              <p class="font-bold text-white text-sm">Pařížská 18 Penthouse</p>
+              <p class="text-gray-300">Deep Clean + Windows</p>
+              <p class="text-[#e8c468] font-medium pt-1">Team Markéta S.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-[#092118] border border-[#e8c468]/30 hover:border-[#e8c468] transition cursor-pointer space-y-1.5">
+              <span class="text-[10px] text-[#e8c468] font-semibold">14:00 – 17:00</span>
+              <p class="font-bold text-white text-sm">Vinohradská 44</p>
+              <p class="text-gray-300">Standard Home Clean</p>
+              <p class="text-[#e8c468] font-medium pt-1">Petr Dvořák</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 space-y-3">
+            <div class="flex justify-between items-center border-b border-[#e8c468]/15 pb-2.5">
+              <span class="font-bold text-white">Tuesday</span>
+              <span class="text-[#e8c468] font-semibold">17 Nov</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-[#092118] border border-[#e8c468]/30 hover:border-[#e8c468] transition cursor-pointer space-y-1.5">
+              <span class="text-[10px] text-[#e8c468] font-semibold">10:00 – 15:00</span>
+              <p class="font-bold text-white text-sm">Karlín River Lofts</p>
+              <p class="text-gray-300">Executive Commercial</p>
+              <p class="text-[#e8c468] font-medium pt-1">Team Tomáš Č.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 space-y-3">
+            <div class="flex justify-between items-center border-b border-[#e8c468]/15 pb-2.5">
+              <span class="font-bold text-white">Wednesday</span>
+              <span class="text-[#e8c468] font-semibold">18 Nov</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-gradient-to-br from-emerald-950/90 to-[#071912] border border-emerald-400/35 hover:border-[#e8c468] transition cursor-pointer space-y-1.5">
+              <span class="text-[10px] text-emerald-300 font-semibold">09:00 – 14:00</span>
+              <p class="font-bold text-white text-sm">Malá Strana Residence</p>
+              <p class="text-gray-300">Deep Clean + Marble Polish</p>
+              <p class="text-[#e8c468] font-medium pt-1">Team Markéta S.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 space-y-3">
+            <div class="flex justify-between items-center border-b border-[#e8c468]/15 pb-2.5">
+              <span class="font-bold text-white">Thursday</span>
+              <span class="text-[#e8c468] font-semibold">19 Nov</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-[#092118] border border-[#e8c468]/30 hover:border-[#e8c468] transition cursor-pointer space-y-1.5">
+              <span class="text-[10px] text-[#e8c468] font-semibold">11:00 – 16:00</span>
+              <p class="font-bold text-white text-sm">Letná Park Villa</p>
+              <p class="text-gray-300">Move-In Handover</p>
+              <p class="text-[#e8c468] font-medium pt-1">Petr D. + 2 Staff</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 space-y-3">
+            <div class="flex justify-between items-center border-b border-[#e8c468]/15 pb-2.5">
+              <span class="font-bold text-white">Friday</span>
+              <span class="text-[#e8c468] font-semibold">20 Nov</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-gradient-to-br from-emerald-950/90 to-[#071912] border border-emerald-400/35 hover:border-[#e8c468] transition cursor-pointer space-y-1.5">
+              <span class="text-[10px] text-emerald-300 font-semibold">08:30 – 12:30</span>
+              <p class="font-bold text-white text-sm">Diplomatic Quarter</p>
+              <p class="text-gray-300">VIP Weekly Residence</p>
+              <p class="text-[#e8c468] font-medium pt-1">Markéta Svobodová</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE: JOBS & ASSIGNMENTS
+         ========================================== -->
+    <section id="mod-jobs" class="admin-mod hidden space-y-6">
+      <div class="luxury-card rounded-3xl p-6 sm:p-8">
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+          <div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-[#e8c468] font-semibold">Real-Time Dispatch Queue</span>
+            <h3 class="font-serif-luxury text-3xl text-white mt-0.5">Live Bookings & Specialist Assignments</h3>
+          </div>
+          <div class="flex items-center gap-3">
+            <button onclick="loadAdminBookings()" class="px-4 py-2 rounded-full border border-[#e8c468]/35 text-xs text-[#e8c468] hover:bg-[#e8c468]/15 transition flex items-center gap-1.5">
+              <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Sync Bookings
+            </button>
+            <a href="/book" class="btn-gold px-4 py-2 rounded-full text-xs font-bold">+ Create Booking</a>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead>
+              <tr class="border-b border-[#e8c468]/25 text-[#e8c468] uppercase tracking-wider text-[11px]">
+                <th class="py-3.5 px-4">Booking Ref</th>
+                <th class="py-3.5 px-4">Client & Residence</th>
+                <th class="py-3.5 px-4">Service & Add-Ons</th>
+                <th class="py-3.5 px-4">Schedule</th>
+                <th class="py-3.5 px-4">Total</th>
+                <th class="py-3.5 px-4">Assigned Specialist</th>
+                <th class="py-3.5 px-4">Status</th>
+              </tr>
+            </thead>
+            <tbody id="adminJobsTable" class="divide-y divide-[#e8c468]/10"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE: CUSTOMERS CRM
+         ========================================== -->
+    <section id="mod-customers" class="admin-mod hidden space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="luxury-card rounded-3xl p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-2xl bg-[#e8c468]/20 border border-[#e8c468]/50 flex items-center justify-center font-serif-luxury text-xl font-bold text-[#f3d88c]">KH</div>
+              <div>
+                <h4 class="font-bold text-white text-base">Klára Horáková</h4>
+                <p class="text-xs text-gray-400">Pařížská 18, Praha 1</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-[#e8c468]/20 border border-[#e8c468]/40 text-[#f3d88c] text-[10px] font-bold">DIAMOND VIP</span>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-[#05130e]/80 border border-white/5 text-xs space-y-1.5">
+            <p class="text-gray-300"><span class="text-gray-500">Email:</span> customer@cleanora.cz</p>
+            <p class="text-gray-300"><span class="text-gray-500">Phone:</span> +420 602 118 900</p>
+            <p class="text-gray-300"><span class="text-gray-500">Preference:</span> Lavender botanical mist, morning slot</p>
+          </div>
+          <div class="flex items-center justify-between pt-2 text-xs">
+            <span class="text-emerald-300 font-semibold">14 Cleanings • €1,680 LTV</span>
+            <a href="/book" class="text-[#e8c468] hover:underline font-semibold">Book Visit →</a>
+          </div>
+        </div>
+
+        <div class="luxury-card rounded-3xl p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center font-serif-luxury text-xl font-bold text-emerald-300">MN</div>
+              <div>
+                <h4 class="font-bold text-white text-base">Martin Navrátil</h4>
+                <p class="text-xs text-gray-400">Vinohradská 112, Praha 2</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold">BI-WEEKLY</span>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-[#05130e]/80 border border-white/5 text-xs space-y-1.5">
+            <p class="text-gray-300"><span class="text-gray-500">Email:</span> m.navratil@atelier-prague.cz</p>
+            <p class="text-gray-300"><span class="text-gray-500">Phone:</span> +420 777 402 119</p>
+            <p class="text-gray-300"><span class="text-gray-500">Preference:</span> Pet-safe floor care, Nuki smart lock</p>
+          </div>
+          <div class="flex items-center justify-between pt-2 text-xs">
+            <span class="text-emerald-300 font-semibold">8 Cleanings • €920 LTV</span>
+            <a href="/book" class="text-[#e8c468] hover:underline font-semibold">Book Visit →</a>
+          </div>
+        </div>
+
+        <div class="luxury-card rounded-3xl p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-2xl bg-[#e8c468]/20 border border-[#e8c468]/50 flex items-center justify-center font-serif-luxury text-xl font-bold text-[#f3d88c]">VC</div>
+              <div>
+                <h4 class="font-bold text-white text-base">Vltava Capital s.r.o.</h4>
+                <p class="text-xs text-gray-400">Rohanské nábřeží 670, Karlín</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-[#e8c468]/20 text-[#f3d88c] text-[10px] font-bold">CORPORATE</span>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-[#05130e]/80 border border-white/5 text-xs space-y-1.5">
+            <p class="text-gray-300"><span class="text-gray-500">Email:</span> facilities@vltavacapital.cz</p>
+            <p class="text-gray-300"><span class="text-gray-500">Phone:</span> +420 224 900 111</p>
+            <p class="text-gray-300"><span class="text-gray-500">Schedule:</span> Mon/Wed/Fri after 18:30</p>
+          </div>
+          <div class="flex items-center justify-between pt-2 text-xs">
+            <span class="text-emerald-300 font-semibold">26 Cleanings • €4,910 LTV</span>
+            <a href="/book" class="text-[#e8c468] hover:underline font-semibold">Book Visit →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE: STAFF MANAGEMENT
+         ========================================== -->
+    <section id="mod-staff" class="admin-mod hidden space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <!-- Specialist Card 1 -->
+          <div class="luxury-card rounded-3xl p-6 space-y-4">
+            <div class="flex items-center gap-4">
+              <img src="/images/difference-pro.jpg" class="w-16 h-16 rounded-2xl object-cover border-2 border-[#e8c468]" alt="Markéta" />
+              <div>
+                <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-semibold">● On Active Shift</span>
+                <h4 class="font-serif-luxury text-2xl text-white mt-1">Markéta Svobodová</h4>
+                <p class="text-xs text-[#e8c468]">Team Lead — Luxury Residential</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 pt-2 text-center text-xs">
+              <div class="p-2.5 rounded-xl bg-[#05130e]/80"><p class="text-gray-400 text-[10px]">Rating</p><p class="font-bold text-[#e8c468]">4.98 ★</p></div>
+              <div class="p-2.5 rounded-xl bg-[#05130e]/80"><p class="text-gray-400 text-[10px]">Completed</p><p class="font-bold text-white">312</p></div>
+              <div class="p-2.5 rounded-xl bg-[#05130e]/80"><p class="text-gray-400 text-[10px]">Vetting</p><p class="font-bold text-emerald-300">Verified</p></div>
+            </div>
+          </div>
+
+          <!-- Specialist Card 2 -->
+          <div class="luxury-card rounded-3xl p-6 space-y-4">
+            <div class="flex items-center gap-4">
+              <img src="/images/services-deep-gloves.jpg" class="w-16 h-16 rounded-2xl object-cover border-2 border-[#e8c468]/60" alt="Petr" />
+              <div>
+                <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-semibold">● On Active Shift</span>
+                <h4 class="font-serif-luxury text-2xl text-white mt-1">Petr Dvořák</h4>
+                <p class="text-xs text-[#e8c468]">Service Manager — Deep Clean</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 pt-2 text-center text-xs">
+              <div class="p-2.5 rounded-xl bg-[#05130e]/80"><p class="text-gray-400 text-[10px]">Rating</p><p class="font-bold text-[#e8c468]">4.95 ★</p></div>
+              <div class="p-2.5 rounded-xl bg-[#05130e]/80"><p class="text-gray-400 text-[10px]">Completed</p><p class="font-bold text-white">284</p></div>
+              <div class="p-2.5 rounded-xl bg-[#05130e]/80"><p class="text-gray-400 text-[10px]">Vetting</p><p class="font-bold text-emerald-300">Verified</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Staff Invite Code Generator -->
+        <div class="luxury-card rounded-3xl p-6 sm:p-7 flex flex-col justify-between space-y-5">
+          <div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-[#e8c468] font-semibold">Role-Based Onboarding</span>
+            <h4 class="font-serif-luxury text-2xl text-white mt-1">Staff Invitation Token</h4>
+            <p class="text-xs text-gray-300 mt-1 leading-relaxed">
+              New specialists require this invitation token to register under the **Staff** role on `/login`.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-[#05130e] border border-[#e8c468]/40 text-center space-y-1">
+            <p class="text-[10px] uppercase tracking-widest text-gray-400">Active Invitation Code</p>
+            <p class="font-mono text-2xl font-bold text-[#e8c468] tracking-wider" id="staffInviteCodeDisplay">STAFF-2026</p>
+          </div>
+          <button onclick="generateInviteCode()" class="btn-gold w-full py-3 rounded-full text-xs font-bold flex items-center justify-center gap-2">
+            <i data-lucide="key-round" class="w-4 h-4"></i> Generate New Invite Token
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE: PROPERTIES & KEY VAULT
+         ========================================== -->
+    <section id="mod-properties" class="admin-mod hidden space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="luxury-card rounded-3xl p-6 space-y-4">
+          <div class="flex justify-between items-start">
+            <div>
+              <span class="px-2.5 py-1 rounded-full bg-[#e8c468]/20 text-[#f3d88c] text-[10px] font-bold">KEY TAG #KV-104</span>
+              <h4 class="font-serif-luxury text-2xl text-white mt-2">Pařížská 18 — Penthouse 4B</h4>
+              <p class="text-xs text-gray-400">165 m² • Calacatta Marble & Brass Fixtures</p>
+            </div>
+            <i data-lucide="shield-lock" class="w-6 h-6 text-[#e8c468]"></i>
+          </div>
+          <div class="p-4 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/20 text-xs space-y-2 text-gray-300">
+            <p><strong class="text-white">Access Protocol:</strong> 24/7 Concierge Desk sign-in + biometric lift key.</p>
+            <p><strong class="text-white">Surface Care Note:</strong> Use strictly pH-neutral CLEANORA® Botanical Mist on kitchen stone islands.</p>
+          </div>
+        </div>
+
+        <div class="luxury-card rounded-3xl p-6 space-y-4">
+          <div class="flex justify-between items-start">
+            <div>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold">KEY TAG #KV-209</span>
+              <h4 class="font-serif-luxury text-2xl text-white mt-2">Vinohradská 112 — Residence</h4>
+              <p class="text-xs text-gray-400">210 m² • Herringbone Oak Parquet</p>
+            </div>
+            <i data-lucide="key-round" class="w-6 h-6 text-[#e8c468]"></i>
+          </div>
+          <div class="p-4 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/20 text-xs space-y-2 text-gray-300">
+            <p><strong class="text-white">Access Protocol:</strong> Nuki Smart Lock time-limited PIN issued to assigned specialist.</p>
+            <p><strong class="text-white">Household Note:</strong> Friendly Golden Retriever indoors; keep terrace door latched.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE: ECO INVENTORY
+         ========================================== -->
+    <section id="mod-inventory" class="admin-mod hidden space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="luxury-card rounded-3xl p-6 space-y-4">
+          <img src="/images/services-hero-bottle.jpg" class="w-full h-36 object-cover rounded-2xl border border-[#e8c468]/30" alt="Botanical Spray" />
+          <div class="flex justify-between items-center">
+            <h4 class="font-bold text-white text-sm">CLEANORA® Botanical Surface Mist</h4>
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px]">Optimal</span>
+          </div>
+          <p class="font-serif-luxury text-3xl text-[#e8c468] font-bold">184 Bottles</p>
+          <div class="w-full h-2 rounded-full bg-[#05130e] overflow-hidden"><div class="h-full bg-emerald-400 w-[82%]"></div></div>
+        </div>
+
+        <div class="luxury-card rounded-3xl p-6 space-y-4">
+          <img src="/images/services-deep-gloves.jpg" class="w-full h-36 object-cover rounded-2xl border border-[#e8c468]/30" alt="Microfiber" />
+          <div class="flex justify-between items-center">
+            <h4 class="font-bold text-white text-sm">400 GSM Color-Coded Microfiber Sets</h4>
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px]">Sanitized</span>
+          </div>
+          <p class="font-serif-luxury text-3xl text-[#e8c468] font-bold">320 Sets</p>
+          <div class="w-full h-2 rounded-full bg-[#05130e] overflow-hidden"><div class="h-full bg-[#e8c468] w-[90%]"></div></div>
+        </div>
+
+        <div class="luxury-card rounded-3xl p-6 space-y-4">
+          <img src="/images/service-deep.jpg" class="w-full h-36 object-cover rounded-2xl border border-[#e8c468]/30" alt="HEPA Filters" />
+          <div class="flex justify-between items-center">
+            <h4 class="font-bold text-white text-sm">HEPA-14 Hospital-Grade Filters</h4>
+            <span class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 text-[10px]">Low Stock</span>
+          </div>
+          <p class="font-serif-luxury text-3xl text-amber-300 font-bold">14 Cartridges</p>
+          <button onclick="alert('Purchase order #PO-2026-88 dispatched to Prague Eco Supplier!')" class="btn-gold w-full py-2.5 rounded-full text-xs font-bold">Restock Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE: WORKING HOURS & PAYROLL
+         ========================================== -->
+    <section id="mod-hours" class="admin-mod hidden space-y-6">
+      <div class="luxury-card rounded-3xl p-6 sm:p-8 space-y-4">
+        <h3 class="font-serif-luxury text-3xl text-white mb-2">Verified Specialist Timesheets</h3>
+        <div class="space-y-3 text-xs">
+          <div class="p-4 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 flex flex-wrap justify-between items-center gap-4">
+            <div class="flex items-center gap-3.5">
+              <img src="/images/difference-pro.jpg" class="w-11 h-11 rounded-xl object-cover border border-[#e8c468]" alt="Markéta" />
+              <div>
+                <p class="font-bold text-white text-sm">Markéta Svobodová — Week 46</p>
+                <p class="text-gray-400">38.5 Verified Hours • 100% GPS Check-In Match</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="font-serif-luxury text-2xl font-bold text-[#e8c468]">€962.50</span>
+              <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold">Approved</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 flex flex-wrap justify-between items-center gap-4">
+            <div class="flex items-center gap-3.5">
+              <img src="/images/services-deep-gloves.jpg" class="w-11 h-11 rounded-xl object-cover border border-[#e8c468]" alt="Petr" />
+              <div>
+                <p class="font-bold text-white text-sm">Petr Dvořák — Week 46</p>
+                <p class="text-gray-400">40.0 Verified Hours • Deep Cleaning Lead</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="font-serif-luxury text-2xl font-bold text-[#e8c468]">€1,040.00</span>
+              <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold">Approved</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE: CONCIERGE MESSAGES
+         ========================================== -->
+    <section id="mod-messages" class="admin-mod hidden space-y-6">
+      <div class="luxury-card rounded-3xl p-6 sm:p-8">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-[#e8c468] font-semibold">Live Website Inquiries</span>
+            <h3 class="font-serif-luxury text-3xl text-white">Client Concierge Inbox</h3>
+          </div>
+          <button onclick="loadAdminMessages()" class="px-4 py-2 rounded-full border border-[#e8c468]/35 text-xs text-[#e8c468] hover:bg-[#e8c468]/15 transition">Refresh Inbox</button>
+        </div>
+        <div id="adminMessagesList" class="space-y-4 text-xs"></div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE: FINANCIAL & ESG REPORTS
+         ========================================== -->
+    <section id="mod-reports" class="admin-mod hidden space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="luxury-card rounded-3xl p-7 flex flex-col justify-between space-y-5">
+          <div>
+            <span class="px-3 py-1 rounded-full bg-[#e8c468]/20 text-[#f3d88c] text-[10px] font-bold">FINANCE & TAX</span>
+            <h4 class="font-serif-luxury text-3xl text-white mt-3">Monthly Revenue & VAT Ledger</h4>
+            <p class="text-xs text-gray-300 mt-2 leading-relaxed">Complete breakdown of residential packages, commercial contracts, and optional add-on revenue for November 2026.</p>
+          </div>
+          <button onclick="alert('Exported CLEANORA_Executive_Ledger_Nov2026.csv')" class="btn-gold px-6 py-3 rounded-full text-xs font-bold w-fit flex items-center gap-2">
+            <i data-lucide="download" class="w-4 h-4"></i> Download CSV Ledger
+          </button>
+        </div>
+
+        <div class="luxury-card rounded-3xl p-7 flex flex-col justify-between space-y-5">
+          <div>
+            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold">SUSTAINABILITY</span>
+            <h4 class="font-serif-luxury text-3xl text-white mt-3">Eco-Botanical ESG Impact Report</h4>
+            <p class="text-xs text-gray-300 mt-2 leading-relaxed">Certified audit of biodegradable cleaning agents, water conservation, and zero-plastic refill metrics.</p>
+          </div>
+          <button onclick="alert('Downloaded CLEANORA_ESG_Certificate_2026.pdf')" class="btn-gold px-6 py-3 rounded-full text-xs font-bold w-fit flex items-center gap-2">
+            <i data-lucide="file-check" class="w-4 h-4"></i> Download ESG PDF
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE: SERVICES & PRICING CONFIGURATOR
+         ========================================== -->
+    <section id="mod-pricing" class="admin-mod hidden space-y-6">
+      <div class="luxury-card rounded-3xl p-6 sm:p-8">
+        <div class="flex flex-wrap justify-between items-center gap-4 mb-6">
+          <div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-[#e8c468] font-semibold">Live Website Synchronization</span>
+            <h3 class="font-serif-luxury text-3xl text-white mt-0.5">Package Pricing Configurator</h3>
+            <p class="text-xs text-gray-300 mt-1">Updating these rates immediately updates `/pricing` and the `/book` calculator.</p>
+          </div>
+          <span id="pricingSaveStatus" class="px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-xs text-emerald-300 font-semibold hidden">
+            ✓ Live prices published to website!
+          </span>
+        </div>
+
+        <form id="pricingConfigForm" onsubmit="savePricingConfig(event)" class="space-y-6 text-xs">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/30 space-y-3">
+              <span class="text-[10px] uppercase tracking-widest text-gray-400">Essential Maintenance</span>
+              <h4 class="font-serif-luxury text-2xl text-white">Basic Clean (€ / visit)</h4>
+              <input type="number" id="cfgBasicPrice" value="59" class="input-luxury w-full px-4 py-3 rounded-xl text-xl font-bold text-[#e8c468]" />
+            </div>
+
+            <div class="p-6 rounded-2xl bg-gradient-to-b from-[#113828] to-[#06150f] border-2 border-[#e8c468] space-y-3 shadow-xl shadow-[#e8c468]/10">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#e8c468] text-[#05130e] text-[10px] font-bold">MOST POPULAR</span>
+              <h4 class="font-serif-luxury text-2xl text-white">Standard Clean (€ / visit)</h4>
+              <input type="number" id="cfgStandardPrice" value="89" class="input-luxury w-full px-4 py-3 rounded-xl text-xl font-bold text-[#e8c468]" />
+            </div>
+
+            <div class="p-6 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/30 space-y-3">
+              <span class="text-[10px] uppercase tracking-widest text-gray-400">Top-To-Bottom Detail</span>
+              <h4 class="font-serif-luxury text-2xl text-white">Deep Clean (€ / visit)</h4>
+              <input type="number" id="cfgDeepPrice" value="149" class="input-luxury w-full px-4 py-3 rounded-xl text-xl font-bold text-[#e8c468]" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn-gold px-7 py-3.5 rounded-full text-xs font-bold flex items-center gap-2">
+            <i data-lucide="save" class="w-4 h-4"></i> Save & Publish Live Pricing
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE: PAYMENTS & INVOICES
+         ========================================== -->
+    <section id="mod-payments" class="admin-mod hidden space-y-6">
+      <div class="luxury-card rounded-3xl p-6 sm:p-8 space-y-4">
+        <h3 class="font-serif-luxury text-3xl text-white mb-2">Client Transactions & Invoices</h3>
+        <div class="space-y-3 text-xs">
+          <div class="p-4 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 flex flex-wrap justify-between items-center gap-4">
+            <div>
+              <p class="font-bold text-white text-sm">INV-2026-0891 • Klára Horáková</p>
+              <p class="text-gray-400">Deep Cleaning + Oven & Window Add-ons • Apple Pay</p>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="font-serif-luxury text-2xl font-bold text-[#e8c468]">€204.00</span>
+              <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold">Paid</span>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 flex flex-wrap justify-between items-center gap-4">
+            <div>
+              <p class="font-bold text-white text-sm">INV-2026-0892 • Vltava Capital Offices</p>
+              <p class="text-gray-400">Monthly Executive Commercial Retainer • SEPA Transfer</p>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="font-serif-luxury text-2xl font-bold text-[#e8c468]">€1,290.00</span>
+              <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold">Paid</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE: CLIENT REVIEWS
+         ========================================== -->
+    <section id="mod-reviews" class="admin-mod hidden space-y-6">
+      <div class="luxury-card rounded-3xl p-6 sm:p-8 space-y-4">
+        <h3 class="font-serif-luxury text-3xl text-white mb-2">Verified Client Testimonials</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-xs">
+          <div class="p-5 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/30 space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-[#e8c468] font-bold text-sm">★★★★★ 5.0</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px]">Published on /reviews</span>
+            </div>
+            <p class="text-gray-200 italic leading-relaxed">“Our marble kitchen and brass fixtures have never looked this radiant. Truly hotel-grade care.”</p>
+            <p class="text-[#e8c468] font-semibold">— Elena Rostova, Vinohrady</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/30 space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-[#e8c468] font-bold text-sm">★★★★★ 5.0</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px]">Published on /reviews</span>
+            </div>
+            <p class="text-gray-200 italic leading-relaxed">“Punctual, discreet, and the botanical scent leaves our entire penthouse feeling like a spa.”</p>
+            <p class="text-[#e8c468] font-semibold">— Jakub Marek, Karlín</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE: SETTINGS & PERMISSIONS
+         ========================================== -->
+    <section id="mod-settings" class="admin-mod hidden space-y-6">
+      <div class="luxury-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.2em] text-[#e8c468] font-semibold">Enterprise Access Governance</span>
+          <h3 class="font-serif-luxury text-3xl text-white mt-0.5">Role-Based Security Matrix</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs">
+          <div class="p-5 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 space-y-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold">PUBLIC ROLE</span>
+            <h4 class="font-serif-luxury text-2xl text-white">Customer Portal</h4>
+            <p class="text-gray-300 leading-relaxed">Open registration on `/login`. Strictly scoped to own bookings, invoices, and property preferences.</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 space-y-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-[#e8c468]/20 text-[#f3d88c] text-[10px] font-bold">INVITE-ONLY</span>
+            <h4 class="font-serif-luxury text-2xl text-white">Staff Portal</h4>
+            <p class="text-gray-300 leading-relaxed">Requires `STAFF-2026` token. Scoped to assigned shifts, room checklists, and timesheet logs.</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 space-y-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-red-500/20 text-red-300 text-[10px] font-bold">RESTRICTED</span>
+            <h4 class="font-serif-luxury text-2xl text-white">Administrator Suite</h4>
+            <p class="text-gray-300 leading-relaxed">Public registration blocked. Full command over pricing, staff tokens, and financial ledgers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    lucide.createIcons();
+
+    const MODULE_TITLES = {
+      dashboard: 'Executive <span class="italic gold-gradient-text">Overview & Analytics</span>',
+      calendar: 'Prague Dispatch <span class="italic gold-gradient-text">Calendar & Schedule</span>',
+      jobs: 'Live Bookings & <span class="italic gold-gradient-text">Specialist Assignments</span>',
+      customers: 'Luxury Client <span class="italic gold-gradient-text">CRM Directory</span>',
+      staff: 'Vetted Specialists & <span class="italic gold-gradient-text">Onboarding</span>',
+      properties: 'Encrypted <span class="italic gold-gradient-text">Key Vault & Properties</span>',
+      inventory: 'Eco-Botanical <span class="italic gold-gradient-text">Supply Inventory</span>',
+      hours: 'Specialist <span class="italic gold-gradient-text">Timesheets & Payroll</span>',
+      messages: 'Client Concierge <span class="italic gold-gradient-text">Messages</span>',
+      reports: 'Financial & <span class="italic gold-gradient-text">ESG Sustainability Reports</span>',
+      pricing: 'Live Services & <span class="italic gold-gradient-text">Pricing Configurator</span>',
+      payments: 'Client <span class="italic gold-gradient-text">Payments & Invoices</span>',
+      reviews: 'Verified Client <span class="italic gold-gradient-text">Reviews Moderation</span>',
+      settings: 'Security & <span class="italic gold-gradient-text">Role Permissions</span>'
+    };
+
+    function switchModule(mod) {
+      document.querySelectorAll('.admin-mod').forEach(el => el.classList.add('hidden'));
+      const target = document.getElementById('mod-' + mod);
+      if (target) target.classList.remove('hidden');
+
+      document.querySelectorAll('#adminNav .nav-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.mod === mod);
+      });
+      document.getElementById('moduleTitle').innerHTML = MODULE_TITLES[mod] || 'Executive Command';
+      if (mod === 'jobs') loadAdminBookings();
+      if (mod === 'messages') loadAdminMessages();
+    }
+
+    async function loadAdminBookings() {
+      try {
+        const res = await fetch('/api/bookings');
+        const data = await res.json();
+        const bookings = data.bookings || [];
+        document.getElementById('kpiTotalBookings').textContent = bookings.length + 140;
+        document.getElementById('badgeJobs').textContent = bookings.length;
+        const tbody = document.getElementById('adminJobsTable');
+        tbody.innerHTML = bookings.map(b => `
+          <tr class="hover:bg-[#e8c468]/5 transition">
+            <td class="py-4 px-4 font-mono text-[#e8c468] font-bold">${b.reference}</td>
+            <td class="py-4 px-4">
+              <p class="font-bold text-white text-sm">${b.customerName || 'Klára Horáková'}</p>
+              <p class="text-gray-400">${b.address || 'Pařížská 18, Praha 1'}</p>
+            </td>
+            <td class="py-4 px-4">
+              <p class="font-semibold text-white">${b.serviceName}</p>
+              <p class="text-[11px] text-[#e8c468]">${(b.addons || []).join(', ') || 'Standard Botanical Kit'}</p>
+            </td>
+            <td class="py-4 px-4 text-gray-300">${b.date} • ${b.time}</td>
+            <td class="py-4 px-4 font-serif-luxury text-xl font-bold text-[#e8c468]">€${b.totalPrice}</td>
+            <td class="py-4 px-4">
+              <select class="input-luxury rounded-xl px-3 py-1.5 text-xs">
+                <option>${b.assignedStaff || 'Markéta Svobodová'}</option>
+                <option>Petr Dvořák</option>
+                <option>Tomáš Černý</option>
+              </select>
+            </td>
+            <td class="py-4 px-4">
+              <span class="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 font-semibold">${b.status || 'Confirmed'}</span>
+            </td>
+          </tr>
+        `).join('');
+      } catch (e) {}
+    }
+
+    async function loadAdminMessages() {
+      try {
+        const res = await fetch('/api/contact');
+        const data = await res.json();
+        const list = document.getElementById('adminMessagesList');
+        const items = data.messages || [];
+        document.getElementById('badgeMessages').textContent = items.length;
+        list.innerHTML = items.map(m => `
+          <div class="p-5 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 hover:border-[#e8c468] transition flex flex-wrap justify-between gap-4">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2.5">
+                <span class="font-bold text-white text-sm">${m.name}</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-[#e8c468]/15 text-[#e8c468] text-[10px] font-semibold">${m.service || 'Concierge Inquiry'}</span>
+              </div>
+              <p class="text-gray-400">${m.email} • ${m.phone || ''}</p>
+              <p class="text-gray-200 pt-1 leading-relaxed">${m.message}</p>
+            </div>
+            <span class="text-[11px] text-gray-400">${new Date(m.createdAt).toLocaleString()}</span>
+          </div>
+        `).join('');
+      } catch (e) {}
+    }
+
+    async function loadPricingConfig() {
+      try {
+        const res = await fetch('/data/site-config.json');
+        const cfg = await res.json();
+        if (cfg.packages) {
+          const basic = cfg.packages.find(p => p.id === 'basic');
+          const standard = cfg.packages.find(p => p.id === 'standard');
+          const deep = cfg.packages.find(p => p.id === 'deep');
+          if (basic) document.getElementById('cfgBasicPrice').value = basic.price;
+          if (standard) document.getElementById('cfgStandardPrice').value = standard.price;
+          if (deep) document.getElementById('cfgDeepPrice').value = deep.price;
+        }
+      } catch (e) {}
+    }
+
+    async function savePricingConfig(e) {
+      e.preventDefault();
+      const basic = Number(document.getElementById('cfgBasicPrice').value);
+      const standard = Number(document.getElementById('cfgStandardPrice').value);
+      const deep = Number(document.getElementById('cfgDeepPrice').value);
+      const res = await fetch('/api/config', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ basic, standard, deep })
+      });
+      if (res.ok) {
+        const st = document.getElementById('pricingSaveStatus');
+        st.classList.remove('hidden');
+        setTimeout(() => st.classList.add('hidden'), 4000);
+      }
+    }
+
+    function generateInviteCode() {
+      const code = 'STAFF-' + Math.floor(1000 + Math.random() * 9000);
+      document.getElementById('staffInviteCodeDisplay').textContent = code;
+    }
+
+    function quickSearch(q) {
+      if (q && q.length > 2) {
+        switchModule('jobs');
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem('cleanora_user');
+      window.location.href = '/login';
+    }
+
+    loadAdminBookings();
+    loadAdminMessages();
+    loadPricingConfig();
+  </script>
+</body>
+</html>

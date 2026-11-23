@@ -1,0 +1,9 @@
+node_modules
+node_modules/**
+.next
+src
+patch-fat32.js
+next.config.mjs
+postcss.config.mjs
+tsconfig.json
+.git

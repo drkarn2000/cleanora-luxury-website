@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Cleaning | CLEANORA® Luxury Cleaning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/hover-effects.css" />
+  <style>
+    :root {
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    body {
+      background-color: #081d15;
+      color: #f8f6f0;
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-serif-luxury {
+      font-family: var(--font-serif);
+    }
+    .btn-gold-luxury {
+      background: linear-gradient(135deg, #f3d88c 0%, #e4be62 48%, #d4a644 100%);
+      color: #0d2219;
+      box-shadow:
+        0 8px 28px -4px rgba(232, 196, 104, 0.42),
+        0 2px 10px rgba(232, 196, 104, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.65);
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .btn-gold-luxury:hover {
+      background: linear-gradient(135deg, #f7e1a0 0%, #ebc86e 50%, #dcaf4d 100%);
+      box-shadow:
+        0 12px 34px -4px rgba(232, 196, 104, 0.58),
+        0 4px 14px rgba(232, 196, 104, 0.35),
+        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+      transform: translateY(-1.5px);
+    }
+    .selected-card-glow {
+      border-color: #e8c468 !important;
+      box-shadow: 0 0 28px rgba(232, 196, 104, 0.25), inset 0 0 12px rgba(232, 196, 104, 0.08);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#081d15] text-[#f8f6f0] selection:bg-[#e8c468] selection:text-[#0b231b]">
+
+  <!-- =====================================================================
+       EXISTING UNTOUCHED HEADER / NAVIGATION
+       ===================================================================== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-[#0a1f18]/75 backdrop-blur-md border-b border-white/[0.08] py-4">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14 flex items-center justify-between">
+      <a href="/" class="group flex items-center gap-3.5 focus:outline-none">
+        <div class="relative w-11 h-11 flex items-center justify-center shrink-0">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11 transition-transform duration-500 group-hover:scale-105">
+            <defs>
+              <linearGradient id="cleanoraGoldGrad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#F5DF9E" />
+                <stop offset="50%" stop-color="#E4BE62" />
+                <stop offset="100%" stop-color="#C89B3C" />
+              </linearGradient>
+            </defs>
+            <path d="M11 38.5C6.8 34.8 4.2 29.4 4.2 23.4C4.2 12.4 13.1 3.5 24.1 3.5C35.1 3.5 44 12.4 44 23.4C44 33.6 36.3 42 26.4 43.2" stroke="url(#cleanoraGoldGrad)" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M16 7.8C18.5 6.6 21.2 6 24.1 6C33.7 6 41.5 13.8 41.5 23.4" stroke="url(#cleanoraGoldGrad)" stroke-width="0.75" stroke-opacity="0.55" stroke-linecap="round" />
+            <path d="M14.5 34.5C15.5 24.5 22.5 14.5 34.5 12.5C33.5 24.5 26.5 32.5 14.5 34.5Z" fill="url(#cleanoraGoldGrad)" fill-opacity="0.18" stroke="url(#cleanoraGoldGrad)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M11.5 38.5C15.5 33.5 21.5 25.5 29.5 17.5" stroke="url(#cleanoraGoldGrad)" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M15.2 33.5C12.2 31.2 11.8 27.2 13.8 24.2C16.2 26.2 16.8 30.2 15.2 33.5Z" fill="url(#cleanoraGoldGrad)" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-baseline">
+            <span class="font-serif-luxury text-[24px] sm:text-[26px] font-semibold tracking-[0.11em] text-white leading-none">CLEANORA</span>
+            <span class="text-[10px] text-[#e8c468] ml-0.5 font-sans align-top">®</span>
+          </div>
+          <span class="text-[8.5px] sm:text-[9px] tracking-[0.23em] uppercase text-[#d8d5cc]/75 font-medium mt-1">Professional Cleaning Services</span>
+        </div>
+      </a>
+
+      <nav class="hidden xl:flex items-center gap-8">
+        <a href="/" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Home</a>
+        <div class="relative group">
+          <a href="/services" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white flex items-center gap-1.5 transition-colors">
+            <span>Services</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-[#e8c468]/85"></i>
+          </a>
+          <div class="hidden group-hover:block absolute top-full left-0 pt-3 w-64 z-50">
+            <div class="bg-[#0c261d]/95 backdrop-blur-xl border border-[#e8c468]/25 rounded-2xl p-2 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Home Cleaning</a>
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Deep Cleaning</a>
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Commercial Cleaning</a>
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Move In / Move Out</a>
+            </div>
+          </div>
+        </div>
+        <a href="/pricing" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Pricing</a>
+        <a href="/about" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">About</a>
+        <a href="/gallery" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Gallery</a>
+        <a href="/reviews" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Reviews</a>
+        <a href="/contact" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:+420600123456" class="flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#0f2c22]/75 border border-white/[0.15] hover:border-[#e8c468]/45 text-[14px] text-[#f4f1ea] tracking-wide transition-all">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-[#e8c468]"></i>
+          <span>+420 600 123 456</span>
+        </a>
+        <a href="/login" class="px-4 py-2.5 rounded-full bg-white/[0.06] border border-[#e8c468]/35 text-[13.5px] text-[#f3d88c] hover:bg-white/[0.12] transition-colors">Sign In</a>
+        <a href="/book" class="btn-gold-luxury cursor-pointer flex items-center gap-2.5 px-6 py-2.5 rounded-full text-[14.5px] font-semibold">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book a Cleaning</span>
+        </a>
+      </div>
+
+      <div class="flex items-center gap-3 xl:hidden">
+        <button onclick="toggleMobileMenu()" aria-label="Menu" class="p-2.5 rounded-full bg-white/[0.06] border border-white/[0.14] text-[#f3d88c]">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden xl:hidden bg-[#0a2119]/98 backdrop-blur-2xl border-b border-[#e8c468]/20 px-6 pt-5 pb-8 space-y-4 mt-4">
+      <div class="flex flex-col space-y-2">
+        <a href="/" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Home</a>
+        <a href="/services" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Services</a>
+        <a href="/pricing" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Pricing</a>
+        <a href="/about" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">About</a>
+        <a href="/gallery" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Gallery</a>
+        <a href="/reviews" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Reviews</a>
+        <a href="/contact" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Contact</a>
+        <a href="/login" class="px-4 py-2.5 rounded-xl text-[#f3d88c] hover:bg-white/5">Login / Portals</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       1. BOOKING HERO & 2. 4-STEP BOOKING PROGRESS BAR
+       ===================================================================== -->
+  <section class="relative w-full pt-[92px] overflow-hidden bg-[#081d15] border-b border-[#e8c468]/20">
+    <div class="pointer-events-none absolute inset-0 z-0">
+      <img src="/images/services-hero-bottle.jpg" alt="CLEANORA Booking Hero" class="w-full h-full object-cover object-right opacity-95" />
+      <div class="absolute inset-0" style="background: linear-gradient(90deg, #071912 0%, #092118 40%, rgba(10,34,25,0.72) 65%, rgba(8,26,19,0.22) 100%);"></div>
+      <div class="absolute inset-x-0 bottom-0 h-20" style="background: linear-gradient(to top, #081c14 0%, transparent 100%);"></div>
+    </div>
+
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14 pt-12 pb-10">
+      <div class="max-w-[640px] mb-10">
+        <nav class="flex items-center gap-2 text-[12.5px] text-[#d5ddd8]/75 mb-4">
+          <a href="/" class="hover:text-[#f3d88c] transition-colors">Home</a>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#e8c468]/70"></i>
+          <span class="text-[#f3d88c] font-medium">Book a Cleaning</span>
+        </nav>
+
+        <h1 class="font-serif-luxury text-[48px] sm:text-[62px] lg:text-[68px] leading-[1.04] text-white font-normal mb-3.5">
+          Book a <span class="italic text-[#e8c468]">Cleaning</span>
+        </h1>
+
+        <p class="text-[15.5px] sm:text-[16.5px] leading-[1.68] text-[#d7ded9]/85 font-light">
+          A quick and easy way to schedule your professional cleaning service.
+        </p>
+      </div>
+
+      <!-- 4-Step Horizontal Progress Indicator -->
+      <div class="w-full flex flex-wrap sm:flex-nowrap items-center justify-between gap-4 pt-4 border-t border-white/[0.1]">
+        <!-- Step 1 Pill -->
+        <button onclick="goToStep(1)" id="step-pill-1" class="cursor-pointer flex items-center gap-3 px-4 py-2 rounded-full bg-[#133628] border border-[#e8c468] shadow-[0_0_20px_rgba(232,196,104,0.25)] transition-all">
+          <span id="step-num-1" class="w-8 h-8 rounded-full btn-gold-luxury flex items-center justify-center text-sm font-bold">1</span>
+          <span class="text-[13.5px] font-medium text-white pr-2">Select Service</span>
+        </button>
+
+        <div class="hidden md:block flex-1 h-[1px] bg-[#e8c468]/35"></div>
+
+        <!-- Step 2 Pill -->
+        <button onclick="goToStep(2)" id="step-pill-2" class="cursor-pointer flex items-center gap-3 px-3 py-1.5 rounded-full transition-all opacity-80 hover:opacity-100">
+          <span id="step-num-2" class="w-8 h-8 rounded-full bg-[#0e2a20] border border-[#e8c468]/50 flex items-center justify-center text-sm text-[#e8c468]">2</span>
+          <span class="text-[13.5px] text-[#d5ddd8]">Property Details</span>
+        </button>
+
+        <div class="hidden md:block flex-1 h-[1px] bg-white/15"></div>
+
+        <!-- Step 3 Pill -->
+        <button onclick="goToStep(3)" id="step-pill-3" class="cursor-pointer flex items-center gap-3 px-3 py-1.5 rounded-full transition-all opacity-80 hover:opacity-100">
+          <span id="step-num-3" class="w-8 h-8 rounded-full bg-[#0e2a20] border border-[#e8c468]/50 flex items-center justify-center text-sm text-[#e8c468]">3</span>
+          <span class="text-[13.5px] text-[#d5ddd8]">Date & Time</span>
+        </button>
+
+        <div class="hidden md:block flex-1 h-[1px] bg-white/15"></div>
+
+        <!-- Step 4 Pill -->
+        <button onclick="goToStep(4)" id="step-pill-4" class="cursor-pointer flex items-center gap-3 px-3 py-1.5 rounded-full transition-all opacity-80 hover:opacity-100">
+          <span id="step-num-4" class="w-8 h-8 rounded-full bg-[#0e2a20] border border-[#e8c468]/50 flex items-center justify-center text-sm text-[#e8c468]">4</span>
+          <span class="text-[13.5px] text-[#d5ddd8]">Review & Confirm</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       MAIN 3-COLUMN BOOKING WORKSPACE (TRUST PANEL | WIZARD | STICKY SUMMARY)
+       ===================================================================== -->
+  <section class="relative w-full py-12 lg:py-16 bg-[#081d15]">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 items-start">
+
+        <!-- =================================================================
+             LEFT COLUMN (3 COLS): TRUST PANEL + LIVING ROOM PHOTOGRAPH
+             ================================================================= -->
+        <div class="lg:col-span-3 rounded-[26px] overflow-hidden bg-[#0c271d]/90 border border-[#e8c468]/35 shadow-[0_20px_50px_rgba(0,0,0,0.45)] flex flex-col justify-between">
+          <div class="p-6 space-y-6">
+            <div class="flex items-start gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-[#113125] border border-[#e8c468]/50 flex items-center justify-center shrink-0">
+                <i data-lucide="calendar-check" class="w-5 h-5 text-[#e8c468]"></i>
+              </div>
+              <div>
+                <h3 class="text-[14.5px] font-semibold text-white">Easy Booking</h3>
+                <p class="text-[12px] text-[#d5ddd8]/75 mt-0.5">Book in just a few steps</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5 pt-5 border-t border-white/[0.08]">
+              <div class="w-11 h-11 rounded-full bg-[#113125] border border-[#e8c468]/50 flex items-center justify-center shrink-0">
+                <i data-lucide="shield-check" class="w-5 h-5 text-[#e8c468]"></i>
+              </div>
+              <div>
+                <h3 class="text-[14.5px] font-semibold text-white">Trusted Professionals</h3>
+                <p class="text-[12px] text-[#d5ddd8]/75 mt-0.5">Vetted & trained team</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5 pt-5 border-t border-white/[0.08]">
+              <div class="w-11 h-11 rounded-full bg-[#113125] border border-[#e8c468]/50 flex items-center justify-center shrink-0">
+                <i data-lucide="leaf" class="w-5 h-5 text-[#e8c468]"></i>
+              </div>
+              <div>
+                <h3 class="text-[14.5px] font-semibold text-white">Eco-Friendly</h3>
+                <p class="text-[12px] text-[#d5ddd8]/75 mt-0.5">Safe products for your space</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5 pt-5 border-t border-white/[0.08]">
+              <div class="w-11 h-11 rounded-full bg-[#113125] border border-[#e8c468]/50 flex items-center justify-center shrink-0">
+                <i data-lucide="star" class="w-5 h-5 text-[#e8c468]"></i>
+              </div>
+              <div>
+                <h3 class="text-[14.5px] font-semibold text-white">100% Satisfaction</h3>
+                <p class="text-[12px] text-[#d5ddd8]/75 mt-0.5">Your happiness is our priority</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative h-[220px] w-full overflow-hidden">
+            <img src="/images/hero-interior.jpg" alt="Spotless Luxury Home" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0c271d] via-transparent to-transparent"></div>
+          </div>
+        </div>
+
+        <!-- =================================================================
+             CENTER COLUMN (6 COLS): 4-STEP INTERACTIVE BOOKING WIZARD
+             ================================================================= -->
+        <div class="lg:col-span-6 rounded-[28px] bg-[#0c271d]/95 border border-[#e8c468]/45 p-6 sm:p-8 shadow-[0_25px_65px_rgba(0,0,0,0.55)]">
+
+          <!-- ---------------- STEP 1: SELECT SERVICE & ADD-ONS ---------------- -->
+          <div id="wizard-step-1">
+            <div class="text-[12.5px] text-[#e8c468] font-medium mb-1">Step 1 of 4</div>
+            <h2 class="font-serif-luxury text-[34px] sm:text-[40px] leading-[1.08] text-white font-normal mb-1.5">
+              Select Your Cleaning Service
+            </h2>
+            <p class="text-[13.5px] text-[#d5ddd8]/80 font-light mb-6">
+              Choose the service that best fits your needs.
+            </p>
+
+            <!-- 4 Service Cards Row -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3.5 mb-8">
+              <!-- Card 1: Home Cleaning -->
+              <div onclick="selectService('Home Cleaning', 59, '~ 2 hours', '1 professional', '/images/hero-interior.jpg', 'Regular home cleaning service', this)" class="srv-card selected-card-glow cursor-pointer relative rounded-2xl overflow-hidden bg-[#0e2d22] border border-[#e8c468]/35 flex flex-col justify-between transition-all">
+                <div class="srv-badge absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-[#e8c468] text-[#0b231b] flex items-center justify-center text-xs font-bold">✓</div>
+                <div class="h-28 overflow-hidden">
+                  <img src="/images/hero-interior.jpg" alt="Home Cleaning" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-3.5">
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <i data-lucide="home" class="w-4 h-4 text-[#e8c468] shrink-0"></i>
+                    <span class="text-[13.5px] font-semibold text-white leading-tight">Home Cleaning</span>
+                  </div>
+                  <p class="text-[11.5px] text-[#d5ddd8]/75 leading-snug">Regular cleaning for a fresh and tidy home.</p>
+                </div>
+              </div>
+
+              <!-- Card 2: Deep Cleaning -->
+              <div onclick="selectService('Deep Cleaning', 149, '~ 5 hours', '2 professionals', '/images/service-deep.jpg', 'Comprehensive top-to-bottom clean', this)" class="srv-card cursor-pointer relative rounded-2xl overflow-hidden bg-[#0e2d22] border border-[#e8c468]/30 flex flex-col justify-between transition-all">
+                <div class="srv-badge absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-black/45 border border-white/50 text-transparent flex items-center justify-center text-xs font-bold">✓</div>
+                <div class="h-28 overflow-hidden">
+                  <img src="/images/service-deep.jpg" alt="Deep Cleaning" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-3.5">
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-[#e8c468] shrink-0"></i>
+                    <span class="text-[13.5px] font-semibold text-white leading-tight">Deep Cleaning</span>
+                  </div>
+                  <p class="text-[11.5px] text-[#d5ddd8]/75 leading-snug">A thorough, top-to-bottom clean for a healthier space.</p>
+                </div>
+              </div>
+
+              <!-- Card 3: Commercial Cleaning -->
+              <div onclick="selectService('Commercial Cleaning', 119, '~ 4 hours', '2 professionals', '/images/service-commercial.jpg', 'Executive office & retail cleaning', this)" class="srv-card cursor-pointer relative rounded-2xl overflow-hidden bg-[#0e2d22] border border-[#e8c468]/30 flex flex-col justify-between transition-all">
+                <div class="srv-badge absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-black/45 border border-white/50 text-transparent flex items-center justify-center text-xs font-bold">✓</div>
+                <div class="h-28 overflow-hidden">
+                  <img src="/images/service-commercial.jpg" alt="Commercial Cleaning" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-3.5">
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <i data-lucide="building-2" class="w-4 h-4 text-[#e8c468] shrink-0"></i>
+                    <span class="text-[13.5px] font-semibold text-white leading-tight">Commercial Cleaning</span>
+                  </div>
+                  <p class="text-[11.5px] text-[#d5ddd8]/75 leading-snug">Professional cleaning for offices and business spaces.</p>
+                </div>
+              </div>
+
+              <!-- Card 4: Move In / Move Out -->
+              <div onclick="selectService('Move In / Move Out', 179, '~ 6 hours', '3 professionals', '/images/services-move-in.jpg', 'Complete empty residence transition clean', this)" class="srv-card cursor-pointer relative rounded-2xl overflow-hidden bg-[#0e2d22] border border-[#e8c468]/30 flex flex-col justify-between transition-all">
+                <div class="srv-badge absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-black/45 border border-white/50 text-transparent flex items-center justify-center text-xs font-bold">✓</div>
+                <div class="h-28 overflow-hidden">
+                  <img src="/images/services-move-in.jpg" alt="Move In / Move Out" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-3.5">
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <i data-lucide="package-check" class="w-4 h-4 text-[#e8c468] shrink-0"></i>
+                    <span class="text-[13.5px] font-semibold text-white leading-tight">Move In / Move Out</span>
+                  </div>
+                  <p class="text-[11.5px] text-[#d5ddd8]/75 leading-snug">A detailed clean for a smooth transition.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Optional Service Add-Ons -->
+            <div class="pt-5 border-t border-white/[0.1] mb-8">
+              <h3 class="font-serif-luxury text-[24px] text-white font-normal mb-1">
+                Service Add-Ons <span class="italic text-[#e8c468]">(Optional)</span>
+              </h3>
+              <p class="text-[12.5px] text-[#d5ddd8]/75 mb-4">
+                Customize your cleaning with additional services.
+              </p>
+
+              <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+                <button type="button" onclick="toggleBookingAddon('Oven Cleaning', 25, this)" class="addon-pill selected-card-glow cursor-pointer rounded-xl bg-[#103024] border border-[#e8c468] p-3 text-left transition-all">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="addon-box w-4 h-4 rounded bg-[#e8c468] text-[#0b231b] flex items-center justify-center text-[10px] font-bold">✓</span>
+                    <span class="text-[11.5px] font-medium text-white truncate">Oven Cleaning</span>
+                  </div>
+                  <div class="text-[12px] font-semibold text-[#e8c468] pl-6">+ €25</div>
+                </button>
+
+                <button type="button" onclick="toggleBookingAddon('Fridge Cleaning', 20, this)" class="addon-pill cursor-pointer rounded-xl bg-[#0e291f] border border-[#e8c468]/30 p-3 text-left transition-all">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="addon-box w-4 h-4 rounded border border-[#e8c468]/60 text-transparent flex items-center justify-center text-[10px] font-bold">✓</span>
+                    <span class="text-[11.5px] font-medium text-white truncate">Fridge Cleaning</span>
+                  </div>
+                  <div class="text-[12px] font-semibold text-[#e8c468] pl-6">+ €20</div>
+                </button>
+
+                <button type="button" onclick="toggleBookingAddon('Window Cleaning', 30, this)" class="addon-pill cursor-pointer rounded-xl bg-[#0e291f] border border-[#e8c468]/30 p-3 text-left transition-all">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="addon-box w-4 h-4 rounded border border-[#e8c468]/60 text-transparent flex items-center justify-center text-[10px] font-bold">✓</span>
+                    <span class="text-[11.5px] font-medium text-white truncate">Window Cleaning</span>
+                  </div>
+                  <div class="text-[12px] font-semibold text-[#e8c468] pl-6">+ €30</div>
+                </button>
+
+                <button type="button" onclick="toggleBookingAddon('Upholstery Cleaning', 49, this)" class="addon-pill cursor-pointer rounded-xl bg-[#0e291f] border border-[#e8c468]/30 p-3 text-left transition-all">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="addon-box w-4 h-4 rounded border border-[#e8c468]/60 text-transparent flex items-center justify-center text-[10px] font-bold">✓</span>
+                    <span class="text-[11.5px] font-medium text-white truncate">Upholstery</span>
+                  </div>
+                  <div class="text-[12px] font-semibold text-[#e8c468] pl-6">+ €49</div>
+                </button>
+
+                <button type="button" onclick="toggleBookingAddon('Ironing Service', 25, this)" class="addon-pill cursor-pointer rounded-xl bg-[#0e291f] border border-[#e8c468]/30 p-3 text-left transition-all col-span-2 sm:col-span-1">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="addon-box w-4 h-4 rounded border border-[#e8c468]/60 text-transparent flex items-center justify-center text-[10px] font-bold">✓</span>
+                    <span class="text-[11.5px] font-medium text-white truncate">Ironing Service</span>
+                  </div>
+                  <div class="text-[12px] font-semibold text-[#e8c468] pl-6">+ €25</div>
+                </button>
+              </div>
+            </div>
+
+            <div class="flex justify-end">
+              <button type="button" onclick="goToStep(2)" class="btn-gold-luxury cursor-pointer inline-flex items-center gap-3 px-8 py-3.5 rounded-full text-[14.5px] font-semibold">
+                <span>Next: Property Details</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- ---------------- STEP 2: PROPERTY DETAILS ---------------- -->
+          <div id="wizard-step-2" class="hidden">
+            <div class="text-[12.5px] text-[#e8c468] font-medium mb-1">Step 2 of 4</div>
+            <h2 class="font-serif-luxury text-[34px] sm:text-[40px] leading-[1.08] text-white font-normal mb-1.5">
+              Property Details
+            </h2>
+            <p class="text-[13.5px] text-[#d5ddd8]/80 font-light mb-6">
+              Tell us about your property so we can assign the right team and equipment.
+            </p>
+
+            <div class="space-y-5 mb-8">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-[#e8c468] mb-2">Property Type *</label>
+                  <select id="prop-type" onchange="updateSummary()" class="w-full px-4 py-3.5 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none">
+                    <option value="Apartment">Apartment</option>
+                    <option value="Family House / Villa">Family House / Villa (+€25)</option>
+                    <option value="Penthouse Suite">Penthouse Suite (+€40)</option>
+                    <option value="Executive Office">Executive Office (+€30)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-[#e8c468] mb-2">Square Footage (m²) *</label>
+                  <input type="number" id="prop-sqm" value="85" min="20" max="1000" onchange="updateSummary()" class="w-full px-4 py-3.5 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-[#e8c468] mb-2">Bedrooms / Rooms</label>
+                  <select id="prop-beds" onchange="updateSummary()" class="w-full px-4 py-3.5 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none">
+                    <option value="1">1 Bedroom</option>
+                    <option value="2" selected>2 Bedrooms</option>
+                    <option value="3">3 Bedrooms (+€15)</option>
+                    <option value="4">4+ Bedrooms (+€30)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-[#e8c468] mb-2">Bathrooms</label>
+                  <select id="prop-baths" onchange="updateSummary()" class="w-full px-4 py-3.5 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none">
+                    <option value="1" selected>1 Bathroom</option>
+                    <option value="2">2 Bathrooms (+€15)</option>
+                    <option value="3">3+ Bathrooms (+€30)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider text-[#e8c468] mb-2">Street Address & City *</label>
+                <input type="text" id="prop-address" required placeholder="Václavské náměstí 802/56, 110 00 Praha 1" class="w-full px-4 py-3.5 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none" />
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider text-[#e8c468] mb-2">Access & Special Instructions (Pets, Keybox, Gate Code)</label>
+                <textarea id="prop-notes" rows="2" placeholder="e.g., Concierge desk has the key, friendly golden retriever at home..." class="w-full px-4 py-3 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none"></textarea>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <button type="button" onclick="goToStep(1)" class="px-6 py-3 rounded-full bg-white/10 text-sm text-white hover:bg-white/15 cursor-pointer">← Back</button>
+              <button type="button" onclick="goToStep(3)" class="btn-gold-luxury cursor-pointer inline-flex items-center gap-3 px-8 py-3.5 rounded-full text-[14.5px] font-semibold">
+                <span>Next: Date & Time</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- ---------------- STEP 3: DATE & TIME (STAFF AVAILABILITY) ---------------- -->
+          <div id="wizard-step-3" class="hidden">
+            <div class="text-[12.5px] text-[#e8c468] font-medium mb-1">Step 3 of 4</div>
+            <h2 class="font-serif-luxury text-[34px] sm:text-[40px] leading-[1.08] text-white font-normal mb-1.5">
+              Choose Date & Time
+            </h2>
+            <p class="text-[13.5px] text-[#d5ddd8]/80 font-light mb-6">
+              Real-time slots based on our vetted Prague cleaning specialists' availability.
+            </p>
+
+            <div class="space-y-6 mb-8">
+              <div>
+                <label class="block text-xs uppercase tracking-wider text-[#e8c468] mb-2">Select Available Date *</label>
+                <input type="date" id="book-date" value="2026-11-18" onchange="updateSummary()" class="w-full px-4 py-3.5 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none" />
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider text-[#e8c468] mb-2.5">Available Time Slots (Staff Verified)</label>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  <button type="button" onclick="selectTimeSlot('08:30 AM', 'Lucie N.', this)" class="slot-btn selected-card-glow cursor-pointer rounded-xl bg-[#103024] border border-[#e8c468] p-3.5 text-left">
+                    <div class="text-sm font-semibold text-white">08:30 AM</div>
+                    <div class="text-[11px] text-[#f3d88c] mt-0.5">✓ Lucie N. Available</div>
+                  </button>
+                  <button type="button" onclick="selectTimeSlot('10:30 AM', 'Markéta S.', this)" class="slot-btn cursor-pointer rounded-xl bg-[#081c14] border border-[#e8c468]/30 p-3.5 text-left">
+                    <div class="text-sm font-semibold text-white">10:30 AM</div>
+                    <div class="text-[11px] text-[#d5ddd8]/75 mt-0.5">✓ Markéta S. Available</div>
+                  </button>
+                  <button type="button" onclick="selectTimeSlot('01:00 PM', 'Petr D.', this)" class="slot-btn cursor-pointer rounded-xl bg-[#081c14] border border-[#e8c468]/30 p-3.5 text-left">
+                    <div class="text-sm font-semibold text-white">01:00 PM</div>
+                    <div class="text-[11px] text-[#d5ddd8]/75 mt-0.5">✓ Petr D. Available</div>
+                  </button>
+                  <button type="button" onclick="selectTimeSlot('03:30 PM', 'Tomáš Č.', this)" class="slot-btn cursor-pointer rounded-xl bg-[#081c14] border border-[#e8c468]/30 p-3.5 text-left">
+                    <div class="text-sm font-semibold text-white">03:30 PM</div>
+                    <div class="text-[11px] text-[#d5ddd8]/75 mt-0.5">✓ Tomáš Č. Available</div>
+                  </button>
+                  <button type="button" onclick="selectTimeSlot('05:30 PM', 'Evening Team', this)" class="slot-btn cursor-pointer rounded-xl bg-[#081c14] border border-[#e8c468]/30 p-3.5 text-left">
+                    <div class="text-sm font-semibold text-white">05:30 PM</div>
+                    <div class="text-[11px] text-[#d5ddd8]/75 mt-0.5">✓ Evening Concierge</div>
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider text-[#e8c468] mb-2">Cleaning Frequency</label>
+                <select id="book-freq" onchange="updateSummary()" class="w-full px-4 py-3.5 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none">
+                  <option value="One-Time">One-Time Cleaning</option>
+                  <option value="Weekly (10% Off)">Weekly Rhythm (Save 10%)</option>
+                  <option value="Bi-Weekly (5% Off)">Bi-Weekly Rhythm (Save 5%)</option>
+                  <option value="Monthly">Monthly Refresh</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <button type="button" onclick="goToStep(2)" class="px-6 py-3 rounded-full bg-white/10 text-sm text-white hover:bg-white/15 cursor-pointer">← Back</button>
+              <button type="button" onclick="goToStep(4)" class="btn-gold-luxury cursor-pointer inline-flex items-center gap-3 px-8 py-3.5 rounded-full text-[14.5px] font-semibold">
+                <span>Next: Review & Confirm</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- ---------------- STEP 4: REVIEW & CONFIRM ---------------- -->
+          <div id="wizard-step-4" class="hidden">
+            <div class="text-[12.5px] text-[#e8c468] font-medium mb-1">Step 4 of 4</div>
+            <h2 class="font-serif-luxury text-[34px] sm:text-[40px] leading-[1.08] text-white font-normal mb-1.5">
+              Review & Confirm Booking
+            </h2>
+            <p class="text-[13.5px] text-[#d5ddd8]/80 font-light mb-6">
+              Enter your contact details to receive instant confirmation and booking reference.
+            </p>
+
+            <form onsubmit="submitFinalBooking(event)" class="space-y-4 mb-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input type="text" id="cust-name" required placeholder="Your Full Name *" class="w-full px-4 py-3.5 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none" />
+                <input type="email" id="cust-email" required placeholder="Email Address *" class="w-full px-4 py-3.5 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none" />
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input type="tel" id="cust-phone" required placeholder="Phone (+420 600 123 456) *" class="w-full px-4 py-3.5 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none" />
+                <select id="cust-payment" class="w-full px-4 py-3.5 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none">
+                  <option>Pay After Cleaning (Card / Cash)</option>
+                  <option>Online Card Payment (Encrypted)</option>
+                  <option>Corporate Invoice (Net 14)</option>
+                </select>
+              </div>
+
+              <div class="flex items-center justify-between pt-4">
+                <button type="button" onclick="goToStep(3)" class="px-6 py-3 rounded-full bg-white/10 text-sm text-white hover:bg-white/15 cursor-pointer">← Back</button>
+                <button type="submit" class="btn-gold-luxury cursor-pointer inline-flex items-center gap-3 px-9 py-4 rounded-full text-[15px] font-semibold">
+                  <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                  <span>Confirm & Schedule Cleaning</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- ---------------- FINAL CONFIRMATION SCREEN ---------------- -->
+          <div id="wizard-confirmation" class="hidden py-8 text-center space-y-5">
+            <div class="w-16 h-16 rounded-full bg-[#e8c468]/20 border-2 border-[#e8c468] flex items-center justify-center mx-auto text-[#e8c468]">
+              <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <div class="inline-block px-4 py-1 rounded-full bg-[#13382a] border border-[#e8c468]/50 text-xs text-[#f3d88c]">
+              Booking Reference: <span id="conf-ref-code" class="font-bold">CLN-84920</span>
+            </div>
+            <h2 class="font-serif-luxury text-4xl text-white">Your Cleaning is Scheduled!</h2>
+            <p class="text-sm text-[#d5ddd8]/85 max-w-md mx-auto leading-relaxed">
+              We have sent a calendar invitation and confirmation details to your email. You can manage or reschedule your appointment anytime from your Customer Portal.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-3">
+              <a href="/customer" class="btn-gold-luxury px-7 py-3.5 rounded-full text-sm font-semibold">Open Customer Portal →</a>
+              <a href="/" class="px-7 py-3.5 rounded-full bg-white/10 text-sm text-white hover:bg-white/15">Return Home</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- =================================================================
+             RIGHT COLUMN (3 COLS): STICKY BOOKING SUMMARY PANEL
+             ================================================================= -->
+        <div class="lg:col-span-3 lg:sticky lg:top-24 rounded-[26px] bg-[#0c271d]/95 border border-[#e8c468]/45 p-6 shadow-[0_22px_55px_rgba(0,0,0,0.5)]">
+          <div class="flex items-center gap-2.5 pb-4 mb-5 border-b border-white/[0.1]">
+            <i data-lucide="clipboard-list" class="w-5 h-5 text-[#e8c468]"></i>
+            <h3 class="font-serif-luxury text-[26px] text-white font-normal">Booking Summary</h3>
+          </div>
+
+          <!-- Selected Service Mini Card -->
+          <div class="flex items-center gap-3.5 mb-4">
+            <img id="sum-img" src="/images/hero-interior.jpg" alt="Selected Service" class="w-16 h-16 rounded-xl object-cover border border-[#e8c468]/50 shrink-0" />
+            <div>
+              <div id="sum-service-title" class="text-[15px] font-semibold text-white">Home Cleaning</div>
+              <div id="sum-service-sub" class="text-[12px] text-[#d5ddd8]/75">Regular home cleaning service</div>
+              <button onclick="goToStep(1)" class="text-[11.5px] text-[#e8c468] hover:underline mt-1 inline-flex items-center gap-1 cursor-pointer">
+                <span>✎ Change Service</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Total Price -->
+          <div class="flex items-baseline justify-end pb-5 mb-5 border-b border-white/[0.1]">
+            <span id="sum-total-price" class="font-serif-luxury text-[44px] font-semibold text-[#f3d88c] leading-none">€84</span>
+          </div>
+
+          <!-- Breakdown Rows -->
+          <div class="space-y-3 text-[13px] mb-6">
+            <div class="flex items-center justify-between text-[#d5ddd8]/90">
+              <span class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-[#e8c468]"></i> Duration</span>
+              <span id="sum-duration" class="font-medium text-white">~ 2 hours</span>
+            </div>
+            <div class="flex items-center justify-between text-[#d5ddd8]/90">
+              <span class="flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-[#e8c468]"></i> Team</span>
+              <span id="sum-team" class="font-medium text-white">1 professional</span>
+            </div>
+            <div class="flex items-center justify-between text-[#d5ddd8]/90">
+              <span class="flex items-center gap-2"><i data-lucide="home" class="w-4 h-4 text-[#e8c468]"></i> Property Type</span>
+              <span id="sum-prop-type" class="font-medium text-white">Apartment</span>
+            </div>
+            <div class="flex items-center justify-between text-[#d5ddd8]/90">
+              <span class="flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4 text-[#e8c468]"></i> Date & Slot</span>
+              <span id="sum-datetime" class="font-medium text-[#f3d88c]">Nov 18, 08:30 AM</span>
+            </div>
+            <div class="pt-2 border-t border-white/[0.08]">
+              <div class="text-[11.5px] text-[#e8c468] mb-1">Selected Add-Ons:</div>
+              <div id="sum-addons-list" class="text-[12px] text-[#d5ddd8]/85">Oven Cleaning (+€25)</div>
+            </div>
+          </div>
+
+          <!-- Info Note Box -->
+          <div class="rounded-2xl bg-[#103024]/80 border border-white/[0.1] p-3.5 flex items-start gap-3 mb-3.5">
+            <i data-lucide="info" class="w-4 h-4 text-[#e8c468] shrink-0 mt-0.5"></i>
+            <p class="text-[11.5px] text-[#d5ddd8]/80 leading-relaxed">
+              Final price may vary based on your property details and add-ons.
+            </p>
+          </div>
+
+          <!-- Security Box -->
+          <div class="rounded-2xl bg-[#103024]/80 border border-[#e8c468]/30 p-3.5 flex items-start gap-3">
+            <i data-lucide="shield-check" class="w-5 h-5 text-[#e8c468] shrink-0 mt-0.5"></i>
+            <div>
+              <div class="text-[12.5px] font-semibold text-[#f3d88c]">Your Booking is Secure</div>
+              <p class="text-[11px] text-[#d5ddd8]/75 leading-relaxed mt-0.5">
+                Your information is encrypted and safe with us.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       EXISTING UNTOUCHED BOTANICAL LUXURY FOOTER
+       ===================================================================== -->
+  <footer class="relative w-full pt-20 pb-12 overflow-hidden bg-[#061610] text-[#f3f0e6] border-t border-[#e8c468]/20">
+    <div class="pointer-events-none absolute inset-y-0 left-0 w-1/2 bg-cover bg-left-top opacity-85" style="background-image: url('/images/footer-botanical.jpg');"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-cover bg-left-top opacity-85 -scale-x-100" style="background-image: url('/images/footer-botanical.jpg');"></div>
+    <div class="pointer-events-none absolute inset-0" style="background: linear-gradient(90deg, rgba(6, 22, 16, 0.62) 0%, rgba(7, 25, 18, 0.88) 32%, rgba(7, 25, 18, 0.88) 68%, rgba(6, 22, 16, 0.62) 100%);"></div>
+
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-[#d5ddd8]/75">
+        <p>© 2026 CLEANORA. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="/privacy" class="hover:text-[#f3d88c]">Privacy Policy</a>
+          <span class="text-white/25">|</span>
+          <a href="/terms" class="hover:text-[#f3d88c]">Terms of Service</a>
+          <span class="text-white/25">|</span>
+          <a href="/cookies" class="hover:text-[#f3d88c]">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    let state = {
+      service: 'Home Cleaning',
+      basePrice: 59,
+      duration: '~ 2 hours',
+      team: '1 professional',
+      img: '/images/hero-interior.jpg',
+      sub: 'Regular home cleaning service',
+      addons: new Map([['Oven Cleaning', 25]]),
+      timeSlot: '08:30 AM',
+      staff: 'Lucie N.'
+    };
+
+    function selectService(name, price, duration, team, img, sub, cardEl) {
+      state.service = name;
+      state.basePrice = price;
+      state.duration = duration;
+      state.team = team;
+      state.img = img;
+      state.sub = sub;
+
+      document.querySelectorAll('.srv-card').forEach(el => {
+        el.classList.remove('selected-card-glow');
+        const b = el.querySelector('.srv-badge');
+        b.className = "srv-badge absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-black/45 border border-white/50 text-transparent flex items-center justify-center text-xs font-bold";
+      });
+      cardEl.classList.add('selected-card-glow');
+      const badge = cardEl.querySelector('.srv-badge');
+      badge.className = "srv-badge absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-[#e8c468] text-[#0b231b] flex items-center justify-center text-xs font-bold";
+      updateSummary();
+    }
+
+    function toggleBookingAddon(name, price, btnEl) {
+      const box = btnEl.querySelector('.addon-box');
+      if (state.addons.has(name)) {
+        state.addons.delete(name);
+        btnEl.classList.remove('selected-card-glow', 'bg-[#103024]', 'border-[#e8c468]');
+        btnEl.classList.add('bg-[#0e291f]', 'border-[#e8c468]/30');
+        box.className = "addon-box w-4 h-4 rounded border border-[#e8c468]/60 text-transparent flex items-center justify-center text-[10px] font-bold";
+      } else {
+        state.addons.set(name, price);
+        btnEl.classList.add('selected-card-glow', 'bg-[#103024]', 'border-[#e8c468]');
+        box.className = "addon-box w-4 h-4 rounded bg-[#e8c468] text-[#0b231b] flex items-center justify-center text-[10px] font-bold";
+      }
+      updateSummary();
+    }
+
+    function selectTimeSlot(slot, staff, btnEl) {
+      state.timeSlot = slot;
+      state.staff = staff;
+      document.querySelectorAll('.slot-btn').forEach(b => {
+        b.classList.remove('selected-card-glow', 'bg-[#103024]', 'border-[#e8c468]');
+        b.classList.add('bg-[#081c14]', 'border-[#e8c468]/30');
+      });
+      btnEl.classList.add('selected-card-glow', 'bg-[#103024]', 'border-[#e8c468]');
+      updateSummary();
+    }
+
+    function updateSummary() {
+      document.getElementById('sum-service-title').textContent = state.service;
+      document.getElementById('sum-service-sub').textContent = state.sub;
+      document.getElementById('sum-img').src = state.img;
+      document.getElementById('sum-duration').textContent = state.duration;
+      document.getElementById('sum-team').textContent = state.team;
+
+      const propType = document.getElementById('prop-type').value;
+      document.getElementById('sum-prop-type').textContent = propType;
+
+      let extraProp = 0;
+      if (propType.includes('+€25')) extraProp += 25;
+      if (propType.includes('+€40')) extraProp += 40;
+      if (propType.includes('+€30')) extraProp += 30;
+
+      const beds = Number(document.getElementById('prop-beds').value || 2);
+      const baths = Number(document.getElementById('prop-baths').value || 1);
+      if (beds === 3) extraProp += 15;
+      if (beds >= 4) extraProp += 30;
+      if (baths === 2) extraProp += 15;
+      if (baths >= 3) extraProp += 30;
+
+      let addonsSum = 0;
+      const addonLabels = [];
+      state.addons.forEach((p, k) => {
+        addonsSum += p;
+        addonLabels.push(`${k} (+€${p})`);
+      });
+
+      document.getElementById('sum-addons-list').textContent = addonLabels.length ? addonLabels.join(', ') : 'None selected';
+
+      const dateVal = document.getElementById('book-date').value || '2026-11-18';
+      document.getElementById('sum-datetime').textContent = `${dateVal}, ${state.timeSlot}`;
+
+      const total = state.basePrice + addonsSum + extraProp;
+      document.getElementById('sum-total-price').textContent = '€' + total;
+      return total;
+    }
+
+    function goToStep(step) {
+      [1, 2, 3, 4].forEach(s => {
+        document.getElementById('wizard-step-' + s).classList.add('hidden');
+        const pill = document.getElementById('step-pill-' + s);
+        const num = document.getElementById('step-num-' + s);
+        if (s === step) {
+          pill.className = "cursor-pointer flex items-center gap-3 px-4 py-2 rounded-full bg-[#133628] border border-[#e8c468] shadow-[0_0_20px_rgba(232,196,104,0.25)] transition-all";
+          num.className = "w-8 h-8 rounded-full btn-gold-luxury flex items-center justify-center text-sm font-bold";
+        } else {
+          pill.className = "cursor-pointer flex items-center gap-3 px-3 py-1.5 rounded-full transition-all opacity-80 hover:opacity-100";
+          num.className = "w-8 h-8 rounded-full bg-[#0e2a20] border border-[#e8c468]/50 flex items-center justify-center text-sm text-[#e8c468]";
+        }
+      });
+      document.getElementById('wizard-confirmation').classList.add('hidden');
+      document.getElementById('wizard-step-' + step).classList.remove('hidden');
+      updateSummary();
+    }
+
+    async function submitFinalBooking(e) {
+      e.preventDefault();
+      const total = updateSummary();
+      const refCode = 'CLN-' + Math.floor(10000 + Math.random() * 90000);
+      const bookingPayload = {
+        ref: refCode,
+        customerName: document.getElementById('cust-name').value,
+        customerEmail: document.getElementById('cust-email').value,
+        customerPhone: document.getElementById('cust-phone').value,
+        service: state.service,
+        propertyType: document.getElementById('prop-type').value,
+        address: document.getElementById('prop-address').value || 'Prague 1 Residence',
+        date: document.getElementById('book-date').value,
+        time: state.timeSlot,
+        assignedStaff: state.staff,
+        addons: Array.from(state.addons.keys()),
+        totalPrice: total,
+        status: 'Confirmed',
+        createdAt: new Date().toISOString()
+      };
+
+      try {
+        await fetch('/api/bookings', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(bookingPayload)
+        });
+      } catch (err) {}
+
+      [1, 2, 3, 4].forEach(s => document.getElementById('wizard-step-' + s).classList.add('hidden'));
+      document.getElementById('conf-ref-code').textContent = refCode;
+      document.getElementById('wizard-confirmation').classList.remove('hidden');
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+
+    updateSummary();
+  </script>
+</body>
+</html>
+

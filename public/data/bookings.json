@@ -1,0 +1,45 @@
+[
+  {
+    "reference": "CLN-84920",
+    "serviceId": "deep",
+    "serviceName": "Deep Cleaning",
+    "propertyType": "Penthouse Apartment",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "sqft": 165,
+    "address": "Pařížská 18, 110 00 Praha 1",
+    "date": "2026-11-18",
+    "time": "09:00 AM",
+    "addons": [
+      "Oven Cleaning",
+      "Window Cleaning"
+    ],
+    "totalPrice": 204,
+    "customerName": "Klára Horáková",
+    "customerEmail": "customer@cleanora.cz",
+    "assignedStaff": "Markéta Svobodová",
+    "status": "Confirmed",
+    "createdAt": "2026-11-14T07:21:49.775Z"
+  },
+  {
+    "reference": "CLN-84875",
+    "serviceId": "home",
+    "serviceName": "Home Cleaning",
+    "propertyType": "Family Residence",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqft": 210,
+    "address": "Vinohradská 112, 120 00 Praha 2",
+    "date": "2026-11-21",
+    "time": "11:00 AM",
+    "addons": [
+      "Fridge Cleaning"
+    ],
+    "totalPrice": 109,
+    "customerName": "Klára Horáková",
+    "customerEmail": "customer@cleanora.cz",
+    "assignedStaff": "Petr Dvořák",
+    "status": "Scheduled",
+    "createdAt": "2026-11-14T07:21:49.776Z"
+  }
+]

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private Client Concierge — CLEANORA® Luxury Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --emerald-deep: #05130e;
+      --gold-primary: #e8c468;
+      --gold-light: #f7e2a4;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #05130e;
+      background-image:
+        radial-gradient(circle at 18% 12%, rgba(232, 196, 104, 0.09) 0%, transparent 38%),
+        radial-gradient(circle at 88% 22%, rgba(16, 85, 58, 0.35) 0%, transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(232, 196, 104, 0.06) 0%, transparent 45%);
+      color: #f4f7f5;
+      overflow-x: hidden;
+    }
+    .font-serif-luxury { font-family: 'Cormorant Garamond', serif; }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fff1be 0%, #e8c468 45%, #c59734 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #f5dc93 0%, #e4be60 50%, #c89b3c 100%);
+      color: #061811;
+      box-shadow: 0 8px 24px -4px rgba(232, 196, 104, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.65);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 14px 32px -4px rgba(232, 196, 104, 0.7), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+    }
+
+    /* Ultra-Luxury Glass Cards with Interactive Hover Lift & Shimmer Sweep */
+    .luxury-card {
+      position: relative;
+      background: linear-gradient(155deg, rgba(15, 46, 34, 0.78) 0%, rgba(7, 23, 17, 0.92) 100%);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(232, 196, 104, 0.18);
+      box-shadow: 0 18px 40px -15px rgba(0, 0, 0, 0.65);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+    }
+    .luxury-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(247, 226, 164, 0.8), transparent);
+      transition: left 0.65s ease;
+    }
+    .luxury-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(232, 196, 104, 0.48);
+      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.75), 0 0 28px -8px rgba(232, 196, 104, 0.22);
+    }
+    .luxury-card:hover::before {
+      left: 120%;
+    }
+
+    /* Creative Sidebar Hover & Active States */
+    .nav-btn {
+      position: relative;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+    }
+    .nav-btn .nav-icon-wrap {
+      transition: all 0.28s ease;
+      background: rgba(232, 196, 104, 0.08);
+      border: 1px solid rgba(232, 196, 104, 0.15);
+    }
+    .nav-btn:hover {
+      background: linear-gradient(90deg, rgba(232, 196, 104, 0.12) 0%, rgba(232, 196, 104, 0.02) 100%);
+      color: #ffffff;
+      padding-left: 1.15rem;
+    }
+    .nav-btn:hover .nav-icon-wrap {
+      background: rgba(232, 196, 104, 0.22);
+      border-color: rgba(232, 196, 104, 0.5);
+      transform: scale(1.08) rotate(-3deg);
+      box-shadow: 0 0 14px rgba(232, 196, 104, 0.35);
+    }
+    .nav-btn.active {
+      background: linear-gradient(90deg, rgba(232, 196, 104, 0.22) 0%, rgba(232, 196, 104, 0.04) 100%);
+      border-color: rgba(232, 196, 104, 0.45);
+      color: #f7e2a4;
+      box-shadow: inset 3px 0 0 #e8c468, 0 8px 20px -6px rgba(0, 0, 0, 0.5);
+    }
+    .nav-btn.active .nav-icon-wrap {
+      background: linear-gradient(135deg, #f3d88c 0%, #cfa341 100%);
+      color: #061811;
+      border-color: transparent;
+      box-shadow: 0 0 16px rgba(232, 196, 104, 0.5);
+    }
+    .nav-btn.active .nav-icon-wrap svg {
+      color: #061811 !important;
+    }
+
+    .input-luxury {
+      background: rgba(6, 20, 14, 0.85);
+      border: 1px solid rgba(232, 196, 104, 0.24);
+      color: #ffffff;
+      transition: all 0.25s ease;
+    }
+    .input-luxury:focus {
+      outline: none;
+      border-color: #e8c468;
+      box-shadow: 0 0 0 3px rgba(232, 196, 104, 0.16);
+    }
+
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #05130e; }
+    ::-webkit-scrollbar-thumb { background: rgba(232, 196, 104, 0.28); border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(232, 196, 104, 0.55); }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.55; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.15); }
+    }
+    .live-dot { animation: pulseGlow 2s infinite ease-in-out; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col lg:flex-row selection:bg-[#e8c468] selection:text-[#05130e]">
+
+  <!-- LEFT LUXURY SIDEBAR -->
+  <aside class="w-full lg:w-[290px] bg-[#04100b]/95 backdrop-blur-2xl border-b lg:border-b-0 lg:border-r border-[#e8c468]/20 p-5 flex flex-col justify-between shrink-0 lg:h-screen lg:sticky lg:top-0 overflow-y-auto z-30">
+    <div>
+      <!-- Brand Header -->
+      <div class="flex items-center justify-between mb-6 pb-5 border-b border-[#e8c468]/15">
+        <a href="/" class="flex items-center gap-3.5 group">
+          <div class="w-11 h-11 rounded-2xl border border-[#e8c468]/50 flex items-center justify-center bg-gradient-to-br from-[#123829] to-[#071912] shadow-lg shadow-[#e8c468]/10 group-hover:scale-105 group-hover:border-[#e8c468] transition">
+            <svg class="w-5 h-5 text-[#e8c468]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="font-serif-luxury text-2xl font-bold tracking-wider text-white block leading-none">CLEANORA<span class="text-[#e8c468] text-sm align-top">®</span></span>
+            <span class="text-[9px] uppercase tracking-[0.24em] text-[#e8c468]/85 font-semibold mt-1 block">Client Concierge</span>
+          </div>
+        </a>
+        <span class="px-2.5 py-1 rounded-full bg-[#e8c468]/15 border border-[#e8c468]/35 text-[10px] text-[#f3d88c] font-semibold flex items-center gap-1.5">
+          <i data-lucide="crown" class="w-3 h-3"></i> VIP
+        </span>
+      </div>
+
+      <!-- Categorized Menu -->
+      <nav class="space-y-5 text-xs" id="customerNav">
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[#e8c468]/70 font-semibold px-3 mb-2">My Residence</p>
+          <div class="space-y-1">
+            <button onclick="switchTab('dashboard')" data-tab="dashboard" class="nav-btn active w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="layout-dashboard" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Concierge Overview</span>
+              </span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5 opacity-60"></i>
+            </button>
+
+            <button onclick="switchTab('bookings')" data-tab="bookings" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="calendar-check-2" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>My Bookings</span>
+              </span>
+              <span id="navBookingCount" class="px-2 py-0.5 rounded-full text-[10px] bg-[#e8c468]/20 text-[#e8c468] font-bold">2</span>
+            </button>
+
+            <button onclick="switchTab('details')" data-tab="details" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="clipboard-check" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Booking Details & Care</span>
+              </span>
+              <span class="w-2 h-2 rounded-full bg-emerald-400 live-dot"></span>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[#e8c468]/70 font-semibold px-3 mb-2">Billing & Feedback</p>
+          <div class="space-y-1">
+            <button onclick="switchTab('payments')" data-tab="payments" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="credit-card" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Payments & Invoices</span>
+              </span>
+            </button>
+
+            <button onclick="switchTab('reviews')" data-tab="reviews" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="star" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>My Reviews</span>
+              </span>
+              <span class="text-[10px] text-[#e8c468] font-bold">5.0★</span>
+            </button>
+
+            <button onclick="switchTab('profile')" data-tab="profile" class="nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-transparent font-medium text-gray-300">
+              <span class="flex items-center gap-3">
+                <span class="nav-icon-wrap w-8 h-8 rounded-lg flex items-center justify-center"><i data-lucide="user-cog" class="w-4 h-4 text-[#e8c468]"></i></span>
+                <span>Profile & Key Vault</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Bottom Quick Book CTA & Sign Out -->
+    <div class="pt-5 mt-6 border-t border-[#e8c468]/15 space-y-3">
+      <div class="p-4 rounded-2xl bg-gradient-to-br from-[#113628] to-[#071912] border border-[#e8c468]/30 space-y-2.5">
+        <div class="flex items-center justify-between">
+          <span class="text-[10px] uppercase tracking-widest text-[#e8c468] font-semibold">Need a Fresh Space?</span>
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#e8c468]"></i>
+        </div>
+        <p class="text-[11px] text-gray-300 leading-relaxed">Priority slots available for Diamond VIP members this week.</p>
+        <a href="/book" class="btn-gold w-full py-2.5 rounded-full text-xs font-bold flex items-center justify-center gap-1.5">
+          <i data-lucide="calendar-plus" class="w-3.5 h-3.5"></i> Book New Cleaning
+        </a>
+      </div>
+
+      <div class="flex items-center justify-between text-[11px] px-2 text-gray-400">
+        <span>Switch Portal:</span>
+        <div class="flex gap-2">
+          <a href="/staff" class="text-[#e8c468] hover:underline">Staff</a>
+          <span>•</span>
+          <a href="/admin" class="text-[#e8c468] hover:underline">Admin</a>
+        </div>
+      </div>
+
+      <button onclick="logout()" class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-red-400/25 text-red-300 hover:bg-red-500/15 hover:border-red-400/50 text-xs font-semibold transition">
+        <i data-lucide="log-out" class="w-3.5 h-3.5"></i> Sign Out
+      </button>
+    </div>
+  </aside>
+
+  <!-- MAIN CLIENT CONCIERGE WORKSPACE -->
+  <main class="flex-1 p-6 lg:p-10 overflow-y-auto">
+
+    <!-- Top Glassmorphic Command Header -->
+    <div class="luxury-card rounded-3xl p-5 sm:p-6 mb-8 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <div class="hidden sm:flex w-12 h-12 rounded-2xl bg-gradient-to-br from-[#e8c468]/25 to-[#e8c468]/5 border border-[#e8c468]/40 items-center justify-center">
+          <i data-lucide="home" class="w-6 h-6 text-[#e8c468]"></i>
+        </div>
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.24em] text-[#e8c468] font-semibold">Pařížská 18 Penthouse • Prague 1</span>
+          <h1 class="font-serif-luxury text-3xl sm:text-4xl text-white mt-0.5" id="portalHeading">
+            Welcome back, <span class="italic gold-gradient-text" id="userNameTitle">Klára Horáková</span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="/book" class="btn-gold px-5 py-2.5 rounded-full text-xs font-bold flex items-center gap-2">
+          <i data-lucide="plus-circle" class="w-4 h-4"></i> Schedule Cleaning
+        </a>
+        <div class="flex items-center gap-3 bg-[#061610] border border-[#e8c468]/30 rounded-full pl-2 pr-4 py-1.5 hover:border-[#e8c468] transition cursor-pointer" onclick="switchTab('profile')">
+          <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#f3d88c] to-[#cfa341] text-[#05130e] font-bold text-xs flex items-center justify-center" id="userAvatar">KH</div>
+          <div class="text-xs">
+            <p class="text-white font-semibold leading-none" id="userNameBadge">Klára Horáková</p>
+            <p class="text-[10px] text-[#e8c468] mt-0.5">Diamond VIP Member</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         1. DASHBOARD VIEW
+         ========================================== -->
+    <section id="tab-dashboard" class="portal-tab space-y-7">
+
+      <!-- Luxury Residence Hero Banner -->
+      <div class="relative rounded-3xl overflow-hidden border border-[#e8c468]/35 shadow-2xl">
+        <img src="/images/hero-interior.jpg" alt="Luxury Residence" class="absolute inset-0 w-full h-full object-cover opacity-35 scale-105 transition duration-700 hover:scale-100" />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#04110c] via-[#071d14]/90 to-transparent"></div>
+        <div class="relative p-7 sm:p-9 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div class="max-w-xl space-y-2.5">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-[11px] font-semibold">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 live-dot"></span> Next Visit Confirmed • Wed, 18 Nov at 09:00 AM
+            </span>
+            <h2 class="font-serif-luxury text-3xl sm:text-4xl text-white leading-tight">
+              Your Penthouse Deep Clean is assigned to <span class="italic gold-gradient-text">Markéta Svobodová.</span>
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+              100% organic botanical surface care, Calacatta marble polishing, and interior crystal window detailing included.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <button onclick="switchTab('details')" class="btn-gold px-5 py-3 rounded-full text-xs font-bold flex items-center gap-2">
+              <i data-lucide="clipboard-check" class="w-4 h-4"></i> View Live Checklist
+            </button>
+            <button onclick="switchTab('bookings')" class="px-5 py-3 rounded-full bg-[#071912]/90 border border-[#e8c468]/40 hover:border-[#e8c468] text-xs font-semibold text-[#f3d88c] transition">
+              Manage Visits →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Interactive KPI Cards with Hover Lift -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div class="luxury-card rounded-2xl p-6 group cursor-pointer" onclick="switchTab('details')">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <p class="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">Upcoming Visit</p>
+              <h3 class="font-serif-luxury text-3xl font-bold text-white mt-1" id="dashNextDate">18 Nov 2026</h3>
+            </div>
+            <div class="w-11 h-11 rounded-2xl bg-[#e8c468]/15 border border-[#e8c468]/35 flex items-center justify-center group-hover:scale-110 transition">
+              <i data-lucide="calendar-clock" class="w-5 h-5 text-[#e8c468]"></i>
+            </div>
+          </div>
+          <p class="text-xs text-[#e8c468] font-medium" id="dashNextService">Deep Cleaning • 09:00 AM</p>
+          <div class="flex items-center justify-between text-xs mt-3 pt-2.5 border-t border-white/5">
+            <span class="text-emerald-300 font-semibold">Confirmed</span>
+            <span class="text-gray-400 group-hover:text-white">View Details →</span>
+          </div>
+        </div>
+
+        <div class="luxury-card rounded-2xl p-6 group cursor-pointer" onclick="switchTab('bookings')">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <p class="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">Total Cleanings</p>
+              <h3 class="font-serif-luxury text-4xl font-bold text-white mt-1" id="dashTotalCount">14</h3>
+            </div>
+            <div class="w-11 h-11 rounded-2xl bg-emerald-500/15 border border-emerald-400/35 flex items-center justify-center group-hover:scale-110 transition">
+              <i data-lucide="sparkles" class="w-5 h-5 text-emerald-300"></i>
+            </div>
+          </div>
+          <svg class="w-full h-8 stroke-emerald-400 fill-none" viewBox="0 0 200 35">
+            <path d="M0 28 Q 50 18, 95 20 T 155 10 T 200 4" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="flex items-center justify-between text-xs mt-2 pt-2 border-t border-white/5">
+            <span class="text-emerald-400 font-semibold">100% Eco-Botanical</span>
+            <span class="text-gray-400">Since 2025</span>
+          </div>
+        </div>
+
+        <div class="luxury-card rounded-2xl p-6 group">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <p class="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">CLEANORA® Privilege</p>
+              <h3 class="font-serif-luxury text-4xl font-bold text-white mt-1">1,450 <span class="text-base text-[#e8c468] font-normal">pts</span></h3>
+            </div>
+            <div class="w-11 h-11 rounded-2xl bg-[#e8c468]/15 border border-[#e8c468]/35 flex items-center justify-center group-hover:scale-110 transition">
+              <i data-lucide="crown" class="w-5 h-5 text-[#e8c468]"></i>
+            </div>
+          </div>
+          <div class="w-full bg-[#04100b] h-2 rounded-full overflow-hidden my-2.5 border border-[#e8c468]/20">
+            <div class="bg-gradient-to-r from-[#f3d88c] to-[#cfa341] h-full w-[85%]"></div>
+          </div>
+          <div class="flex items-center justify-between text-xs mt-2 pt-2 border-t border-white/5">
+            <span class="text-[#e8c468] font-semibold">€25 Free Add-On Credit</span>
+            <span class="text-gray-400">Diamond Tier</span>
+          </div>
+        </div>
+
+        <div class="luxury-card rounded-2xl p-6 group cursor-pointer" onclick="switchTab('details')">
+          <div class="flex justify-between items-start mb-3">
+            <div>
+              <p class="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">Dedicated Specialist</p>
+              <h3 class="font-serif-luxury text-2xl font-bold text-white mt-1">Markéta S.</h3>
+            </div>
+            <img src="/images/difference-pro.jpg" class="w-12 h-12 rounded-2xl object-cover border-2 border-[#e8c468]" alt="Markéta" />
+          </div>
+          <p class="text-xs text-gray-300">Background-checked • 4.98 ★ Rating</p>
+          <div class="flex items-center justify-between text-xs mt-3 pt-2.5 border-t border-white/5">
+            <span class="text-emerald-300 font-semibold">Key Vault #KV-104</span>
+            <span class="text-[#e8c468]">Preferred Lead</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Bookings & Care Preferences -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 luxury-card rounded-3xl p-6 sm:p-8">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <span class="text-[10px] uppercase tracking-[0.2em] text-[#e8c468] font-semibold">Live Schedule</span>
+              <h3 class="font-serif-luxury text-2xl sm:text-3xl text-white">Upcoming & Recent Cleanings</h3>
+            </div>
+            <button onclick="switchTab('bookings')" class="text-xs text-[#e8c468] hover:underline font-semibold">View All →</button>
+          </div>
+          <div id="dashBookingsList" class="space-y-3.5"></div>
+        </div>
+
+        <!-- Custom Residence Care Card -->
+        <div class="luxury-card rounded-3xl p-6 sm:p-7 flex flex-col justify-between space-y-5">
+          <div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-[#e8c468] font-semibold">Bespoke Care Profile</span>
+            <h3 class="font-serif-luxury text-2xl text-white mt-1">Residence Preferences</h3>
+            <div class="space-y-3 mt-4 text-xs">
+              <div class="p-3.5 rounded-2xl bg-[#05130e]/80 border border-[#e8c468]/20 flex items-center gap-3">
+                <i data-lucide="flower-2" class="w-5 h-5 text-[#e8c468] shrink-0"></i>
+                <div>
+                  <p class="font-bold text-white">Aromatherapy Scent</p>
+                  <p class="text-gray-400">Organic White Tea & Eucalyptus</p>
+                </div>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-[#05130e]/80 border border-[#e8c468]/20 flex items-center gap-3">
+                <i data-lucide="gem" class="w-5 h-5 text-[#e8c468] shrink-0"></i>
+                <div>
+                  <p class="font-bold text-white">Delicate Surfaces</p>
+                  <p class="text-gray-400">Calacatta Marble & Brushed Brass</p>
+                </div>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-[#05130e]/80 border border-[#e8c468]/20 flex items-center gap-3">
+                <i data-lucide="key-round" class="w-5 h-5 text-[#e8c468] shrink-0"></i>
+                <div>
+                  <p class="font-bold text-white">Concierge Key Access</p>
+                  <p class="text-gray-400">Encrypted Vault Tag #KV-104</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button onclick="switchTab('profile')" class="w-full py-2.5 rounded-full border border-[#e8c468]/40 text-xs font-semibold text-[#f3d88c] hover:bg-[#e8c468]/15 transition">
+            Customize Preferences
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         2. MY BOOKINGS VIEW
+         ========================================== -->
+    <section id="tab-bookings" class="portal-tab hidden space-y-6">
+      <div class="luxury-card rounded-3xl p-6 sm:p-8">
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+          <div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-[#e8c468] font-semibold">Complete Reservation History</span>
+            <h3 class="font-serif-luxury text-3xl text-white mt-0.5">My Scheduled & Past Cleanings</h3>
+          </div>
+          <a href="/book" class="btn-gold px-5 py-2.5 rounded-full text-xs font-bold flex items-center gap-2">
+            <i data-lucide="plus" class="w-4 h-4"></i> Book Another Service
+          </a>
+        </div>
+        <div id="allBookingsList" class="space-y-4"></div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         3. BOOKING DETAILS & CHECKLIST VIEW
+         ========================================== -->
+    <section id="tab-details" class="portal-tab hidden space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 luxury-card rounded-3xl p-6 sm:p-8 space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-4 border-b border-[#e8c468]/15 pb-5">
+            <div>
+              <span class="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-semibold">● Confirmed — Reference #CLN-84920</span>
+              <h3 class="font-serif-luxury text-3xl text-white mt-2">Deep Architectural Cleaning</h3>
+              <p class="text-xs text-gray-400">Pařížská 18, 110 00 Praha 1 • Penthouse Apartment (165 m²)</p>
+            </div>
+            <div class="text-right">
+              <p class="font-serif-luxury text-4xl font-bold text-[#e8c468]">€204</p>
+              <span class="text-[11px] text-gray-400">Includes Oven & Window Add-Ons</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-[#e8c468] font-semibold mb-3">5-Point Room-by-Room Luxury Checklist</h4>
+            <div class="space-y-2.5 text-xs">
+              <div class="p-3.5 rounded-2xl bg-[#05130e]/90 border border-emerald-500/30 flex items-center justify-between">
+                <span class="flex items-center gap-2.5 text-white"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Living & Dining Salon — Dusting, Parquet Care & Botanical Mist</span>
+                <span class="text-emerald-300 font-semibold">Included</span>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-[#05130e]/90 border border-emerald-500/30 flex items-center justify-between">
+                <span class="flex items-center gap-2.5 text-white"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Kitchen & Calacatta Marble Island + Interior Oven Detailing (+€25)</span>
+                <span class="text-emerald-300 font-semibold">Included</span>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-[#05130e]/90 border border-emerald-500/30 flex items-center justify-between">
+                <span class="flex items-center gap-2.5 text-white"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Panoramic Terrace Windows & Mirrors Streak-Free Polish (+€30)</span>
+                <span class="text-emerald-300 font-semibold">Included</span>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-[#05130e]/90 border border-emerald-500/30 flex items-center justify-between">
+                <span class="flex items-center gap-2.5 text-white"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> 2 En-Suite Bathrooms — Steam Sanitization & Brass Descaling</span>
+                <span class="text-emerald-300 font-semibold">Included</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3 pt-2">
+            <button onclick="alert('Reschedule request opened — free changes up to 24h before arrival.')" class="btn-gold px-5 py-2.5 rounded-full text-xs font-bold">Reschedule Visit</button>
+            <button onclick="switchTab('payments')" class="px-5 py-2.5 rounded-full border border-[#e8c468]/40 text-xs text-[#f3d88c] hover:bg-[#e8c468]/15 transition">Download Receipt PDF</button>
+          </div>
+        </div>
+
+        <div class="luxury-card rounded-3xl p-6 sm:p-7 space-y-5">
+          <span class="text-[10px] uppercase tracking-[0.2em] text-[#e8c468] font-semibold">Assigned Team Lead</span>
+          <div class="flex items-center gap-4">
+            <img src="/images/difference-pro.jpg" class="w-16 h-16 rounded-2xl object-cover border-2 border-[#e8c468]" alt="Markéta" />
+            <div>
+              <h4 class="font-serif-luxury text-2xl text-white">Markéta Svobodová</h4>
+              <p class="text-xs text-[#e8c468]">4.98 ★ • 312 Luxury Cleanings</p>
+            </div>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Markéta has cared for your residence on 8 previous visits and is familiar with your marble island and key vault protocol.
+          </p>
+          <div class="p-4 rounded-2xl bg-[#05130e] border border-[#e8c468]/25 text-xs space-y-1">
+            <p class="text-[#e8c468] font-semibold">100% Satisfaction Guarantee</p>
+            <p class="text-gray-400">Complimentary 24-hour re-clean if any detail is missed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         4. PAYMENTS & INVOICES VIEW
+         ========================================== -->
+    <section id="tab-payments" class="portal-tab hidden space-y-6">
+      <div class="luxury-card rounded-3xl p-6 sm:p-8 space-y-5">
+        <div class="flex flex-wrap justify-between items-center gap-4">
+          <div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-[#e8c468] font-semibold">Encrypted Billing History</span>
+            <h3 class="font-serif-luxury text-3xl text-white mt-0.5">Payments & Tax Invoices</h3>
+          </div>
+          <span class="px-3.5 py-1.5 rounded-full bg-[#05130e] border border-[#e8c468]/35 text-xs text-[#f3d88c]">Default Method: Apple Pay / Visa •••• 4821</span>
+        </div>
+
+        <div class="space-y-3 text-xs">
+          <div class="p-5 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <p class="font-bold text-white text-sm">INV-2026-0891 • Deep Cleaning + Oven & Windows</p>
+              <p class="text-gray-400">18 Nov 2026 • Ref #CLN-84920 • Paid via Apple Pay</p>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="font-serif-luxury text-2xl font-bold text-[#e8c468]">€204.00</span>
+              <button onclick="alert('Downloaded Invoice INV-2026-0891.pdf')" class="px-4 py-2 rounded-full border border-[#e8c468]/40 text-[#e8c468] hover:bg-[#e8c468]/15 transition font-semibold">PDF Invoice</button>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <p class="font-bold text-white text-sm">INV-2026-0844 • Standard Home Cleaning + Fridge</p>
+              <p class="text-gray-400">04 Nov 2026 • Ref #CLN-84875 • Paid via Visa •••• 4821</p>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="font-serif-luxury text-2xl font-bold text-[#e8c468]">€109.00</span>
+              <button onclick="alert('Downloaded Invoice INV-2026-0844.pdf')" class="px-4 py-2 rounded-full border border-[#e8c468]/40 text-[#e8c468] hover:bg-[#e8c468]/15 transition font-semibold">PDF Invoice</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5. REVIEWS VIEW
+         ========================================== -->
+    <section id="tab-reviews" class="portal-tab hidden space-y-6">
+      <div class="luxury-card rounded-3xl p-6 sm:p-8 max-w-2xl space-y-5">
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.2em] text-[#e8c468] font-semibold">Share Your Experience</span>
+          <h3 class="font-serif-luxury text-3xl text-white mt-0.5">Rate Your Recent Cleaning</h3>
+        </div>
+        <form onsubmit="event.preventDefault(); alert('Thank you! Your 5-star review has been shared with Markéta and the CLEANORA team.');" class="space-y-4 text-xs">
+          <div>
+            <label class="block text-gray-300 mb-1.5">Rating</label>
+            <div class="text-2xl text-[#e8c468] tracking-widest">★★★★★</div>
+          </div>
+          <div>
+            <label class="block text-gray-300 mb-1.5">Your Feedback</label>
+            <textarea rows="4" class="input-luxury w-full rounded-2xl p-4" placeholder="Tell us how your home feels after our visit...">Markéta and her team left our penthouse spotless. The botanical scent is incredible!</textarea>
+          </div>
+          <button type="submit" class="btn-gold px-6 py-3 rounded-full font-bold">Submit Verified Review</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         6. PROFILE & KEY VAULT SETTINGS VIEW
+         ========================================== -->
+    <section id="tab-profile" class="portal-tab hidden space-y-6">
+      <div class="luxury-card rounded-3xl p-6 sm:p-8 max-w-3xl space-y-5">
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.2em] text-[#e8c468] font-semibold">Encrypted Client Record</span>
+          <h3 class="font-serif-luxury text-3xl text-white mt-0.5">Profile & Key Vault Instructions</h3>
+        </div>
+        <form onsubmit="event.preventDefault(); alert('Profile & Key Vault settings updated!');" class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div>
+            <label class="block text-gray-400 mb-1">Full Name</label>
+            <input type="text" value="Klára Horáková" class="input-luxury w-full px-4 py-3 rounded-xl" />
+          </div>
+          <div>
+            <label class="block text-gray-400 mb-1">Email Address</label>
+            <input type="email" value="customer@cleanora.cz" class="input-luxury w-full px-4 py-3 rounded-xl" />
+          </div>
+          <div>
+            <label class="block text-gray-400 mb-1">Phone Number</label>
+            <input type="text" value="+420 602 118 900" class="input-luxury w-full px-4 py-3 rounded-xl" />
+          </div>
+          <div>
+            <label class="block text-gray-400 mb-1">Primary Residence Address</label>
+            <input type="text" value="Pařížská 18, 110 00 Praha 1" class="input-luxury w-full px-4 py-3 rounded-xl" />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-gray-400 mb-1">Encrypted Concierge / Smart-Lock Instructions</label>
+            <input type="text" value="Key Tag #KV-104 at 24/7 Concierge Desk. Use pH-neutral botanical mist on kitchen marble." class="input-luxury w-full px-4 py-3 rounded-xl" />
+          </div>
+          <div class="sm:col-span-2 pt-2">
+            <button type="submit" class="btn-gold px-7 py-3 rounded-full font-bold">Save Residence Settings</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    lucide.createIcons();
+
+    function switchTab(tab) {
+      document.querySelectorAll('.portal-tab').forEach(el => el.classList.add('hidden'));
+      const target = document.getElementById('tab-' + tab);
+      if (target) target.classList.remove('hidden');
+
+      document.querySelectorAll('#customerNav .nav-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.tab === tab);
+      });
+    }
+
+    async function loadCustomerBookings() {
+      try {
+        const res = await fetch('/api/bookings');
+        const data = await res.json();
+        const bookings = data.bookings || [];
+        document.getElementById('navBookingCount').textContent = bookings.length;
+        document.getElementById('dashTotalCount').textContent = bookings.length + 12;
+
+        if (bookings.length > 0) {
+          document.getElementById('dashNextDate').textContent = bookings[0].date;
+          document.getElementById('dashNextService').textContent = `${bookings[0].serviceName} • ${bookings[0].time}`;
+        }
+
+        const renderCard = (b) => `
+          <div class="p-4 sm:p-5 rounded-2xl bg-[#05130e]/90 border border-[#e8c468]/25 hover:border-[#e8c468] transition flex flex-wrap items-center justify-between gap-4 text-xs">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2.5">
+                <span class="font-mono text-[#e8c468] font-bold">${b.reference}</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-semibold">${b.status || 'Confirmed'}</span>
+              </div>
+              <p class="font-serif-luxury text-2xl text-white">${b.serviceName}</p>
+              <p class="text-gray-400">${b.date} at ${b.time} • ${b.address || 'Pařížská 18, Praha 1'}</p>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="text-right">
+                <p class="font-serif-luxury text-2xl font-bold text-[#e8c468]">€${b.totalPrice}</p>
+                <p class="text-[10px] text-gray-400">Specialist: ${b.assignedStaff || 'Markéta S.'}</p>
+              </div>
+              <button onclick="switchTab('details')" class="px-4 py-2 rounded-full border border-[#e8c468]/35 text-[#f3d88c] hover:bg-[#e8c468]/15 transition font-semibold">Details →</button>
+            </div>
+          </div>
+        `;
+
+        document.getElementById('dashBookingsList').innerHTML = bookings.slice(0, 3).map(renderCard).join('');
+        document.getElementById('allBookingsList').innerHTML = bookings.map(renderCard).join('');
+      } catch (e) {}
+    }
+
+    function logout() {
+      localStorage.removeItem('cleanora_user');
+      window.location.href = '/login';
+    }
+
+    const savedUser = JSON.parse(localStorage.getItem('cleanora_user') || 'null');
+    if (savedUser && savedUser.name) {
+      document.getElementById('userNameTitle').textContent = savedUser.name;
+      document.getElementById('userNameBadge').textContent = savedUser.name;
+    }
+
+    loadCustomerBookings();
+  </script>
+</body>
+</html>

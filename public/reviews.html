@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Reviews & Testimonials | CLEANORA® Luxury Cleaning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/hover-effects.css" />
+  <style>
+    :root {
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    body {
+      background-color: #081d15;
+      color: #f8f6f0;
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-serif-luxury {
+      font-family: var(--font-serif);
+    }
+    .btn-gold-luxury {
+      background: linear-gradient(135deg, #f3d88c 0%, #e4be62 48%, #d4a644 100%);
+      color: #0d2219;
+      box-shadow:
+        0 8px 28px -4px rgba(232, 196, 104, 0.42),
+        0 2px 10px rgba(232, 196, 104, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.65);
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .btn-gold-luxury:hover {
+      background: linear-gradient(135deg, #f7e1a0 0%, #ebc86e 50%, #dcaf4d 100%);
+      box-shadow:
+        0 12px 34px -4px rgba(232, 196, 104, 0.58),
+        0 4px 14px rgba(232, 196, 104, 0.35),
+        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+      transform: translateY(-1.5px);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#081d15] text-[#f8f6f0] selection:bg-[#e8c468] selection:text-[#0b231b]">
+
+  <!-- =====================================================================
+       EXISTING UNTOUCHED HEADER / NAVIGATION
+       ===================================================================== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-[#0a1f18]/75 backdrop-blur-md border-b border-white/[0.08] py-4">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14 flex items-center justify-between">
+      <a href="/" class="group flex items-center gap-3.5 focus:outline-none">
+        <div class="relative w-11 h-11 flex items-center justify-center shrink-0">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11 transition-transform duration-500 group-hover:scale-105">
+            <defs>
+              <linearGradient id="cleanoraGoldGrad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#F5DF9E" />
+                <stop offset="50%" stop-color="#E4BE62" />
+                <stop offset="100%" stop-color="#C89B3C" />
+              </linearGradient>
+            </defs>
+            <path d="M11 38.5C6.8 34.8 4.2 29.4 4.2 23.4C4.2 12.4 13.1 3.5 24.1 3.5C35.1 3.5 44 12.4 44 23.4C44 33.6 36.3 42 26.4 43.2" stroke="url(#cleanoraGoldGrad)" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M16 7.8C18.5 6.6 21.2 6 24.1 6C33.7 6 41.5 13.8 41.5 23.4" stroke="url(#cleanoraGoldGrad)" stroke-width="0.75" stroke-opacity="0.55" stroke-linecap="round" />
+            <path d="M14.5 34.5C15.5 24.5 22.5 14.5 34.5 12.5C33.5 24.5 26.5 32.5 14.5 34.5Z" fill="url(#cleanoraGoldGrad)" fill-opacity="0.18" stroke="url(#cleanoraGoldGrad)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M11.5 38.5C15.5 33.5 21.5 25.5 29.5 17.5" stroke="url(#cleanoraGoldGrad)" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M15.2 33.5C12.2 31.2 11.8 27.2 13.8 24.2C16.2 26.2 16.8 30.2 15.2 33.5Z" fill="url(#cleanoraGoldGrad)" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-baseline">
+            <span class="font-serif-luxury text-[24px] sm:text-[26px] font-semibold tracking-[0.11em] text-white leading-none">CLEANORA</span>
+            <span class="text-[10px] text-[#e8c468] ml-0.5 font-sans align-top">®</span>
+          </div>
+          <span class="text-[8.5px] sm:text-[9px] tracking-[0.23em] uppercase text-[#d8d5cc]/75 font-medium mt-1">Professional Cleaning Services</span>
+        </div>
+      </a>
+
+      <nav class="hidden xl:flex items-center gap-8">
+        <a href="/" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Home</a>
+        <div class="relative group">
+          <a href="/services" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white flex items-center gap-1.5 transition-colors">
+            <span>Services</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-[#e8c468]/85"></i>
+          </a>
+          <div class="hidden group-hover:block absolute top-full left-0 pt-3 w-64 z-50">
+            <div class="bg-[#0c261d]/95 backdrop-blur-xl border border-[#e8c468]/25 rounded-2xl p-2 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Home Cleaning</a>
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Deep Cleaning</a>
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Commercial Cleaning</a>
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Move In / Move Out</a>
+            </div>
+          </div>
+        </div>
+        <a href="/pricing" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Pricing</a>
+        <a href="/about" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">About</a>
+        <a href="/gallery" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Gallery</a>
+        <a href="/reviews" class="relative py-2 text-[14.5px] font-medium text-white flex items-center gap-1.5">
+          <span>Reviews</span>
+          <span class="absolute -bottom-[3px] left-0 right-0 h-[2px] bg-gradient-to-r from-[#e8c468] via-[#f3d88c] to-[#d4a644] rounded-full shadow-[0_0_8px_rgba(232,196,104,0.7)]"></span>
+        </a>
+        <a href="/contact" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:+420600123456" class="flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#0f2c22]/75 border border-white/[0.15] hover:border-[#e8c468]/45 text-[14px] text-[#f4f1ea] tracking-wide transition-all">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-[#e8c468]"></i>
+          <span>+420 600 123 456</span>
+        </a>
+        <button onclick="openBookingModal()" class="btn-gold-luxury cursor-pointer flex items-center gap-2.5 px-6 py-2.5 rounded-full text-[14.5px] font-semibold">
+          <span>Book a Cleaning</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="flex items-center gap-3 xl:hidden">
+        <button onclick="toggleMobileMenu()" aria-label="Menu" class="p-2.5 rounded-full bg-white/[0.06] border border-white/[0.14] text-[#f3d88c]">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden xl:hidden bg-[#0a2119]/98 backdrop-blur-2xl border-b border-[#e8c468]/20 px-6 pt-5 pb-8 space-y-4 mt-4">
+      <div class="flex flex-col space-y-2">
+        <a href="/" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Home</a>
+        <a href="/services" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Services</a>
+        <a href="/pricing" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Pricing</a>
+        <a href="/about" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">About</a>
+        <a href="/gallery" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Gallery</a>
+        <a href="/reviews" class="px-4 py-2.5 rounded-xl bg-[#e8c468]/15 text-[#f3d88c] font-medium border border-[#e8c468]/30">Reviews</a>
+        <a href="/contact" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       1. REVIEWS HERO + 2. RATING SUMMARY BAR
+       ===================================================================== -->
+  <section class="relative w-full pt-[92px] overflow-hidden bg-[#081d15] border-b border-[#e8c468]/20">
+    <div class="pointer-events-none absolute inset-0 z-0">
+      <img src="/images/services-hero-bottle.jpg" alt="CLEANORA Reviews Hero" class="w-full h-full object-cover object-right opacity-95" />
+      <div class="absolute inset-0" style="background: linear-gradient(90deg, #071912 0%, #092118 38%, rgba(10,34,25,0.68) 62%, rgba(8,26,19,0.18) 100%);"></div>
+      <div class="absolute inset-x-0 bottom-0 h-20" style="background: linear-gradient(to top, #081c14 0%, transparent 100%);"></div>
+    </div>
+
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14 pt-14 pb-12">
+      <div class="max-w-[580px] mb-12">
+        <nav class="flex items-center gap-2 text-[12.5px] text-[#d5ddd8]/75 mb-5">
+          <a href="/" class="hover:text-[#f3d88c] transition-colors">Home</a>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#e8c468]/70"></i>
+          <span class="text-[#f3d88c] font-medium">Reviews</span>
+        </nav>
+
+        <h1 class="font-serif-luxury text-[48px] sm:text-[62px] lg:text-[68px] leading-[1.04] text-white font-normal mb-5">
+          <span class="block">Client Reviews</span>
+          <span class="block italic text-[#e8c468] mt-1">& Testimonials</span>
+        </h1>
+
+        <p class="text-[15.5px] sm:text-[16.5px] leading-[1.68] text-[#d7ded9]/85 font-light max-w-[490px]">
+          Real feedback from our happy clients. See why homeowners and businesses trust CLEANORA for their cleaning needs.
+        </p>
+      </div>
+
+      <!-- 2. Rating Summary Glass Card (4.9/5 | Star Distribution Bars | Verified Reviews) -->
+      <div class="rounded-[26px] bg-[#0c271d]/90 backdrop-blur-xl border border-[#e8c468]/40 p-6 sm:p-8 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-[0_22px_55px_rgba(0,0,0,0.5)]">
+        <!-- Left: 4.9/5 + Based on 1,245+ verified reviews -->
+        <div class="lg:col-span-4 flex items-center gap-6 lg:border-r lg:border-white/[0.12] lg:pr-6">
+          <div class="text-center">
+            <div class="font-serif-luxury text-[48px] sm:text-[56px] font-semibold text-[#e8c468] leading-none">4.9/5</div>
+            <div class="flex items-center justify-center gap-1 text-[#ecc566] text-lg mt-1.5">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+          <div class="pl-6 border-l border-white/[0.12] text-[13.5px] text-[#d5ddd8]/85 leading-relaxed">
+            <div>Based on <span class="text-white font-semibold">1,245+</span></div>
+            <div>verified reviews</div>
+          </div>
+        </div>
+
+        <!-- Center: Star Distribution Bars (5★ 92%, 4★ 6%, 3★ 2%) -->
+        <div class="lg:col-span-5 space-y-2.5 lg:px-4">
+          <div class="flex items-center gap-3 text-[13px]">
+            <span class="w-8 text-[#e8c468] font-medium">5 ★</span>
+            <div class="flex-1 h-2 rounded-full bg-white/[0.1] overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-[#f3d88c] to-[#d4a644] rounded-full" style="width: 92%"></div>
+            </div>
+            <span class="w-9 text-right text-[#d5ddd8]/85">92%</span>
+          </div>
+          <div class="flex items-center gap-3 text-[13px]">
+            <span class="w-8 text-[#e8c468] font-medium">4 ★</span>
+            <div class="flex-1 h-2 rounded-full bg-white/[0.1] overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-[#f3d88c] to-[#d4a644] rounded-full" style="width: 6%"></div>
+            </div>
+            <span class="w-9 text-right text-[#d5ddd8]/85">6%</span>
+          </div>
+          <div class="flex items-center gap-3 text-[13px]">
+            <span class="w-8 text-[#e8c468] font-medium">3 ★</span>
+            <div class="flex-1 h-2 rounded-full bg-white/[0.1] overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-[#f3d88c] to-[#d4a644] rounded-full" style="width: 2%"></div>
+            </div>
+            <span class="w-9 text-right text-[#d5ddd8]/85">2%</span>
+          </div>
+        </div>
+
+        <!-- Right: Verified Reviews Badge -->
+        <div class="lg:col-span-3 lg:pl-6 lg:border-l lg:border-white/[0.12] flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-[#113125] border border-[#e8c468]/50 flex items-center justify-center shrink-0">
+            <i data-lucide="shield-check" class="w-6 h-6 text-[#e8c468]"></i>
+          </div>
+          <div>
+            <div class="text-[14.5px] font-semibold text-white">Verified Reviews</div>
+            <div class="text-[12px] text-[#d5ddd8]/75 leading-snug mt-0.5">Real customers. Real experiences. No fake reviews.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       3. DYNAMIC CUSTOMER TESTIMONIALS + RATING FILTERS & PAGINATION
+       ===================================================================== -->
+  <section class="relative w-full py-20 lg:py-24 bg-[#092018] overflow-hidden">
+    <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(ellipse 80% 60% at 50% 20%, rgba(24,68,52,0.5) 0%, rgba(9,32,24,0.95) 70%, #071912 100%);"></div>
+
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
+      <div class="text-center max-w-[680px] mx-auto mb-10">
+        <div class="inline-flex items-center gap-3 mb-3">
+          <span class="w-8 h-[1px] bg-[#e8c468]/75"></span>
+          <span class="text-[11.5px] tracking-[0.24em] uppercase text-[#e8c468] font-medium">WHAT OUR CLIENTS SAY</span>
+          <span class="w-8 h-[1px] bg-[#e8c468]/75"></span>
+        </div>
+        <h2 class="font-serif-luxury text-[40px] sm:text-[52px] leading-[1.08] text-white font-normal mb-3">
+          Real Experiences, <span class="italic text-[#e8c468]">Real Results</span>
+        </h2>
+        <p class="text-[14.5px] text-[#d5ddd8]/80 font-light">
+          Discover what our clients love about CLEANORA's cleaning services.
+        </p>
+      </div>
+
+      <!-- Interactive Rating & Category Filter Pills -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+        <button onclick="filterReviews('all')" id="rev-filter-all" class="rev-filter-btn btn-gold-luxury cursor-pointer px-5 py-2 rounded-full text-[13px] font-semibold">All Reviews (6)</button>
+        <button onclick="filterReviews('5')" id="rev-filter-5" class="rev-filter-btn cursor-pointer px-5 py-2 rounded-full text-[13px] bg-[#0e2c21] border border-[#e8c468]/35 text-[#e6ece8] hover:border-[#e8c468]">5 ★ Only</button>
+        <button onclick="filterReviews('Residential')" id="rev-filter-Residential" class="rev-filter-btn cursor-pointer px-5 py-2 rounded-full text-[13px] bg-[#0e2c21] border border-[#e8c468]/35 text-[#e6ece8] hover:border-[#e8c468]">Residential</button>
+        <button onclick="filterReviews('Business')" id="rev-filter-Business" class="rev-filter-btn cursor-pointer px-5 py-2 rounded-full text-[13px] bg-[#0e2c21] border border-[#e8c468]/35 text-[#e6ece8] hover:border-[#e8c468]">Commercial & Business</button>
+      </div>
+
+      <!-- Dynamic 3-Card Reviews Grid -->
+      <div id="reviewsCardsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-7 mb-10"></div>
+
+      <!-- Pagination Controls -->
+      <div class="flex items-center justify-center gap-3 mb-16">
+        <button onclick="changeReviewPage(1)" id="page-btn-1" class="w-9 h-9 rounded-full btn-gold-luxury text-xs font-bold cursor-pointer">1</button>
+        <button onclick="changeReviewPage(2)" id="page-btn-2" class="w-9 h-9 rounded-full bg-[#0e2c21] border border-[#e8c468]/40 text-xs text-white hover:border-[#e8c468] cursor-pointer">2</button>
+      </div>
+
+      <!-- =====================================================================
+           4. TRUST STATISTICS BAR (1,245+ | 98% | 5+ Years | 10,000+)
+           ===================================================================== -->
+      <div class="rounded-[24px] bg-[#0c271d]/90 border border-[#e8c468]/35 px-6 py-7 sm:px-10 grid grid-cols-2 lg:grid-cols-4 gap-6 shadow-[0_20px_50px_rgba(0,0,0,0.4)] mb-20">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-[#113125] border border-[#e8c468]/45 flex items-center justify-center shrink-0">
+            <i data-lucide="users" class="w-5 h-5 text-[#e8c468]"></i>
+          </div>
+          <div>
+            <div class="font-serif-luxury text-[28px] sm:text-[32px] font-semibold text-white leading-none">1,245+</div>
+            <div class="text-[12.5px] text-[#d5ddd8]/80 mt-1">Happy Reviews</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:pl-6 lg:border-l lg:border-white/[0.12]">
+          <div class="w-12 h-12 rounded-full bg-[#113125] border border-[#e8c468]/45 flex items-center justify-center shrink-0">
+            <i data-lucide="shield-check" class="w-5 h-5 text-[#e8c468]"></i>
+          </div>
+          <div>
+            <div class="font-serif-luxury text-[28px] sm:text-[32px] font-semibold text-white leading-none">98%</div>
+            <div class="text-[12.5px] text-[#d5ddd8]/80 mt-1">Client Satisfaction</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:pl-6 lg:border-l lg:border-white/[0.12]">
+          <div class="w-12 h-12 rounded-full bg-[#113125] border border-[#e8c468]/45 flex items-center justify-center shrink-0">
+            <i data-lucide="calendar-check" class="w-5 h-5 text-[#e8c468]"></i>
+          </div>
+          <div>
+            <div class="font-serif-luxury text-[28px] sm:text-[32px] font-semibold text-white leading-none">5+ Years</div>
+            <div class="text-[12.5px] text-[#d5ddd8]/80 mt-1">Trusted Service</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:pl-6 lg:border-l lg:border-white/[0.12]">
+          <div class="w-12 h-12 rounded-full bg-[#113125] border border-[#e8c468]/45 flex items-center justify-center shrink-0">
+            <i data-lucide="sofa" class="w-5 h-5 text-[#e8c468]"></i>
+          </div>
+          <div>
+            <div class="font-serif-luxury text-[28px] sm:text-[32px] font-semibold text-white leading-none">10,000+</div>
+            <div class="text-[12.5px] text-[#d5ddd8]/80 mt-1">Spaces Cleaned</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================================
+           5. VIDEO TESTIMONIALS (INTERACTIVE PLAYABLE VIDEO MODAL)
+           ===================================================================== -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+        <div class="lg:col-span-4 flex flex-col items-start">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-7 h-[1px] bg-[#e8c468]/75"></span>
+            <span class="text-[11px] tracking-[0.22em] uppercase text-[#e8c468] font-medium">VIDEO TESTIMONIALS</span>
+            <span class="w-7 h-[1px] bg-[#e8c468]/75"></span>
+          </div>
+          <h3 class="font-serif-luxury text-[38px] sm:text-[46px] leading-[1.06] text-white font-normal mb-4">
+            <span class="block">Hear It</span>
+            <span class="block">From Our</span>
+            <span class="block italic text-[#e8c468]">Clients</span>
+          </h3>
+          <p class="text-[14px] leading-[1.68] text-[#d5ddd8]/80 font-light mb-7 max-w-[300px]">
+            Watch real clients share their experience with CLEANORA cleaning services.
+          </p>
+          <button onclick="openVideoModal('Home Cleaning Review – Jana K.')" class="btn-gold-luxury cursor-pointer inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-[13.5px] font-semibold">
+            <i data-lucide="play-circle" class="w-4 h-4"></i>
+            <span>View All Videos</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <!-- Video Card 1 -->
+          <div onclick="openVideoModal('Home Cleaning Review – Jana K.')" class="group cursor-pointer rounded-[22px] overflow-hidden bg-[#0c271d] border border-[#e8c468]/40 shadow-[0_18px_45px_rgba(0,0,0,0.45)]">
+            <div class="relative h-[200px] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Jana K. Video Review" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                <div class="w-13 h-13 rounded-full bg-[#0c271d]/85 border-2 border-[#e8c468] flex items-center justify-center text-[#f3d88c] group-hover:scale-110 transition-transform shadow-lg">
+                  <i data-lucide="play" class="w-5 h-5 fill-[#f3d88c] ml-0.5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <h4 class="font-serif-luxury text-[20px] font-semibold text-white">Home Cleaning Review</h4>
+              <p class="text-[12.5px] text-[#d5ddd8]/75">Jana K.</p>
+            </div>
+          </div>
+
+          <!-- Video Card 2 -->
+          <div onclick="openVideoModal('Office Cleaning Review – Martin V.')" class="group cursor-pointer rounded-[22px] overflow-hidden bg-[#0c271d] border border-[#e8c468]/40 shadow-[0_18px_45px_rgba(0,0,0,0.45)]">
+            <div class="relative h-[200px] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Martin V. Video Review" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                <div class="w-13 h-13 rounded-full bg-[#0c271d]/85 border-2 border-[#e8c468] flex items-center justify-center text-[#f3d88c] group-hover:scale-110 transition-transform shadow-lg">
+                  <i data-lucide="play" class="w-5 h-5 fill-[#f3d88c] ml-0.5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <h4 class="font-serif-luxury text-[20px] font-semibold text-white">Office Cleaning Review</h4>
+              <p class="text-[12.5px] text-[#d5ddd8]/75">Martin V.</p>
+            </div>
+          </div>
+
+          <!-- Video Card 3 -->
+          <div onclick="openVideoModal('Deep Cleaning Review – Elena R.')" class="group cursor-pointer rounded-[22px] overflow-hidden bg-[#0c271d] border border-[#e8c468]/40 shadow-[0_18px_45px_rgba(0,0,0,0.45)]">
+            <div class="relative h-[200px] overflow-hidden">
+              <img src="/images/difference-pro.jpg" alt="Elena R. Video Review" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                <div class="w-13 h-13 rounded-full bg-[#0c271d]/85 border-2 border-[#e8c468] flex items-center justify-center text-[#f3d88c] group-hover:scale-110 transition-transform shadow-lg">
+                  <i data-lucide="play" class="w-5 h-5 fill-[#f3d88c] ml-0.5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <h4 class="font-serif-luxury text-[20px] font-semibold text-white">Deep Cleaning Review</h4>
+              <p class="text-[12.5px] text-[#d5ddd8]/75">Elena R.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================================
+           6. REVIEW PLATFORMS BAR (GOOGLE, TRUSTPILOT, FACEBOOK)
+           ===================================================================== -->
+      <div class="rounded-[22px] bg-[#0c271d]/90 border border-[#e8c468]/35 px-6 py-5 sm:px-10 grid grid-cols-1 sm:grid-cols-4 gap-6 items-center mb-16">
+        <div class="text-[15px] font-medium text-white text-center sm:text-left">Also Rated On</div>
+
+        <div class="flex items-center justify-center gap-3.5 sm:border-l sm:border-white/[0.12] sm:pl-6">
+          <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center font-bold text-[#4285F4] text-lg shrink-0">G</div>
+          <div>
+            <div class="text-[14px] font-semibold text-white">Google</div>
+            <div class="text-[12px] text-[#e8c468]">4.9/5 ★ <span class="text-[#d5ddd8]/75">(820+)</span></div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center gap-3.5 sm:border-l sm:border-white/[0.12] sm:pl-6">
+          <div class="w-9 h-9 rounded-full bg-[#00b67a] flex items-center justify-center text-white text-lg shrink-0">★</div>
+          <div>
+            <div class="text-[14px] font-semibold text-white">Trustpilot</div>
+            <div class="text-[12px] text-[#e8c468]">4.8/5 ★ <span class="text-[#d5ddd8]/75">(310+)</span></div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center gap-3.5 sm:border-l sm:border-white/[0.12] sm:pl-6">
+          <div class="w-9 h-9 rounded-full bg-[#1877F2] flex items-center justify-center font-bold text-white text-lg shrink-0">f</div>
+          <div>
+            <div class="text-[14px] font-semibold text-white">Facebook</div>
+            <div class="text-[12px] text-[#e8c468]">4.9/5 ★ <span class="text-[#d5ddd8]/75">(115+)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================================
+           7. FINAL BOOKING CTA BANNER
+           ===================================================================== -->
+      <div class="relative rounded-[30px] overflow-hidden bg-[#0c271d] border border-[#e8c468]/45 shadow-[0_28px_70px_rgba(0,0,0,0.55)]">
+        <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+          <div class="lg:col-span-5 p-8 sm:p-12 lg:p-14 flex flex-col items-start z-10">
+            <h2 class="font-serif-luxury text-[36px] sm:text-[44px] leading-[1.08] text-white font-normal mb-4">
+              <span class="block">Experience the</span>
+              <span class="block italic text-[#e8c468] mt-1">CLEANORA Difference</span>
+            </h2>
+            <p class="text-[14.5px] sm:text-[15px] leading-[1.65] text-[#d5ddd8]/85 font-light max-w-[380px] mb-8">
+              Join hundreds of happy clients and enjoy a cleaner, fresher and healthier space today.
+            </p>
+            <button onclick="openBookingModal()" class="btn-gold-luxury cursor-pointer inline-flex items-center gap-3 px-8 py-4 rounded-full text-[15px] font-semibold">
+              <i data-lucide="calendar" class="w-4 h-4 text-[#0d2219]"></i>
+              <span>Book a Cleaning</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 text-[#0d2219]"></i>
+            </button>
+          </div>
+
+          <div class="lg:col-span-7 relative h-[320px] sm:h-[360px] w-full overflow-hidden">
+            <img src="/images/hero-interior.jpg" alt="Luxury Living Room" class="w-full h-full object-cover object-center" />
+            <svg viewBox="0 0 140 400" preserveAspectRatio="none" class="hidden lg:block absolute top-0 left-0 bottom-0 w-28 h-full pointer-events-none">
+              <path d="M0 0 L110 0 C45 120, 20 260, 10 400 L0 400 Z" fill="#0c271d" />
+              <path d="M110 0 C45 120, 20 260, 10 400" fill="none" stroke="#e8c468" stroke-width="3.5" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       EXISTING UNTOUCHED BOTANICAL LUXURY FOOTER
+       ===================================================================== -->
+  <footer id="contact" class="relative w-full pt-20 pb-12 overflow-hidden bg-[#061610] text-[#f3f0e6] border-t border-[#e8c468]/20">
+    <div class="pointer-events-none absolute inset-y-0 left-0 w-1/2 bg-cover bg-left-top opacity-85" style="background-image: url('/images/footer-botanical.jpg');"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-cover bg-left-top opacity-85 -scale-x-100" style="background-image: url('/images/footer-botanical.jpg');"></div>
+    <div class="pointer-events-none absolute inset-0" style="background: linear-gradient(90deg, rgba(6, 22, 16, 0.62) 0%, rgba(7, 25, 18, 0.88) 32%, rgba(7, 25, 18, 0.88) 68%, rgba(6, 22, 16, 0.62) 100%);"></div>
+
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 pb-16">
+        <div class="lg:col-span-3 lg:pr-6 lg:border-r lg:border-white/[0.1] flex flex-col items-start">
+          <a href="/" class="flex flex-col items-start mb-5">
+            <div class="flex items-center gap-3">
+              <svg viewBox="0 0 42 42" fill="none" class="w-10 h-10 shrink-0">
+                <path d="M7 35C8 21 18 9 35 6C34 22 24 33 7 35Z" fill="#e8c468" />
+                <path d="M5 38C11 31 19 22 28 13" stroke="#071912" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+              <span class="font-serif-luxury text-[28px] sm:text-[30px] font-semibold tracking-[0.1em] text-white leading-none">CLEANORA</span>
+            </div>
+            <span class="text-[9.5px] tracking-[0.25em] uppercase text-[#e8c468] font-medium mt-2.5">PROFESSIONAL CLEANING SERVICES</span>
+          </a>
+          <p class="text-[13.5px] leading-[1.7] text-[#d5ddd8]/80 font-light mb-7 max-w-[300px]">
+            Professional, reliable and eco-friendly cleaning for homes and businesses. A cleaner space for a healthier, happier life.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-full bg-[#0d281e]/80 hover:bg-[#e8c468] text-[#f3e5be] hover:text-[#071912] border border-[#e8c468]/45 flex items-center justify-center transition-all">f</a>
+            <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-full bg-[#0d281e]/80 hover:bg-[#e8c468] text-[#f3e5be] hover:text-[#071912] border border-[#e8c468]/45 flex items-center justify-center transition-all">ig</a>
+            <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-full bg-[#0d281e]/80 hover:bg-[#e8c468] text-[#f3e5be] hover:text-[#071912] border border-[#e8c468]/45 flex items-center justify-center transition-all">in</a>
+            <a href="https://youtube.com" target="_blank" class="w-10 h-10 rounded-full bg-[#0d281e]/80 hover:bg-[#e8c468] text-[#f3e5be] hover:text-[#071912] border border-[#e8c468]/45 flex items-center justify-center transition-all">▶</a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 grid grid-cols-2 gap-6 sm:gap-8 lg:px-4">
+          <div>
+            <h3 class="font-serif-luxury text-[23px] font-medium text-white mb-2">Quick Links</h3>
+            <div class="w-8 h-[2px] bg-[#e8c468] mb-5"></div>
+            <ul class="space-y-2.5 text-[13.5px] text-[#d5ddd8]/80">
+              <li><a href="/" class="hover:text-[#f3d88c]">› Home</a></li>
+              <li><a href="/about" class="hover:text-[#f3d88c]">› About Us</a></li>
+              <li><a href="/services" class="hover:text-[#f3d88c]">› Our Services</a></li>
+              <li><a href="/pricing" class="hover:text-[#f3d88c]">› Pricing</a></li>
+              <li><a href="/gallery" class="hover:text-[#f3d88c]">› Gallery</a></li>
+              <li><a href="/reviews" class="hover:text-[#f3d88c]">› Reviews</a></li>
+              <li><a href="/contact" class="hover:text-[#f3d88c]">› Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-serif-luxury text-[23px] font-medium text-white mb-2">Our Services</h3>
+            <div class="w-8 h-[2px] bg-[#e8c468] mb-5"></div>
+            <ul class="space-y-2.5 text-[13.5px] text-[#d5ddd8]/80">
+              <li><a href="/services" class="hover:text-[#f3d88c]">› Home Cleaning</a></li>
+              <li><a href="/services" class="hover:text-[#f3d88c]">› Deep Cleaning</a></li>
+              <li><a href="/services" class="hover:text-[#f3d88c]">› Commercial Cleaning</a></li>
+              <li><a href="/services" class="hover:text-[#f3d88c]">› Move In / Move Out</a></li>
+              <li><a href="/services" class="hover:text-[#f3d88c]">› Office Cleaning</a></li>
+              <li><a href="/contact" class="hover:text-[#f3d88c]">› Custom Cleaning</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+          <div class="grid grid-cols-1 sm:grid-cols-12 gap-8">
+            <div class="sm:col-span-6 lg:pr-4 lg:border-r lg:border-white/[0.1]">
+              <h3 class="font-serif-luxury text-[23px] font-medium text-white mb-2">Contact Us</h3>
+              <div class="w-8 h-[2px] bg-[#e8c468] mb-5"></div>
+              <div class="space-y-3.5 text-[13.5px]">
+                <a href="tel:+420600123456" class="flex items-center gap-3 pb-3 border-b border-white/[0.08] text-[#e6ece8]/90 hover:text-[#f3d88c]">
+                  <i data-lucide="phone" class="w-4 h-4 text-[#e8c468]"></i><span>+420 600 123 456</span>
+                </a>
+                <a href="mailto:hello@cleanora.cz" class="flex items-center gap-3 pb-3 border-b border-white/[0.08] text-[#e6ece8]/90 hover:text-[#f3d88c]">
+                  <i data-lucide="mail" class="w-4 h-4 text-[#e8c468]"></i><span>hello@cleanora.cz</span>
+                </a>
+                <div class="flex items-center gap-3 text-[#e6ece8]/90">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-[#e8c468]"></i><span>Prague, Czech Republic</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sm:col-span-6">
+              <h3 class="font-serif-luxury text-[23px] font-medium text-white mb-2">Stay in the Loop</h3>
+              <div class="w-8 h-[2px] bg-[#e8c468] mb-5"></div>
+              <p class="text-[13px] leading-[1.6] text-[#d5ddd8]/80 font-light mb-4">
+                Get cleaning tips, offers and updates straight to your inbox.
+              </p>
+              <form onsubmit="event.preventDefault(); document.getElementById('subMsg').classList.remove('hidden');" class="relative flex items-center w-full rounded-xl overflow-hidden bg-[#0a231a]/90 border border-[#e8c468]/40">
+                <input type="email" required placeholder="Enter your email" class="w-full px-4 py-3 bg-transparent text-[13px] text-white placeholder:text-[#d5ddd8]/50 focus:outline-none" />
+                <button type="submit" aria-label="Subscribe" class="btn-gold-luxury cursor-pointer px-4 py-3 flex items-center justify-center shrink-0">
+                  <i data-lucide="send" class="w-4 h-4 text-[#0d2219]"></i>
+                </button>
+              </form>
+              <p id="subMsg" class="hidden text-xs text-[#f3d88c] mt-2">✓ Subscribed! Welcome to CLEANORA.</p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/[0.08] grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="flex items-center gap-3">
+              <i data-lucide="leaf" class="w-6 h-6 text-[#e8c468]"></i>
+              <div class="text-[12px] leading-[1.35] text-[#e6ece8]/90"><div>Eco-Friendly</div><div>Products</div></div>
+            </div>
+            <div class="flex items-center gap-3 sm:pl-4 sm:border-l sm:border-white/[0.1]">
+              <i data-lucide="shield-check" class="w-6 h-6 text-[#e8c468]"></i>
+              <div class="text-[12px] leading-[1.35] text-[#e6ece8]/90"><div>Trusted &</div><div>Vetted Team</div></div>
+            </div>
+            <div class="flex items-center gap-3 sm:pl-4 sm:border-l sm:border-white/[0.1]">
+              <i data-lucide="calendar" class="w-6 h-6 text-[#e8c468]"></i>
+              <div class="text-[12px] leading-[1.35] text-[#e6ece8]/90"><div>Flexible</div><div>Scheduling</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full h-[1px] mb-7" style="background: linear-gradient(90deg, rgba(232,196,104,0.15) 0%, rgba(245,223,158,0.65) 28%, rgba(232,196,104,0.25) 100%);"></div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-[#d5ddd8]/75">
+        <p>© 2026 CLEANORA. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#privacy" class="hover:text-[#f3d88c]">Privacy Policy</a>
+          <span class="text-white/25">|</span>
+          <a href="#terms" class="hover:text-[#f3d88c]">Terms of Service</a>
+          <span class="text-white/25">|</span>
+          <a href="#cookies" class="hover:text-[#f3d88c]">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Video Player Modal -->
+  <div id="videoModal" class="hidden fixed inset-0 z-[110] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+    <div class="relative w-full max-w-2xl rounded-3xl bg-[#0c261d] border border-[#e8c468]/45 p-6 text-white shadow-2xl">
+      <div class="flex items-center justify-between mb-4">
+        <h3 id="videoModalTitle" class="font-serif-luxury text-2xl text-[#f3d88c]">Client Video Review</h3>
+        <button onclick="closeVideoModal()" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-[#e8c468]">✕</button>
+      </div>
+      <div class="aspect-video w-full rounded-2xl overflow-hidden bg-black border border-white/15 flex items-center justify-center relative">
+        <video id="clientVideoPlayer" controls class="w-full h-full object-cover" poster="/images/hero-interior.jpg">
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Booking Modal -->
+  <div id="bookingModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/75 backdrop-blur-md">
+    <div class="relative w-full max-w-lg rounded-3xl bg-[#0c261d] border border-[#e8c468]/35 p-6 sm:p-8 text-white shadow-[0_25px_70px_rgba(0,0,0,0.75)]">
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-[#e8c468]">✕</button>
+      <h3 class="font-serif-luxury text-3xl sm:text-4xl text-white mb-2">Book a <span class="italic text-[#e8c468]">Cleaning</span></h3>
+      <p class="text-xs sm:text-sm text-[#d7ded9]/75 mb-6">Select your preferred service and time for a spotless space.</p>
+      <form onsubmit="event.preventDefault(); alert('Thank you! Your CLEANORA concierge booking is confirmed.'); closeBookingModal();" class="space-y-4">
+        <input type="text" required placeholder="Full Name" class="w-full px-4 py-3 rounded-xl bg-[#081b14] border border-white/15 text-sm text-white" />
+        <input type="tel" required placeholder="+420 600 123 456" class="w-full px-4 py-3 rounded-xl bg-[#081b14] border border-white/15 text-sm text-white" />
+        <select id="bookingServiceSelect" class="w-full px-4 py-3 rounded-xl bg-[#081b14] border border-white/15 text-sm text-white">
+          <option>Home Cleaning</option>
+          <option>Deep Cleaning</option>
+          <option>Commercial Cleaning</option>
+          <option>Move In / Move Out</option>
+        </select>
+        <button type="submit" class="btn-gold-luxury w-full py-3.5 rounded-full text-sm font-semibold mt-2 cursor-pointer">Confirm Priority Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    const ALL_REVIEWS = [
+      {
+        name: "Jana K.",
+        role: "Residential Client",
+        type: "Residential",
+        stars: 5,
+        avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+        text: "“The whole experience feels effortless. The team is thoughtful, punctual and the little details never go unnoticed. Our home has never looked better!”",
+        page: 1
+      },
+      {
+        name: "Martin V.",
+        role: "Business Client",
+        type: "Business",
+        stars: 5,
+        avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80",
+        text: "“Professional, reliable and always consistent. We use CLEANORA for our office cleaning and the quality is excellent every time.”",
+        page: 1
+      },
+      {
+        name: "Elena R.",
+        role: "Repeat Client",
+        type: "Residential",
+        stars: 5,
+        avatar: "/images/difference-pro.jpg",
+        text: "“Amazing service! Friendly team, excellent communication and a spotless result. I highly recommend CLEANORA to anyone.”",
+        page: 1
+      },
+      {
+        name: "Lukáš H.",
+        role: "Penthouse Owner",
+        type: "Residential",
+        stars: 5,
+        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+        text: "“From the eco-friendly botanical scent to the gleaming marble floors, CLEANORA delivers true five-star hospitality standards.”",
+        page: 2
+      },
+      {
+        name: "Klára M.",
+        role: "Boutique Showroom",
+        type: "Business",
+        stars: 5,
+        avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80",
+        text: "“Our luxury retail space requires immaculate glass and lighting care. CLEANORA exceeds our expectations every single week.”",
+        page: 2
+      },
+      {
+        name: "David S.",
+        role: "Move-Out Client",
+        type: "Residential",
+        stars: 5,
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+        text: "“Booked the Move-Out package and received our full security deposit back without a single question. Worth every euro!”",
+        page: 2
+      }
+    ];
+
+    let activeFilter = 'all';
+    let activePage = 1;
+
+    function renderReviews() {
+      const filtered = ALL_REVIEWS.filter(r => {
+        if (activeFilter === 'all') return r.page === activePage;
+        if (activeFilter === '5') return r.stars === 5;
+        return r.type === activeFilter;
+      }).slice(0, 3);
+
+      const container = document.getElementById('reviewsCardsContainer');
+      container.innerHTML = filtered.map(r => `
+        <div class="relative rounded-[26px] bg-[#0c271d]/90 border border-[#e8c468]/40 p-7 sm:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.45)] flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-6">
+              <div class="flex items-center gap-4">
+                <img src="${r.avatar}" alt="${r.name}" class="w-14 h-14 rounded-full object-cover border-2 border-[#e8c468]" />
+                <div>
+                  <h3 class="font-serif-luxury text-[22px] font-semibold text-white leading-tight">${r.name}</h3>
+                  <p class="text-[12.5px] text-[#d5ddd8]/75">${r.role}</p>
+                  <div class="flex items-center gap-1 text-[#ecc566] text-sm mt-1">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                </div>
+              </div>
+              <span class="font-serif-luxury text-[48px] leading-none text-[#e8c468]/80 font-bold select-none">”</span>
+            </div>
+            <p class="text-[14.5px] leading-[1.68] text-[#e6ece8]/90 font-light">${r.text}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterReviews(filter) {
+      activeFilter = filter;
+      activePage = 1;
+      document.querySelectorAll('.rev-filter-btn').forEach(btn => {
+        btn.className = "rev-filter-btn cursor-pointer px-5 py-2 rounded-full text-[13px] bg-[#0e2c21] border border-[#e8c468]/35 text-[#e6ece8] hover:border-[#e8c468]";
+      });
+      const activeBtn = document.getElementById('rev-filter-' + filter);
+      if (activeBtn) {
+        activeBtn.className = "rev-filter-btn btn-gold-luxury cursor-pointer px-5 py-2 rounded-full text-[13px] font-semibold";
+      }
+      renderReviews();
+    }
+
+    function changeReviewPage(p) {
+      activeFilter = 'all';
+      activePage = p;
+      document.getElementById('page-btn-1').className = p === 1
+        ? "w-9 h-9 rounded-full btn-gold-luxury text-xs font-bold cursor-pointer"
+        : "w-9 h-9 rounded-full bg-[#0e2c21] border border-[#e8c468]/40 text-xs text-white hover:border-[#e8c468] cursor-pointer";
+      document.getElementById('page-btn-2').className = p === 2
+        ? "w-9 h-9 rounded-full btn-gold-luxury text-xs font-bold cursor-pointer"
+        : "w-9 h-9 rounded-full bg-[#0e2c21] border border-[#e8c468]/40 text-xs text-white hover:border-[#e8c468] cursor-pointer";
+      renderReviews();
+    }
+
+    function openVideoModal(title) {
+      document.getElementById('videoModalTitle').textContent = title;
+      document.getElementById('videoModal').classList.remove('hidden');
+      const vid = document.getElementById('clientVideoPlayer');
+      vid.currentTime = 0;
+      vid.play().catch(() => {});
+    }
+
+    function closeVideoModal() {
+      const vid = document.getElementById('clientVideoPlayer');
+      vid.pause();
+      document.getElementById('videoModal').classList.add('hidden');
+    }
+
+    function openBookingModal(srv) {
+      if (srv) document.getElementById('bookingServiceSelect').value = srv;
+      document.getElementById('bookingModal').classList.remove('hidden');
+    }
+    function closeBookingModal() {
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+
+    renderReviews();
+  </script>
+</body>
+</html>
+

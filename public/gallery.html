@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Work Gallery | CLEANORA® Before & After Transformations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/hover-effects.css" />
+  <style>
+    :root {
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    body {
+      background-color: #081d15;
+      color: #f8f6f0;
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-serif-luxury {
+      font-family: var(--font-serif);
+    }
+    .btn-gold-luxury {
+      background: linear-gradient(135deg, #f3d88c 0%, #e4be62 48%, #d4a644 100%);
+      color: #0d2219;
+      box-shadow:
+        0 8px 28px -4px rgba(232, 196, 104, 0.42),
+        0 2px 10px rgba(232, 196, 104, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.65);
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .btn-gold-luxury:hover {
+      background: linear-gradient(135deg, #f7e1a0 0%, #ebc86e 50%, #dcaf4d 100%);
+      box-shadow:
+        0 12px 34px -4px rgba(232, 196, 104, 0.58),
+        0 4px 14px rgba(232, 196, 104, 0.35),
+        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+      transform: translateY(-1.5px);
+    }
+    /* Simulated "Before" state filter so the same space looks dull/stained on the left side of the comparison slider */
+    .before-filter {
+      filter: sepia(0.55) brightness(0.62) contrast(1.18) saturate(0.65);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#081d15] text-[#f8f6f0] selection:bg-[#e8c468] selection:text-[#0b231b]">
+
+  <!-- =====================================================================
+       EXISTING UNTOUCHED HEADER / NAVIGATION
+       ===================================================================== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-[#0a1f18]/75 backdrop-blur-md border-b border-white/[0.08] py-4">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14 flex items-center justify-between">
+      <a href="/" class="group flex items-center gap-3.5 focus:outline-none">
+        <div class="relative w-11 h-11 flex items-center justify-center shrink-0">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11 transition-transform duration-500 group-hover:scale-105">
+            <defs>
+              <linearGradient id="cleanoraGoldGrad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#F5DF9E" />
+                <stop offset="50%" stop-color="#E4BE62" />
+                <stop offset="100%" stop-color="#C89B3C" />
+              </linearGradient>
+            </defs>
+            <path d="M11 38.5C6.8 34.8 4.2 29.4 4.2 23.4C4.2 12.4 13.1 3.5 24.1 3.5C35.1 3.5 44 12.4 44 23.4C44 33.6 36.3 42 26.4 43.2" stroke="url(#cleanoraGoldGrad)" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M16 7.8C18.5 6.6 21.2 6 24.1 6C33.7 6 41.5 13.8 41.5 23.4" stroke="url(#cleanoraGoldGrad)" stroke-width="0.75" stroke-opacity="0.55" stroke-linecap="round" />
+            <path d="M14.5 34.5C15.5 24.5 22.5 14.5 34.5 12.5C33.5 24.5 26.5 32.5 14.5 34.5Z" fill="url(#cleanoraGoldGrad)" fill-opacity="0.18" stroke="url(#cleanoraGoldGrad)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M11.5 38.5C15.5 33.5 21.5 25.5 29.5 17.5" stroke="url(#cleanoraGoldGrad)" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M15.2 33.5C12.2 31.2 11.8 27.2 13.8 24.2C16.2 26.2 16.8 30.2 15.2 33.5Z" fill="url(#cleanoraGoldGrad)" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-baseline">
+            <span class="font-serif-luxury text-[24px] sm:text-[26px] font-semibold tracking-[0.11em] text-white leading-none">CLEANORA</span>
+            <span class="text-[10px] text-[#e8c468] ml-0.5 font-sans align-top">®</span>
+          </div>
+          <span class="text-[8.5px] sm:text-[9px] tracking-[0.23em] uppercase text-[#d8d5cc]/75 font-medium mt-1">Professional Cleaning Services</span>
+        </div>
+      </a>
+
+      <nav class="hidden xl:flex items-center gap-8">
+        <a href="/" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Home</a>
+        <div class="relative group">
+          <a href="/services" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white flex items-center gap-1.5 transition-colors">
+            <span>Services</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-[#e8c468]/85"></i>
+          </a>
+          <div class="hidden group-hover:block absolute top-full left-0 pt-3 w-64 z-50">
+            <div class="bg-[#0c261d]/95 backdrop-blur-xl border border-[#e8c468]/25 rounded-2xl p-2 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Home Cleaning</a>
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Deep Cleaning</a>
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Commercial Cleaning</a>
+              <a href="/services" class="block px-4 py-2.5 text-[13.5px] text-[#e5e7e4]/85 hover:text-[#f3d88c] hover:bg-white/[0.05] rounded-xl">Move In / Move Out</a>
+            </div>
+          </div>
+        </div>
+        <a href="/pricing" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Pricing</a>
+        <a href="/about" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">About</a>
+        <a href="/gallery" class="relative py-2 text-[14.5px] font-medium text-white flex items-center gap-1.5">
+          <span>Gallery</span>
+          <span class="absolute -bottom-[3px] left-0 right-0 h-[2px] bg-gradient-to-r from-[#e8c468] via-[#f3d88c] to-[#d4a644] rounded-full shadow-[0_0_8px_rgba(232,196,104,0.7)]"></span>
+        </a>
+        <a href="/reviews" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Reviews</a>
+        <a href="/contact" class="py-2 text-[14.5px] font-normal text-[#e5e7e4]/80 hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:+420600123456" class="flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#0f2c22]/75 border border-white/[0.15] hover:border-[#e8c468]/45 text-[14px] text-[#f4f1ea] tracking-wide transition-all">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-[#e8c468]"></i>
+          <span>+420 600 123 456</span>
+        </a>
+        <button onclick="openBookingModal()" class="btn-gold-luxury cursor-pointer flex items-center gap-2.5 px-6 py-2.5 rounded-full text-[14.5px] font-semibold">
+          <span>Book a Cleaning</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="flex items-center gap-3 xl:hidden">
+        <button onclick="toggleMobileMenu()" aria-label="Menu" class="p-2.5 rounded-full bg-white/[0.06] border border-white/[0.14] text-[#f3d88c]">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden xl:hidden bg-[#0a2119]/98 backdrop-blur-2xl border-b border-[#e8c468]/20 px-6 pt-5 pb-8 space-y-4 mt-4">
+      <div class="flex flex-col space-y-2">
+        <a href="/" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Home</a>
+        <a href="/services" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Services</a>
+        <a href="/pricing" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Pricing</a>
+        <a href="/about" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">About</a>
+        <a href="/gallery" class="px-4 py-2.5 rounded-xl bg-[#e8c468]/15 text-[#f3d88c] font-medium border border-[#e8c468]/30">Gallery</a>
+        <a href="/reviews" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Reviews</a>
+        <a href="/contact" class="px-4 py-2.5 rounded-xl text-white/85 hover:bg-white/5">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       1. GALLERY HERO – ARCHED GOLD CURVE + EMERALD SOFA LUXURY LIVING ROOM
+       ===================================================================== -->
+  <section class="relative min-h-[580px] lg:min-h-[620px] w-full pt-[88px] overflow-hidden bg-[#081d15] border-b border-[#e8c468]/20 flex items-center">
+    <!-- Layered Deep Emerald & Botanical Silk Wave Backgrounds -->
+    <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 90% 80% at 22% 40%, #143a2c 0%, #0b231a 48%, #061610 100%);"></div>
+      <svg viewBox="0 0 900 900" fill="none" class="absolute -top-24 -left-24 w-[650px] sm:w-[820px] h-[820px] opacity-75">
+        <defs>
+          <linearGradient id="galleryWaveTop" x1="0" y1="0" x2="520" y2="550" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#356f56" stop-opacity="0.52" />
+            <stop offset="45%" stop-color="#1d4938" stop-opacity="0.24" />
+            <stop offset="100%" stop-color="#0b231b" stop-opacity="0" />
+          </linearGradient>
+          <linearGradient id="galleryWaveBottom" x1="0" y1="900" x2="650" y2="520" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#2f664f" stop-opacity="0.55" />
+            <stop offset="55%" stop-color="#173b2d" stop-opacity="0.25" />
+            <stop offset="100%" stop-color="#091d16" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <path d="M-60 -40 C160 -40, 390 20, 480 120 C310 90, 120 200, -40 420 Z" fill="url(#galleryWaveTop)" />
+        <path d="M-80 620 C80 690, 290 790, 560 900 L-80 900 Z" fill="url(#galleryWaveBottom)" />
+      </svg>
+
+      <!-- Subtle Botanical Leaf Outline Accent at Bottom Left of Curve -->
+      <svg viewBox="0 0 360 120" fill="none" class="hidden lg:block absolute bottom-0 left-[23%] w-[320px] h-[105px] opacity-45 pointer-events-none">
+        <path d="M10 95 C90 45, 220 45, 340 115 C230 115, 110 110, 10 95 Z" fill="#174432" fill-opacity="0.55" stroke="#e8c468" stroke-width="1" stroke-opacity="0.45" />
+        <path d="M15 95 C120 82, 225 88, 330 112" stroke="#e8c468" stroke-width="0.9" stroke-opacity="0.4" />
+      </svg>
+
+      <!-- Ambient Champagne Gold Glow along the Arch Curve -->
+      <div class="hidden lg:block absolute top-[10%] left-[42%] w-[360px] h-[520px] rounded-full blur-[85px] opacity-40" style="background: radial-gradient(circle, rgba(232,196,104,0.55) 0%, rgba(232,196,104,0) 70%);"></div>
+    </div>
+
+    <!-- Right Side Arched Luxury Living Room with Emerald Sofa (/images/gallery-hero.jpg) -->
+    <div class="hidden lg:block absolute top-0 right-0 bottom-0 w-[58%] z-10 pointer-events-none select-none overflow-hidden">
+      <div class="relative w-full h-full">
+        <img src="/images/gallery-hero.jpg" alt="CLEANORA Luxury Living Room with Emerald Sofa & Marble Table" class="w-full h-full object-cover object-center" />
+        <div class="absolute inset-x-0 top-0 h-24" style="background: linear-gradient(to bottom, rgba(7,24,18,0.65) 0%, transparent 100%);"></div>
+        <div class="absolute inset-x-0 bottom-0 h-16" style="background: linear-gradient(to top, rgba(7,24,18,0.55) 0%, transparent 100%);"></div>
+      </div>
+
+      <!-- Sweeping Emerald Mask & Glowing Champagne-Gold Arch Border -->
+      <svg viewBox="0 0 1000 900" preserveAspectRatio="none" class="absolute inset-0 w-full h-full pointer-events-none">
+        <defs>
+          <linearGradient id="galleryArchFill" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#103226" />
+            <stop offset="50%" stop-color="#0c261d" />
+            <stop offset="100%" stop-color="#081b14" />
+          </linearGradient>
+          <linearGradient id="galleryArchGold" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#f6df9e" stop-opacity="0.7" />
+            <stop offset="25%" stop-color="#fff1be" stop-opacity="1" />
+            <stop offset="55%" stop-color="#e8c468" stop-opacity="0.98" />
+            <stop offset="85%" stop-color="#d4a644" stop-opacity="0.65" />
+            <stop offset="100%" stop-color="#e8c468" stop-opacity="0.1" />
+          </linearGradient>
+          <filter id="galleryGoldGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="6" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+          </filter>
+        </defs>
+        <path d="M 0,0 L 390,0 C 175,130 58,390 48,735 L 48,900 L 0,900 Z" fill="url(#galleryArchFill)" />
+        <path d="M 390,0 C 175,130 58,390 48,735" fill="none" stroke="#e8c468" stroke-width="8" stroke-opacity="0.22" filter="url(#galleryGoldGlow)" />
+        <path d="M 390,0 C 175,130 58,390 48,735" fill="none" stroke="url(#galleryArchGold)" stroke-width="3.2" stroke-linecap="round" />
+      </svg>
+    </div>
+
+    <!-- Left Content Column -->
+    <div class="relative z-20 max-w-[1440px] mx-auto w-full px-5 sm:px-8 lg:px-14 py-14 lg:py-20">
+      <div class="max-w-[590px]">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-[13px] text-[#d5ddd8]/85 mb-6">
+          <a href="/" class="hover:text-[#f3d88c] transition-colors">Home</a>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#e8c468]/75"></i>
+          <span class="text-[#e8c468] font-medium">Gallery</span>
+        </nav>
+
+        <!-- Large Editorial Heading with Gold Curved Underline under Gallery -->
+        <h1 class="font-serif-luxury text-[50px] sm:text-[64px] lg:text-[72px] leading-[1.04] text-white font-normal mb-6">
+          <span>Our Work </span>
+          <span class="relative inline-block italic text-[#e8c468]">
+            Gallery
+            <svg viewBox="0 0 240 20" fill="none" class="absolute -bottom-2.5 -left-3 w-[108%] h-[15px] pointer-events-none">
+              <path d="M4 15C70 5 162 5 232 14" stroke="#e8c468" stroke-width="2.6" stroke-linecap="round" />
+            </svg>
+          </span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-[15.5px] sm:text-[16.5px] leading-[1.68] text-[#d7ded9]/88 font-light max-w-[490px] mb-10">
+          See how CLEANORA® transforms everyday spaces into<br class="hidden sm:inline" />
+          cleaner, fresher and more beautiful environments.
+        </p>
+
+        <!-- 3 Highlights Row: Real Projects | Before & After | Verified Results -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-0 items-center max-w-[540px]">
+          <div class="flex items-center gap-3.5 sm:pr-5">
+            <div class="w-11 h-11 rounded-full bg-[#113125]/90 border border-[#e8c468]/55 flex items-center justify-center shrink-0 shadow-[0_0_16px_rgba(232,196,104,0.12)]">
+              <i data-lucide="image" class="w-5 h-5 text-[#e8c468]"></i>
+            </div>
+            <div class="text-[13.5px] font-medium text-[#f4f7f5]">Real Projects</div>
+          </div>
+
+          <div class="flex items-center gap-3.5 sm:px-5 sm:border-l sm:border-white/[0.16]">
+            <div class="w-11 h-11 rounded-full bg-[#113125]/90 border border-[#e8c468]/55 flex items-center justify-center shrink-0 shadow-[0_0_16px_rgba(232,196,104,0.12)]">
+              <i data-lucide="leaf" class="w-5 h-5 text-[#e8c468]"></i>
+            </div>
+            <div class="text-[13.5px] font-medium text-[#f4f7f5]">Before & After</div>
+          </div>
+
+          <div class="flex items-center gap-3.5 sm:pl-5 sm:border-l sm:border-white/[0.16]">
+            <div class="w-11 h-11 rounded-full bg-[#113125]/90 border border-[#e8c468]/55 flex items-center justify-center shrink-0 shadow-[0_0_16px_rgba(232,196,104,0.12)]">
+              <i data-lucide="sparkles" class="w-5 h-5 text-[#e8c468]"></i>
+            </div>
+            <div class="text-[13.5px] font-medium text-[#f4f7f5]">Verified Results</div>
+          </div>
+        </div>
+
+        <!-- Mobile Image Preview -->
+        <div class="lg:hidden mt-8 rounded-3xl overflow-hidden border border-[#e8c468]/50 shadow-2xl">
+          <img src="/images/gallery-hero.jpg" alt="CLEANORA Gallery Hero Living Room" class="w-full h-64 object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       2. CATEGORY FILTERS + 3. FUNCTIONAL DRAGGABLE BEFORE & AFTER SLIDERS
+       ===================================================================== -->
+  <section class="relative w-full py-20 lg:py-24 bg-[#092018] overflow-hidden">
+    <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(ellipse 80% 60% at 50% 15%, rgba(24,68,52,0.5) 0%, rgba(9,32,24,0.95) 70%, #071912 100%);"></div>
+
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
+      <!-- Category Filter Header -->
+      <div class="text-center max-w-[660px] mx-auto mb-10">
+        <div class="inline-flex items-center gap-3 mb-3">
+          <span class="w-8 h-[1px] bg-[#e8c468]/75"></span>
+          <span class="text-[11.5px] tracking-[0.24em] uppercase text-[#e8c468] font-medium">EXPLORE BY CATEGORY</span>
+          <span class="w-8 h-[1px] bg-[#e8c468]/75"></span>
+        </div>
+        <h2 class="font-serif-luxury text-[40px] sm:text-[52px] leading-[1.08] text-white font-normal mb-3">
+          Browse <span class="italic text-[#e8c468]">Our Gallery</span>
+        </h2>
+        <p class="text-[14.5px] text-[#d5ddd8]/80 font-light">
+          Discover our cleaning projects across different spaces and services.
+        </p>
+      </div>
+
+      <!-- 5 Interactive Filter Pill Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-3.5 mb-16">
+        <button onclick="filterGallery('all')" id="filter-all" class="filter-btn btn-gold-luxury cursor-pointer inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-[13.5px] font-semibold">
+          <i data-lucide="layout-grid" class="w-4 h-4"></i>
+          <span>All Projects</span>
+        </button>
+        <button onclick="filterGallery('home')" id="filter-home" class="filter-btn cursor-pointer inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-[13.5px] font-medium bg-[#0e2c21]/85 text-[#e6ece8] border border-[#e8c468]/35 hover:border-[#e8c468]">
+          <i data-lucide="home" class="w-4 h-4 text-[#e8c468]"></i>
+          <span>Home Cleaning</span>
+        </button>
+        <button onclick="filterGallery('deep')" id="filter-deep" class="filter-btn cursor-pointer inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-[13.5px] font-medium bg-[#0e2c21]/85 text-[#e6ece8] border border-[#e8c468]/35 hover:border-[#e8c468]">
+          <i data-lucide="sparkles" class="w-4 h-4 text-[#e8c468]"></i>
+          <span>Deep Cleaning</span>
+        </button>
+        <button onclick="filterGallery('commercial')" id="filter-commercial" class="filter-btn cursor-pointer inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-[13.5px] font-medium bg-[#0e2c21]/85 text-[#e6ece8] border border-[#e8c468]/35 hover:border-[#e8c468]">
+          <i data-lucide="building-2" class="w-4 h-4 text-[#e8c468]"></i>
+          <span>Commercial</span>
+        </button>
+        <button onclick="filterGallery('move')" id="filter-move" class="filter-btn cursor-pointer inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-[13.5px] font-medium bg-[#0e2c21]/85 text-[#e6ece8] border border-[#e8c468]/35 hover:border-[#e8c468]">
+          <i data-lucide="package-check" class="w-4 h-4 text-[#e8c468]"></i>
+          <span>Move In / Move Out</span>
+        </button>
+      </div>
+
+      <!-- =====================================================================
+           3. BEFORE & AFTER RESULTS (FUNCTIONAL DRAGGABLE COMPARISON SLIDERS)
+           ===================================================================== -->
+      <div class="pt-8 border-t border-white/[0.1] mb-20">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+          <div>
+            <h3 class="font-serif-luxury text-[34px] sm:text-[42px] leading-[1.08] text-white font-normal">
+              Before & After <span class="italic text-[#e8c468]">Results</span>
+            </h3>
+            <p class="text-[14px] text-[#d5ddd8]/75 mt-1">
+              The difference a professional clean can make. Drag the gold slider handle left or right to compare.
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <button onclick="nudgeAllSliders(-15)" aria-label="Slide Left" class="w-10 h-10 rounded-full bg-[#0e2c21] border border-[#e8c468]/45 text-[#e8c468] hover:bg-[#e8c468] hover:text-[#0b231b] flex items-center justify-center transition-colors cursor-pointer">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i>
+            </button>
+            <button onclick="nudgeAllSliders(15)" aria-label="Slide Right" class="w-10 h-10 rounded-full btn-gold-luxury flex items-center justify-center cursor-pointer">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+          <!-- Comparison Slider 1: Kitchen Range & Hood -->
+          <div class="ba-slider relative h-[280px] sm:h-[300px] rounded-[24px] overflow-hidden border border-[#e8c468]/45 shadow-[0_18px_45px_rgba(0,0,0,0.45)] select-none" data-pos="50">
+            <!-- Full "After" Clean Layer -->
+            <img src="/images/service-deep.jpg" alt="After Clean Kitchen" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+            <!-- Clipped "Before" Layer -->
+            <div class="ba-before absolute inset-0 overflow-hidden pointer-events-none" style="clip-path: inset(0 50% 0 0);">
+              <img src="/images/service-deep.jpg" alt="Before Clean Kitchen" class="w-full h-full object-cover before-filter" />
+            </div>
+            <!-- Vertical Divider Line & Gold Handle -->
+            <div class="ba-handle absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2.5px] bg-white shadow-[0_0_12px_rgba(0,0,0,0.8)] pointer-events-none">
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-gradient-to-br from-[#f6e09e] to-[#d4a644] text-[#0d2219] border-2 border-white flex items-center justify-center shadow-lg font-bold text-xs">
+                ‹ ›
+              </div>
+            </div>
+            <!-- Interactive Range Input Overlay -->
+            <input type="range" min="5" max="95" value="50" oninput="updateBaSlider(this)" aria-label="Before After Slider 1" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" />
+            <span class="absolute bottom-3.5 left-4 z-10 px-3.5 py-1 rounded-full bg-black/65 backdrop-blur-md text-[11.5px] text-white border border-white/20 pointer-events-none">Before</span>
+            <span class="absolute bottom-3.5 right-4 z-10 px-3.5 py-1 rounded-full btn-gold-luxury text-[11.5px] font-semibold pointer-events-none">After</span>
+          </div>
+
+          <!-- Comparison Slider 2: Glass Shower & Marble -->
+          <div class="ba-slider relative h-[280px] sm:h-[300px] rounded-[24px] overflow-hidden border border-[#e8c468]/45 shadow-[0_18px_45px_rgba(0,0,0,0.45)] select-none" data-pos="50">
+            <img src="/images/services-deep-gloves.jpg" alt="After Bathroom Descale" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+            <div class="ba-before absolute inset-0 overflow-hidden pointer-events-none" style="clip-path: inset(0 50% 0 0);">
+              <img src="/images/services-deep-gloves.jpg" alt="Before Bathroom Descale" class="w-full h-full object-cover before-filter" />
+            </div>
+            <div class="ba-handle absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2.5px] bg-white shadow-[0_0_12px_rgba(0,0,0,0.8)] pointer-events-none">
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-gradient-to-br from-[#f6e09e] to-[#d4a644] text-[#0d2219] border-2 border-white flex items-center justify-center shadow-lg font-bold text-xs">
+                ‹ ›
+              </div>
+            </div>
+            <input type="range" min="5" max="95" value="50" oninput="updateBaSlider(this)" aria-label="Before After Slider 2" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" />
+            <span class="absolute bottom-3.5 left-4 z-10 px-3.5 py-1 rounded-full bg-black/65 backdrop-blur-md text-[11.5px] text-white border border-white/20 pointer-events-none">Before</span>
+            <span class="absolute bottom-3.5 right-4 z-10 px-3.5 py-1 rounded-full btn-gold-luxury text-[11.5px] font-semibold pointer-events-none">After</span>
+          </div>
+
+          <!-- Comparison Slider 3: Luxury Sofa Upholstery -->
+          <div class="ba-slider relative h-[280px] sm:h-[300px] rounded-[24px] overflow-hidden border border-[#e8c468]/45 shadow-[0_18px_45px_rgba(0,0,0,0.45)] select-none" data-pos="50">
+            <img src="/images/hero-interior.jpg" alt="After Sofa Upholstery Clean" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+            <div class="ba-before absolute inset-0 overflow-hidden pointer-events-none" style="clip-path: inset(0 50% 0 0);">
+              <img src="/images/hero-interior.jpg" alt="Before Sofa Upholstery Clean" class="w-full h-full object-cover before-filter" />
+            </div>
+            <div class="ba-handle absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2.5px] bg-white shadow-[0_0_12px_rgba(0,0,0,0.8)] pointer-events-none">
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-gradient-to-br from-[#f6e09e] to-[#d4a644] text-[#0d2219] border-2 border-white flex items-center justify-center shadow-lg font-bold text-xs">
+                ‹ ›
+              </div>
+            </div>
+            <input type="range" min="5" max="95" value="50" oninput="updateBaSlider(this)" aria-label="Before After Slider 3" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" />
+            <span class="absolute bottom-3.5 left-4 z-10 px-3.5 py-1 rounded-full bg-black/65 backdrop-blur-md text-[11.5px] text-white border border-white/20 pointer-events-none">Before</span>
+            <span class="absolute bottom-3.5 right-4 z-10 px-3.5 py-1 rounded-full btn-gold-luxury text-[11.5px] font-semibold pointer-events-none">After</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================================
+           4. LATEST CLEANING PROJECTS (6 FILTERABLE IMAGE CARDS)
+           ===================================================================== -->
+      <div>
+        <div class="text-center max-w-[660px] mx-auto mb-12">
+          <div class="inline-flex items-center gap-3 mb-3">
+            <span class="w-8 h-[1px] bg-[#e8c468]/75"></span>
+            <span class="text-[11.5px] tracking-[0.24em] uppercase text-[#e8c468] font-medium">OUR RECENT PROJECTS</span>
+            <span class="w-8 h-[1px] bg-[#e8c468]/75"></span>
+          </div>
+          <h2 class="font-serif-luxury text-[40px] sm:text-[52px] leading-[1.08] text-white font-normal mb-3">
+            Latest Cleaning <span class="italic text-[#e8c468]">Projects</span>
+          </h2>
+          <p class="text-[14.5px] text-[#d5ddd8]/80 font-light">
+            A look at some of our recent cleaning projects for homes and businesses.
+          </p>
+        </div>
+
+        <div id="galleryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+          <!-- Project 1: Home Cleaning -->
+          <div data-category="home" onclick="openBookingModal('Home Cleaning')" class="gallery-card group cursor-pointer relative h-[260px] rounded-[24px] overflow-hidden border border-[#e8c468]/40 shadow-[0_18px_45px_rgba(0,0,0,0.45)]">
+            <img src="/images/hero-interior.jpg" alt="Home Cleaning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#071912]/90 via-[#071912]/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-5 right-5 flex items-center justify-between">
+              <span class="font-serif-luxury text-[24px] text-white">Home Cleaning</span>
+              <span class="w-9 h-9 rounded-full bg-[#0e2c21]/90 border border-[#e8c468]/60 flex items-center justify-center text-[#e8c468] group-hover:bg-[#e8c468] group-hover:text-[#0b231b] transition-colors">
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- Project 2: Deep Cleaning -->
+          <div data-category="deep" onclick="openBookingModal('Deep Cleaning')" class="gallery-card group cursor-pointer relative h-[260px] rounded-[24px] overflow-hidden border border-[#e8c468]/40 shadow-[0_18px_45px_rgba(0,0,0,0.45)]">
+            <img src="/images/cta-interior.jpg" alt="Deep Cleaning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#071912]/90 via-[#071912]/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-5 right-5 flex items-center justify-between">
+              <span class="font-serif-luxury text-[24px] text-white">Deep Cleaning</span>
+              <span class="w-9 h-9 rounded-full bg-[#0e2c21]/90 border border-[#e8c468]/60 flex items-center justify-center text-[#e8c468] group-hover:bg-[#e8c468] group-hover:text-[#0b231b] transition-colors">
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- Project 3: Commercial Cleaning -->
+          <div data-category="commercial" onclick="openBookingModal('Commercial Cleaning')" class="gallery-card group cursor-pointer relative h-[260px] rounded-[24px] overflow-hidden border border-[#e8c468]/40 shadow-[0_18px_45px_rgba(0,0,0,0.45)]">
+            <img src="/images/service-commercial.jpg" alt="Commercial Cleaning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#071912]/90 via-[#071912]/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-5 right-5 flex items-center justify-between">
+              <span class="font-serif-luxury text-[24px] text-white">Commercial Cleaning</span>
+              <span class="w-9 h-9 rounded-full bg-[#0e2c21]/90 border border-[#e8c468]/60 flex items-center justify-center text-[#e8c468] group-hover:bg-[#e8c468] group-hover:text-[#0b231b] transition-colors">
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- Project 4: Move In / Move Out -->
+          <div data-category="move" onclick="openBookingModal('Move In / Move Out')" class="gallery-card group cursor-pointer relative h-[260px] rounded-[24px] overflow-hidden border border-[#e8c468]/40 shadow-[0_18px_45px_rgba(0,0,0,0.45)]">
+            <img src="/images/services-move-in.jpg" alt="Move In / Move Out" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#071912]/90 via-[#071912]/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-5 right-5 flex items-center justify-between">
+              <span class="font-serif-luxury text-[24px] text-white">Move In / Move Out</span>
+              <span class="w-9 h-9 rounded-full bg-[#0e2c21]/90 border border-[#e8c468]/60 flex items-center justify-center text-[#e8c468] group-hover:bg-[#e8c468] group-hover:text-[#0b231b] transition-colors">
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- Project 5: Bathroom Refresh (Deep) -->
+          <div data-category="deep" onclick="openBookingModal('Bathroom Refresh')" class="gallery-card group cursor-pointer relative h-[260px] rounded-[24px] overflow-hidden border border-[#e8c468]/40 shadow-[0_18px_45px_rgba(0,0,0,0.45)]">
+            <img src="/images/services-deep-gloves.jpg" alt="Bathroom Refresh" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#071912]/90 via-[#071912]/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-5 right-5 flex items-center justify-between">
+              <span class="font-serif-luxury text-[24px] text-white">Bathroom Refresh</span>
+              <span class="w-9 h-9 rounded-full bg-[#0e2c21]/90 border border-[#e8c468]/60 flex items-center justify-center text-[#e8c468] group-hover:bg-[#e8c468] group-hover:text-[#0b231b] transition-colors">
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- Project 6: Kitchen Cleaning (Home) -->
+          <div data-category="home" onclick="openBookingModal('Kitchen Cleaning')" class="gallery-card group cursor-pointer relative h-[260px] rounded-[24px] overflow-hidden border border-[#e8c468]/40 shadow-[0_18px_45px_rgba(0,0,0,0.45)]">
+            <img src="/images/service-deep.jpg" alt="Kitchen Cleaning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#071912]/90 via-[#071912]/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-5 right-5 flex items-center justify-between">
+              <span class="font-serif-luxury text-[24px] text-white">Kitchen Cleaning</span>
+              <span class="w-9 h-9 rounded-full bg-[#0e2c21]/90 border border-[#e8c468]/60 flex items-center justify-center text-[#e8c468] group-hover:bg-[#e8c468] group-hover:text-[#0b231b] transition-colors">
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================================
+           5. TRUST STATISTICS + FINAL BOOKING CTA
+           ===================================================================== -->
+      <div class="mt-16 rounded-[24px] bg-[#0c271d]/90 border border-[#e8c468]/35 px-6 py-7 sm:px-10 grid grid-cols-2 lg:grid-cols-4 gap-6 shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-[#113125] border border-[#e8c468]/45 flex items-center justify-center shrink-0">
+            <i data-lucide="image" class="w-5 h-5 text-[#e8c468]"></i>
+          </div>
+          <div>
+            <div class="font-serif-luxury text-[28px] sm:text-[32px] font-semibold text-white leading-none">500+</div>
+            <div class="text-[12.5px] text-[#d5ddd8]/80 mt-1">Spaces Cleaned</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:pl-6 lg:border-l lg:border-white/[0.12]">
+          <div class="w-12 h-12 rounded-full bg-[#113125] border border-[#e8c468]/45 flex items-center justify-center shrink-0">
+            <i data-lucide="users" class="w-5 h-5 text-[#e8c468]"></i>
+          </div>
+          <div>
+            <div class="font-serif-luxury text-[28px] sm:text-[32px] font-semibold text-white leading-none">1,000+</div>
+            <div class="text-[12.5px] text-[#d5ddd8]/80 mt-1">Happy Clients</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:pl-6 lg:border-l lg:border-white/[0.12]">
+          <div class="w-12 h-12 rounded-full bg-[#113125] border border-[#e8c468]/45 flex items-center justify-center shrink-0">
+            <i data-lucide="star" class="w-5 h-5 text-[#e8c468]"></i>
+          </div>
+          <div>
+            <div class="font-serif-luxury text-[28px] sm:text-[32px] font-semibold text-white leading-none">4.9/5</div>
+            <div class="text-[12.5px] text-[#d5ddd8]/80 mt-1">Average Rating</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:pl-6 lg:border-l lg:border-white/[0.12]">
+          <div class="w-12 h-12 rounded-full bg-[#113125] border border-[#e8c468]/45 flex items-center justify-center shrink-0">
+            <i data-lucide="calendar-check" class="w-5 h-5 text-[#e8c468]"></i>
+          </div>
+          <div>
+            <div class="font-serif-luxury text-[28px] sm:text-[32px] font-semibold text-white leading-none">5+ Years</div>
+            <div class="text-[12.5px] text-[#d5ddd8]/80 mt-1">of Trusted Service</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final Booking CTA Banner -->
+      <div class="mt-12 relative rounded-[30px] overflow-hidden bg-[#0c271d] border border-[#e8c468]/45 shadow-[0_28px_70px_rgba(0,0,0,0.55)]">
+        <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+          <div class="lg:col-span-5 p-8 sm:p-12 lg:p-14 flex flex-col items-start z-10">
+            <h2 class="font-serif-luxury text-[36px] sm:text-[44px] leading-[1.08] text-white font-normal mb-4">
+              <span class="block">Your Space Could Be</span>
+              <span class="block">Our Next <span class="italic text-[#e8c468]">Success Story.</span></span>
+            </h2>
+            <p class="text-[14.5px] sm:text-[15px] leading-[1.65] text-[#d5ddd8]/85 font-light max-w-[380px] mb-8">
+              Book a cleaning today and see the CLEANORA difference for yourself.
+            </p>
+            <button onclick="openBookingModal()" class="btn-gold-luxury cursor-pointer inline-flex items-center gap-3 px-8 py-4 rounded-full text-[15px] font-semibold">
+              <i data-lucide="calendar" class="w-4 h-4 text-[#0d2219]"></i>
+              <span>Book a Cleaning</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 text-[#0d2219]"></i>
+            </button>
+          </div>
+
+          <div class="lg:col-span-7 relative h-[320px] sm:h-[360px] w-full overflow-hidden">
+            <img src="/images/hero-interior.jpg" alt="Luxury Living Room" class="w-full h-full object-cover object-center" />
+            <svg viewBox="0 0 140 400" preserveAspectRatio="none" class="hidden lg:block absolute top-0 left-0 bottom-0 w-28 h-full pointer-events-none">
+              <path d="M0 0 L110 0 C45 120, 20 260, 10 400 L0 400 Z" fill="#0c271d" />
+              <path d="M110 0 C45 120, 20 260, 10 400" fill="none" stroke="#e8c468" stroke-width="3.5" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       EXISTING UNTOUCHED BOTANICAL LUXURY FOOTER
+       ===================================================================== -->
+  <footer id="contact" class="relative w-full pt-20 pb-12 overflow-hidden bg-[#061610] text-[#f3f0e6] border-t border-[#e8c468]/20">
+    <div class="pointer-events-none absolute inset-y-0 left-0 w-1/2 bg-cover bg-left-top opacity-85" style="background-image: url('/images/footer-botanical.jpg');"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-cover bg-left-top opacity-85 -scale-x-100" style="background-image: url('/images/footer-botanical.jpg');"></div>
+    <div class="pointer-events-none absolute inset-0" style="background: linear-gradient(90deg, rgba(6, 22, 16, 0.62) 0%, rgba(7, 25, 18, 0.88) 32%, rgba(7, 25, 18, 0.88) 68%, rgba(6, 22, 16, 0.62) 100%);"></div>
+
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 pb-16">
+        <div class="lg:col-span-3 lg:pr-6 lg:border-r lg:border-white/[0.1] flex flex-col items-start">
+          <a href="/" class="flex flex-col items-start mb-5">
+            <div class="flex items-center gap-3">
+              <svg viewBox="0 0 42 42" fill="none" class="w-10 h-10 shrink-0">
+                <path d="M7 35C8 21 18 9 35 6C34 22 24 33 7 35Z" fill="#e8c468" />
+                <path d="M5 38C11 31 19 22 28 13" stroke="#071912" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+              <span class="font-serif-luxury text-[28px] sm:text-[30px] font-semibold tracking-[0.1em] text-white leading-none">CLEANORA</span>
+            </div>
+            <span class="text-[9.5px] tracking-[0.25em] uppercase text-[#e8c468] font-medium mt-2.5">PROFESSIONAL CLEANING SERVICES</span>
+          </a>
+          <p class="text-[13.5px] leading-[1.7] text-[#d5ddd8]/80 font-light mb-7 max-w-[300px]">
+            Professional, reliable and eco-friendly cleaning for homes and businesses. A cleaner space for a healthier, happier life.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-full bg-[#0d281e]/80 hover:bg-[#e8c468] text-[#f3e5be] hover:text-[#071912] border border-[#e8c468]/45 flex items-center justify-center transition-all">f</a>
+            <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-full bg-[#0d281e]/80 hover:bg-[#e8c468] text-[#f3e5be] hover:text-[#071912] border border-[#e8c468]/45 flex items-center justify-center transition-all">ig</a>
+            <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-full bg-[#0d281e]/80 hover:bg-[#e8c468] text-[#f3e5be] hover:text-[#071912] border border-[#e8c468]/45 flex items-center justify-center transition-all">in</a>
+            <a href="https://youtube.com" target="_blank" class="w-10 h-10 rounded-full bg-[#0d281e]/80 hover:bg-[#e8c468] text-[#f3e5be] hover:text-[#071912] border border-[#e8c468]/45 flex items-center justify-center transition-all">▶</a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 grid grid-cols-2 gap-6 sm:gap-8 lg:px-4">
+          <div>
+            <h3 class="font-serif-luxury text-[23px] font-medium text-white mb-2">Quick Links</h3>
+            <div class="w-8 h-[2px] bg-[#e8c468] mb-5"></div>
+            <ul class="space-y-2.5 text-[13.5px] text-[#d5ddd8]/80">
+              <li><a href="/" class="hover:text-[#f3d88c]">› Home</a></li>
+              <li><a href="/about" class="hover:text-[#f3d88c]">› About Us</a></li>
+              <li><a href="/services" class="hover:text-[#f3d88c]">› Our Services</a></li>
+              <li><a href="/pricing" class="hover:text-[#f3d88c]">› Pricing</a></li>
+              <li><a href="/gallery" class="hover:text-[#f3d88c]">› Gallery</a></li>
+              <li><a href="/reviews" class="hover:text-[#f3d88c]">› Reviews</a></li>
+              <li><a href="/contact" class="hover:text-[#f3d88c]">› Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-serif-luxury text-[23px] font-medium text-white mb-2">Our Services</h3>
+            <div class="w-8 h-[2px] bg-[#e8c468] mb-5"></div>
+            <ul class="space-y-2.5 text-[13.5px] text-[#d5ddd8]/80">
+              <li><a href="/services" class="hover:text-[#f3d88c]">› Home Cleaning</a></li>
+              <li><a href="/services" class="hover:text-[#f3d88c]">› Deep Cleaning</a></li>
+              <li><a href="/services" class="hover:text-[#f3d88c]">› Commercial Cleaning</a></li>
+              <li><a href="/services" class="hover:text-[#f3d88c]">› Move In / Move Out</a></li>
+              <li><a href="/services" class="hover:text-[#f3d88c]">› Office Cleaning</a></li>
+              <li><a href="/contact" class="hover:text-[#f3d88c]">› Custom Cleaning</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+          <div class="grid grid-cols-1 sm:grid-cols-12 gap-8">
+            <div class="sm:col-span-6 lg:pr-4 lg:border-r lg:border-white/[0.1]">
+              <h3 class="font-serif-luxury text-[23px] font-medium text-white mb-2">Contact Us</h3>
+              <div class="w-8 h-[2px] bg-[#e8c468] mb-5"></div>
+              <div class="space-y-3.5 text-[13.5px]">
+                <a href="tel:+420600123456" class="flex items-center gap-3 pb-3 border-b border-white/[0.08] text-[#e6ece8]/90 hover:text-[#f3d88c]">
+                  <i data-lucide="phone" class="w-4 h-4 text-[#e8c468]"></i><span>+420 600 123 456</span>
+                </a>
+                <a href="mailto:hello@cleanora.cz" class="flex items-center gap-3 pb-3 border-b border-white/[0.08] text-[#e6ece8]/90 hover:text-[#f3d88c]">
+                  <i data-lucide="mail" class="w-4 h-4 text-[#e8c468]"></i><span>hello@cleanora.cz</span>
+                </a>
+                <div class="flex items-center gap-3 text-[#e6ece8]/90">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-[#e8c468]"></i><span>Prague, Czech Republic</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sm:col-span-6">
+              <h3 class="font-serif-luxury text-[23px] font-medium text-white mb-2">Stay in the Loop</h3>
+              <div class="w-8 h-[2px] bg-[#e8c468] mb-5"></div>
+              <p class="text-[13px] leading-[1.6] text-[#d5ddd8]/80 font-light mb-4">
+                Get cleaning tips, offers and updates straight to your inbox.
+              </p>
+              <form onsubmit="event.preventDefault(); document.getElementById('subMsg').classList.remove('hidden');" class="relative flex items-center w-full rounded-xl overflow-hidden bg-[#0a231a]/90 border border-[#e8c468]/40">
+                <input type="email" required placeholder="Enter your email" class="w-full px-4 py-3 bg-transparent text-[13px] text-white placeholder:text-[#d5ddd8]/50 focus:outline-none" />
+                <button type="submit" aria-label="Subscribe" class="btn-gold-luxury cursor-pointer px-4 py-3 flex items-center justify-center shrink-0">
+                  <i data-lucide="send" class="w-4 h-4 text-[#0d2219]"></i>
+                </button>
+              </form>
+              <p id="subMsg" class="hidden text-xs text-[#f3d88c] mt-2">✓ Subscribed! Welcome to CLEANORA.</p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/[0.08] grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="flex items-center gap-3">
+              <i data-lucide="leaf" class="w-6 h-6 text-[#e8c468]"></i>
+              <div class="text-[12px] leading-[1.35] text-[#e6ece8]/90"><div>Eco-Friendly</div><div>Products</div></div>
+            </div>
+            <div class="flex items-center gap-3 sm:pl-4 sm:border-l sm:border-white/[0.1]">
+              <i data-lucide="shield-check" class="w-6 h-6 text-[#e8c468]"></i>
+              <div class="text-[12px] leading-[1.35] text-[#e6ece8]/90"><div>Trusted &</div><div>Vetted Team</div></div>
+            </div>
+            <div class="flex items-center gap-3 sm:pl-4 sm:border-l sm:border-white/[0.1]">
+              <i data-lucide="calendar" class="w-6 h-6 text-[#e8c468]"></i>
+              <div class="text-[12px] leading-[1.35] text-[#e6ece8]/90"><div>Flexible</div><div>Scheduling</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full h-[1px] mb-7" style="background: linear-gradient(90deg, rgba(232,196,104,0.15) 0%, rgba(245,223,158,0.65) 28%, rgba(232,196,104,0.25) 100%);"></div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-[#d5ddd8]/75">
+        <p>© 2026 CLEANORA. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#privacy" class="hover:text-[#f3d88c]">Privacy Policy</a>
+          <span class="text-white/25">|</span>
+          <a href="#terms" class="hover:text-[#f3d88c]">Terms of Service</a>
+          <span class="text-white/25">|</span>
+          <a href="#cookies" class="hover:text-[#f3d88c]">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Booking Modal -->
+  <div id="bookingModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/75 backdrop-blur-md">
+    <div class="relative w-full max-w-lg rounded-3xl bg-[#0c261d] border border-[#e8c468]/35 p-6 sm:p-8 text-white shadow-[0_25px_70px_rgba(0,0,0,0.75)]">
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-[#e8c468]">✕</button>
+      <h3 class="font-serif-luxury text-3xl sm:text-4xl text-white mb-2">Book a <span class="italic text-[#e8c468]">Cleaning</span></h3>
+      <p class="text-xs sm:text-sm text-[#d7ded9]/75 mb-6">Select your preferred service and time for a spotless space.</p>
+      <form onsubmit="event.preventDefault(); alert('Thank you! Your CLEANORA concierge booking is confirmed.'); closeBookingModal();" class="space-y-4">
+        <input type="text" required placeholder="Full Name" class="w-full px-4 py-3 rounded-xl bg-[#081b14] border border-white/15 text-sm text-white" />
+        <input type="tel" required placeholder="+420 600 123 456" class="w-full px-4 py-3 rounded-xl bg-[#081b14] border border-white/15 text-sm text-white" />
+        <select id="bookingServiceSelect" class="w-full px-4 py-3 rounded-xl bg-[#081b14] border border-white/15 text-sm text-white">
+          <option>Home Cleaning</option>
+          <option>Deep Cleaning</option>
+          <option>Commercial Cleaning</option>
+          <option>Move In / Move Out</option>
+          <option>Bathroom Refresh</option>
+          <option>Kitchen Cleaning</option>
+        </select>
+        <button type="submit" class="btn-gold-luxury w-full py-3.5 rounded-full text-sm font-semibold mt-2 cursor-pointer">Confirm Priority Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    // Functional Draggable Before & After Slider Handler
+    function updateBaSlider(rangeInput) {
+      const val = Number(rangeInput.value);
+      const container = rangeInput.closest('.ba-slider');
+      const beforeDiv = container.querySelector('.ba-before');
+      const handleDiv = container.querySelector('.ba-handle');
+      beforeDiv.style.clipPath = `inset(0 ${100 - val}% 0 0)`;
+      handleDiv.style.left = `${val}%`;
+    }
+
+    function nudgeAllSliders(delta) {
+      document.querySelectorAll('.ba-slider input[type="range"]').forEach(inp => {
+        const nextVal = Math.min(90, Math.max(10, Number(inp.value) + delta));
+        inp.value = nextVal;
+        updateBaSlider(inp);
+      });
+    }
+
+    // Actual Category Filtering for Latest Cleaning Projects
+    function filterGallery(cat) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.className = "filter-btn cursor-pointer inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-[13.5px] font-medium bg-[#0e2c21]/85 text-[#e6ece8] border border-[#e8c468]/35 hover:border-[#e8c468]";
+      });
+      const activeBtn = document.getElementById('filter-' + cat);
+      if (activeBtn) {
+        activeBtn.className = "filter-btn btn-gold-luxury cursor-pointer inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-[13.5px] font-semibold";
+      }
+
+      document.querySelectorAll('.gallery-card').forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (cat === 'all' || cardCat === cat) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function openBookingModal(srv) {
+      if (srv) document.getElementById('bookingServiceSelect').value = srv;
+      document.getElementById('bookingModal').classList.remove('hidden');
+    }
+    function closeBookingModal() {
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
+

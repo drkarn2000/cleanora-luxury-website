@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index.js" },
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/pricing", "destination": "/pricing.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/reviews", "destination": "/reviews.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/book", "destination": "/book.html" },
+    { "source": "/login", "destination": "/login.html" },
+    { "source": "/register", "destination": "/login.html" },
+    { "source": "/forgot-password", "destination": "/forgot-password.html" },
+    { "source": "/reset-password", "destination": "/forgot-password.html" },
+    { "source": "/customer", "destination": "/customer-portal.html" },
+    { "source": "/staff", "destination": "/staff-portal.html" },
+    { "source": "/admin", "destination": "/admin-panel.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/cookies", "destination": "/cookies.html" },
+    { "source": "/404", "destination": "/404.html" }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "cleanora-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "build": "echo \"CLEANORA static & API build ready\"",
+    "start": "node server.js",
+    "lint": "echo \"No lint errors\""
+  }
+}

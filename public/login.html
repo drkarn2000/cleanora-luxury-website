@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In or Register | CLEANORA® Luxury Cleaning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    body {
+      background-color: #071a13;
+      color: #f8f6f0;
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-serif-luxury {
+      font-family: var(--font-serif);
+    }
+    .btn-gold-luxury {
+      background: linear-gradient(135deg, #f3d88c 0%, #e4be62 48%, #d4a644 100%);
+      color: #0d2219;
+      box-shadow:
+        0 8px 28px -4px rgba(232, 196, 104, 0.42),
+        0 2px 10px rgba(232, 196, 104, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.65);
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .btn-gold-luxury:hover {
+      background: linear-gradient(135deg, #f7e1a0 0%, #ebc86e 50%, #dcaf4d 100%);
+      box-shadow:
+        0 12px 34px -4px rgba(232, 196, 104, 0.58),
+        0 4px 14px rgba(232, 196, 104, 0.35),
+        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+      transform: translateY(-1.5px);
+    }
+    .role-active-gold {
+      background: linear-gradient(135deg, #f3d88c 0%, #e4be62 55%, #d4a644 100%) !important;
+      color: #0d2219 !important;
+      border-color: #f7e2a4 !important;
+      box-shadow: 0 10px 28px rgba(232, 196, 104, 0.38);
+    }
+    .glass-auth-panel {
+      background: rgba(11, 38, 29, 0.78);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.65),
+        0 0 40px rgba(232, 196, 104, 0.16),
+        inset 0 1px 2px rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#071a13] text-[#f8f6f0] relative flex items-center justify-center">
+
+  <!-- Full-Screen Luxury Interior Background + Curved Gold Ribbon Divider -->
+  <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+    <img src="/images/hero-interior.jpg" alt="CLEANORA Luxury Interior" class="w-full h-full object-cover opacity-50 scale-105" style="filter: blur(2px);" />
+    <div class="absolute inset-0" style="background: linear-gradient(95deg, #061811 0%, #092219 42%, rgba(9,32,24,0.78) 65%, rgba(7,24,18,0.88) 100%);"></div>
+
+    <!-- Sweeping Vertical Gold Curve Dividing Left Brand Side & Right Glass Panel -->
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="none" class="hidden lg:block absolute inset-0 w-full h-full">
+      <defs>
+        <linearGradient id="loginGoldCurve" x1="600" y1="0" x2="600" y2="900" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#e8c468" stop-opacity="0.15" />
+          <stop offset="30%" stop-color="#f6df9e" stop-opacity="0.95" />
+          <stop offset="65%" stop-color="#e8c468" stop-opacity="0.9" />
+          <stop offset="100%" stop-color="#d4a644" stop-opacity="0.2" />
+        </linearGradient>
+      </defs>
+      <path d="M580 0 C710 230, 560 630, 730 900 L0 900 L0 0 Z" fill="#071b14" fill-opacity="0.65" />
+      <path d="M580 0 C710 230, 560 630, 730 900" fill="none" stroke="url(#loginGoldCurve)" stroke-width="3.2" />
+    </svg>
+  </div>
+
+  <!-- Main Two-Column Split Container -->
+  <div class="relative z-10 max-w-[1380px] w-full mx-auto px-5 sm:px-8 lg:px-14 py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+      <!-- ===================================================================
+           LEFT COLUMN (5 COLS): BRAND INTRODUCTION & LUXURY PRODUCT STILL-LIFE
+           =================================================================== -->
+      <div class="lg:col-span-5 flex flex-col items-start">
+        <!-- Centered / Top Brand Emblem -->
+        <a href="/" class="flex flex-col items-center sm:items-start mb-8 group">
+          <div class="flex flex-col items-center text-center">
+            <svg viewBox="0 0 42 42" fill="none" class="w-11 h-11 mb-2 transition-transform group-hover:scale-105">
+              <path d="M7 35C8 21 18 9 35 6C34 22 24 33 7 35Z" fill="#e8c468" />
+              <path d="M5 38C11 31 19 22 28 13" stroke="#071912" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+            <div class="flex items-baseline">
+              <span class="font-serif-luxury text-[28px] font-semibold tracking-[0.14em] text-white leading-none">CLEANORA</span>
+              <span class="text-[10px] text-[#e8c468] ml-0.5">®</span>
+            </div>
+            <span class="text-[9.5px] tracking-[0.26em] uppercase text-[#e8c468] font-medium mt-1.5">CLEANING SERVICES</span>
+          </div>
+        </a>
+
+        <h1 class="font-serif-luxury text-[44px] sm:text-[56px] leading-[1.05] text-white font-normal mb-4">
+          <span class="block">Welcome Back to</span>
+          <span class="block italic text-[#e8c468] mt-1">CLEANORA</span>
+        </h1>
+
+        <p class="text-[15px] leading-[1.68] text-[#d5ddd8]/85 font-light max-w-[440px] mb-8">
+          Access your account to book services, manage schedule, track cleaning jobs and more.
+        </p>
+
+        <!-- 3 Feature Highlights -->
+        <div class="space-y-5 mb-8">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-[#113125] border border-[#e8c468]/50 flex items-center justify-center shrink-0">
+              <i data-lucide="calendar-check" class="w-5 h-5 text-[#e8c468]"></i>
+            </div>
+            <div>
+              <h3 class="text-[15px] font-semibold text-white">Book & Manage Cleanings</h3>
+              <p class="text-[13px] text-[#d5ddd8]/75">Schedule, modify and track your bookings.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-[#113125] border border-[#e8c468]/50 flex items-center justify-center shrink-0">
+              <i data-lucide="users" class="w-5 h-5 text-[#e8c468]"></i>
+            </div>
+            <div>
+              <h3 class="text-[15px] font-semibold text-white">Role-Based Access</h3>
+              <p class="text-[13px] text-[#d5ddd8]/75">Customer, Staff and Administrator portals.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-[#113125] border border-[#e8c468]/50 flex items-center justify-center shrink-0">
+              <i data-lucide="shield-check" class="w-5 h-5 text-[#e8c468]"></i>
+            </div>
+            <div>
+              <h3 class="text-[15px] font-semibold text-white">Secure & Reliable</h3>
+              <p class="text-[13px] text-[#d5ddd8]/75">Your data is safe with enterprise-grade security.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Product Still-Life Preview -->
+        <div class="hidden sm:block relative w-full max-w-[430px] h-[180px] rounded-2xl overflow-hidden border border-[#e8c468]/35 shadow-2xl">
+          <img src="/images/services-hero-bottle.jpg" alt="CLEANORA Product" class="w-full h-full object-cover object-right" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071a13]/75 via-transparent to-transparent"></div>
+        </div>
+      </div>
+
+      <!-- ===================================================================
+           RIGHT COLUMN (7 COLS): GLASSMORPHISM AUTHENTICATION PANEL
+           =================================================================== -->
+      <div class="lg:col-span-7 flex justify-center lg:justify-end">
+        <div class="glass-auth-panel relative w-full max-w-[580px] rounded-[32px] border border-[#e8c468]/55 p-7 sm:p-10">
+
+          <!-- Top Edge Gold Flare -->
+          <div class="pointer-events-none absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[55%] h-[2.5px]" style="background: linear-gradient(90deg, transparent 0%, #f6df9e 50%, transparent 100%); box-shadow: 0 0 18px rgba(232,196,104,0.85);"></div>
+
+          <!-- 1. Login / Register Pill Switcher -->
+          <div class="grid grid-cols-2 rounded-full bg-[#092018] border border-[#e8c468]/35 p-1 mb-7">
+            <button type="button" id="tab-login" onclick="switchAuthTab('login')" class="btn-gold-luxury py-2.5 rounded-full text-[15px] font-semibold cursor-pointer">
+              Login
+            </button>
+            <button type="button" id="tab-register" onclick="switchAuthTab('register')" class="py-2.5 rounded-full text-[15px] font-medium text-[#d5ddd8] hover:text-white transition-colors cursor-pointer">
+              Register
+            </button>
+          </div>
+
+          <!-- Heading -->
+          <div class="text-center mb-6">
+            <h2 id="authHeading" class="font-serif-luxury text-[36px] sm:text-[42px] leading-[1.08] text-white font-normal">
+              Sign In to <span class="italic text-[#e8c468]">Your Account</span>
+            </h2>
+            <p id="authSubheading" class="text-[13.5px] text-[#d5ddd8]/80 mt-1">
+              Choose your role and access your CLEANORA account.
+            </p>
+          </div>
+
+          <!-- 2. Three Role Cards (Customer, Staff, Administrator) -->
+          <div class="grid grid-cols-3 gap-3 mb-6">
+            <!-- Customer Role -->
+            <button type="button" onclick="selectRole('customer')" id="role-customer" class="role-card role-active-gold cursor-pointer relative rounded-2xl border border-[#e8c468]/35 p-3.5 flex flex-col items-center text-center transition-all">
+              <span id="role-check-customer" class="absolute top-2 right-2 w-5 h-5 rounded-full bg-[#0d2219] text-[#f3d88c] flex items-center justify-center text-[10px] font-bold">✓</span>
+              <i data-lucide="users" class="w-6 h-6 mb-1.5"></i>
+              <span class="text-[13.5px] font-bold">Customer</span>
+              <span class="text-[10.5px] opacity-85 leading-tight mt-0.5">Book & manage cleanings</span>
+            </button>
+
+            <!-- Staff Role -->
+            <button type="button" onclick="selectRole('staff')" id="role-staff" class="role-card cursor-pointer relative rounded-2xl bg-[#0b251c]/90 text-white border border-[#e8c468]/35 p-3.5 flex flex-col items-center text-center transition-all hover:border-[#e8c468]">
+              <span id="role-check-staff" class="hidden absolute top-2 right-2 w-5 h-5 rounded-full bg-[#0d2219] text-[#f3d88c] items-center justify-center text-[10px] font-bold">✓</span>
+              <i data-lucide="hard-hat" class="w-6 h-6 text-[#e8c468] mb-1.5"></i>
+              <span class="text-[13.5px] font-bold">Staff</span>
+              <span class="text-[10.5px] text-[#d5ddd8]/75 leading-tight mt-0.5">View jobs & manage schedule</span>
+            </button>
+
+            <!-- Administrator Role -->
+            <button type="button" onclick="selectRole('admin')" id="role-admin" class="role-card cursor-pointer relative rounded-2xl bg-[#0b251c]/90 text-white border border-[#e8c468]/35 p-3.5 flex flex-col items-center text-center transition-all hover:border-[#e8c468]">
+              <span id="role-check-admin" class="hidden absolute top-2 right-2 w-5 h-5 rounded-full bg-[#0d2219] text-[#f3d88c] items-center justify-center text-[10px] font-bold">✓</span>
+              <i data-lucide="settings" class="w-6 h-6 text-[#e8c468] mb-1.5"></i>
+              <span class="text-[13.5px] font-bold">Administrator</span>
+              <span class="text-[10.5px] text-[#d5ddd8]/75 leading-tight mt-0.5">Manage operations, team & settings</span>
+            </button>
+          </div>
+
+          <!-- Demo Credentials Helper Banner -->
+          <div class="rounded-xl bg-[#092018]/90 border border-[#e8c468]/30 px-4 py-2.5 mb-5 flex items-center justify-between text-[11.5px] text-[#d5ddd8]/85">
+            <span>Demo Account Autofilled for <strong id="demoRoleLabel" class="text-[#f3d88c]">Customer</strong></span>
+            <button type="button" onclick="fillDemoCredentials()" class="text-[#e8c468] underline cursor-pointer">Autofill</button>
+          </div>
+
+          <!-- Error / Status Alert -->
+          <div id="authAlert" class="hidden rounded-xl bg-red-950/80 border border-red-400/50 px-4 py-3 mb-4 text-xs text-red-200"></div>
+
+          <!-- ---------------- LOGIN FORM ---------------- -->
+          <form id="loginForm" onsubmit="handleLoginSubmit(event)" class="space-y-4">
+            <div class="relative">
+              <i data-lucide="mail" class="w-4 h-4 text-[#e8c468] absolute left-4 top-4 pointer-events-none"></i>
+              <input type="email" id="login-email" required value="jana@cleanora.cz" placeholder="Email Address" class="w-full pl-11 pr-4 py-3.5 rounded-xl bg-[#081c14] border border-[#e8c468]/40 focus:border-[#e8c468] focus:outline-none text-sm text-white" />
+            </div>
+
+            <div class="relative">
+              <i data-lucide="lock" class="w-4 h-4 text-[#e8c468] absolute left-4 top-4 pointer-events-none"></i>
+              <input type="password" id="login-password" required value="Cleanora@2026" placeholder="Password" class="w-full pl-11 pr-11 py-3.5 rounded-xl bg-[#081c14] border border-[#e8c468]/40 focus:border-[#e8c468] focus:outline-none text-sm text-white" />
+              <button type="button" onclick="togglePwd('login-password')" class="absolute right-4 top-3.5 text-[#e8c468]/75 hover:text-[#e8c468] cursor-pointer">
+                <i data-lucide="eye-off" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between text-[13px] pt-1">
+              <label class="inline-flex items-center gap-2 cursor-pointer text-[#d5ddd8]/85">
+                <input type="checkbox" checked class="accent-[#e8c468] w-4 h-4 rounded" />
+                <span>Remember me</span>
+              </label>
+              <a href="/forgot-password" class="text-[#e8c468] hover:underline font-medium">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn-gold-luxury w-full py-4 rounded-full text-[15.5px] font-semibold flex items-center justify-center gap-2.5 cursor-pointer mt-2">
+              <span>Sign In</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </form>
+
+          <!-- ---------------- REGISTER FORM ---------------- -->
+          <form id="registerForm" onsubmit="handleRegisterSubmit(event)" class="hidden space-y-3.5">
+            <!-- Admin Restriction Notice -->
+            <div id="adminRegBlock" class="hidden rounded-2xl bg-[#142e23] border border-[#e8c468]/50 p-5 text-center space-y-2">
+              <i data-lucide="shield-alert" class="w-8 h-8 text-[#e8c468] mx-auto"></i>
+              <h4 class="font-serif-luxury text-2xl text-white">Administrator Registration Restricted</h4>
+              <p class="text-xs text-[#d5ddd8]/80 leading-relaxed">
+                Public registration for Administrator accounts is disabled for security. Only an existing Super Administrator can provision new admin credentials from the Admin Panel.
+              </p>
+            </div>
+
+            <div id="registerFields" class="space-y-3.5">
+              <!-- Staff Invite Code Field (Shown only when Staff role is selected) -->
+              <div id="staffInviteWrap" class="hidden relative">
+                <i data-lucide="key" class="w-4 h-4 text-[#e8c468] absolute left-4 top-4 pointer-events-none"></i>
+                <input type="text" id="reg-invite" placeholder="Staff Invitation Code * (Demo: STAFF-2026)" class="w-full pl-11 pr-4 py-3.5 rounded-xl bg-[#081c14] border border-[#e8c468] text-sm text-[#f3d88c] focus:outline-none" />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <input type="text" id="reg-name" required placeholder="Full Name *" class="w-full px-4 py-3 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none" />
+                <input type="tel" id="reg-phone" required placeholder="Phone (+420...) *" class="w-full px-4 py-3 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none" />
+              </div>
+
+              <input type="email" id="reg-email" required placeholder="Email Address *" class="w-full px-4 py-3 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none" />
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <input type="password" id="reg-password" required placeholder="Password *" class="w-full px-4 py-3 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none" />
+                <input type="password" id="reg-confirm" required placeholder="Confirm Password *" class="w-full px-4 py-3 rounded-xl bg-[#081c14] border border-[#e8c468]/40 text-sm text-white focus:outline-none" />
+              </div>
+
+              <button type="submit" class="btn-gold-luxury w-full py-3.5 rounded-full text-[15px] font-semibold flex items-center justify-center gap-2 cursor-pointer">
+                <span>Create Account</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </form>
+
+          <!-- Social Login Divider -->
+          <div class="my-6 flex items-center gap-4">
+            <div class="flex-1 h-[1px] bg-white/15"></div>
+            <span class="text-[12px] text-[#d5ddd8]/75">or continue with</span>
+            <div class="flex-1 h-[1px] bg-white/15"></div>
+          </div>
+
+          <!-- 3 Social Login Buttons: Google, Apple, Microsoft -->
+          <div class="flex items-center justify-center gap-4 mb-6">
+            <button type="button" onclick="socialSignIn('Google')" class="w-16 h-12 rounded-xl bg-[#092018] border border-[#e8c468]/35 hover:border-[#e8c468] flex items-center justify-center font-bold text-lg text-[#EA4335] transition-all cursor-pointer">
+              G
+            </button>
+            <button type="button" onclick="socialSignIn('Apple')" class="w-16 h-12 rounded-xl bg-[#092018] border border-[#e8c468]/35 hover:border-[#e8c468] flex items-center justify-center text-lg text-white transition-all cursor-pointer">
+              
+            </button>
+            <button type="button" onclick="socialSignIn('Microsoft')" class="w-16 h-12 rounded-xl bg-[#092018] border border-[#e8c468]/35 hover:border-[#e8c468] flex items-center justify-center text-sm font-bold text-[#00A4EF] transition-all cursor-pointer">
+              ⊞
+            </button>
+          </div>
+
+          <div class="text-center text-[13px] text-[#d5ddd8]/85">
+            <span id="bottomSwitchPrompt">Don't have an account?</span>
+            <button type="button" onclick="toggleBottomSwitch()" id="bottomSwitchBtn" class="text-[#e8c468] font-semibold hover:underline ml-1 cursor-pointer">
+              Create an Account
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    let currentTab = 'login';
+    let currentRole = 'customer';
+
+    const DEMO_CREDS = {
+      customer: { label: 'Customer', email: 'jana@cleanora.cz', pass: 'Cleanora@2026' },
+      staff: { label: 'Staff Specialist', email: 'petr.staff@cleanora.cz', pass: 'Cleanora@2026' },
+      admin: { label: 'Administrator', email: 'admin@cleanora.cz', pass: 'Cleanora@2026' }
+    };
+
+    function switchAuthTab(tab) {
+      currentTab = tab;
+      document.getElementById('authAlert').classList.add('hidden');
+      const loginBtn = document.getElementById('tab-login');
+      const regBtn = document.getElementById('tab-register');
+
+      if (tab === 'login') {
+        loginBtn.className = "btn-gold-luxury py-2.5 rounded-full text-[15px] font-semibold cursor-pointer";
+        regBtn.className = "py-2.5 rounded-full text-[15px] font-medium text-[#d5ddd8] hover:text-white transition-colors cursor-pointer";
+        document.getElementById('authHeading').innerHTML = `Sign In to <span class="italic text-[#e8c468]">Your Account</span>`;
+        document.getElementById('loginForm').classList.remove('hidden');
+        document.getElementById('registerForm').classList.add('hidden');
+        document.getElementById('bottomSwitchPrompt').textContent = "Don't have an account?";
+        document.getElementById('bottomSwitchBtn').textContent = "Create an Account";
+      } else {
+        regBtn.className = "btn-gold-luxury py-2.5 rounded-full text-[15px] font-semibold cursor-pointer";
+        loginBtn.className = "py-2.5 rounded-full text-[15px] font-medium text-[#d5ddd8] hover:text-white transition-colors cursor-pointer";
+        document.getElementById('authHeading').innerHTML = `Create Your <span class="italic text-[#e8c468]">CLEANORA Account</span>`;
+        document.getElementById('loginForm').classList.add('hidden');
+        document.getElementById('registerForm').classList.remove('hidden');
+        document.getElementById('bottomSwitchPrompt').textContent = "Already have an account?";
+        document.getElementById('bottomSwitchBtn').textContent = "Sign In";
+        updateRegisterRoleState();
+      }
+    }
+
+    function toggleBottomSwitch() {
+      switchAuthTab(currentTab === 'login' ? 'register' : 'login');
+    }
+
+    function selectRole(role) {
+      currentRole = role;
+      ['customer', 'staff', 'admin'].forEach(r => {
+        const card = document.getElementById('role-' + r);
+        const chk = document.getElementById('role-check-' + r);
+        if (r === role) {
+          card.classList.add('role-active-gold');
+          chk.classList.remove('hidden');
+          chk.classList.add('flex');
+        } else {
+          card.classList.remove('role-active-gold');
+          chk.classList.add('hidden');
+          chk.classList.remove('flex');
+        }
+      });
+      fillDemoCredentials();
+      updateRegisterRoleState();
+    }
+
+    function fillDemoCredentials() {
+      const cred = DEMO_CREDS[currentRole];
+      document.getElementById('demoRoleLabel').textContent = cred.label;
+      document.getElementById('login-email').value = cred.email;
+      document.getElementById('login-password').value = cred.pass;
+    }
+
+    function updateRegisterRoleState() {
+      const adminBlock = document.getElementById('adminRegBlock');
+      const regFields = document.getElementById('registerFields');
+      const staffInvite = document.getElementById('staffInviteWrap');
+
+      if (currentRole === 'admin') {
+        adminBlock.classList.remove('hidden');
+        regFields.classList.add('hidden');
+      } else {
+        adminBlock.classList.add('hidden');
+        regFields.classList.remove('hidden');
+        if (currentRole === 'staff') {
+          staffInvite.classList.remove('hidden');
+        } else {
+          staffInvite.classList.add('hidden');
+        }
+      }
+    }
+
+    function togglePwd(id) {
+      const inp = document.getElementById(id);
+      inp.type = inp.type === 'password' ? 'text' : 'password';
+    }
+
+    async function handleLoginSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password, role: currentRole })
+        });
+        const data = await res.json();
+        if (!res.ok || !data.ok) {
+          const alertBox = document.getElementById('authAlert');
+          alertBox.textContent = data.error || 'Invalid credentials or unauthorized role.';
+          alertBox.classList.remove('hidden');
+          return;
+        }
+        window.location.href = data.redirectUrl;
+      } catch (err) {
+        // Fallback redirect if offline
+        const map = { customer: '/customer', staff: '/staff', admin: '/admin' };
+        window.location.href = map[currentRole] || '/customer';
+      }
+    }
+
+    async function handleRegisterSubmit(e) {
+      e.preventDefault();
+      const alertBox = document.getElementById('authAlert');
+      alertBox.classList.add('hidden');
+
+      const password = document.getElementById('reg-password').value;
+      const confirm = document.getElementById('reg-confirm').value;
+      if (password !== confirm) {
+        alertBox.textContent = 'Passwords do not match.';
+        alertBox.classList.remove('hidden');
+        return;
+      }
+
+      const payload = {
+        role: currentRole,
+        name: document.getElementById('reg-name').value,
+        phone: document.getElementById('reg-phone').value,
+        email: document.getElementById('reg-email').value,
+        password,
+        inviteCode: document.getElementById('reg-invite').value
+      };
+
+      const res = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) {
+        alertBox.textContent = data.error || 'Registration failed.';
+        alertBox.classList.remove('hidden');
+        return;
+      }
+      window.location.href = data.redirectUrl;
+    }
+
+    function socialSignIn(provider) {
+      const map = { customer: '/customer', staff: '/staff', admin: '/admin' };
+      window.location.href = map[currentRole] || '/customer';
+    }
+  </script>
+</body>
+</html>
+

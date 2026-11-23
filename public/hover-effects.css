@@ -1,0 +1,395 @@
+/* ==========================================================================
+   CLEANORA® — Master Interactive Luxury Hover & Micro-Animation System v2
+   Complete Coverage for ALL Cards, Banners, Icons, Checklists, Platform Badges,
+   Pricing Cards, Custom Quote Cards, Featured Service Banners, Buttons & Links
+   ========================================================================== */
+
+/* 1. NAVBAR LINKS — Animated Champagne-Gold Underline & Glow */
+header nav > a,
+header nav > div > a {
+  position: relative;
+  transition: color 0.28s ease, transform 0.28s ease !important;
+}
+header nav > a:hover,
+header nav > div > a:hover {
+  color: #f3d88c !important;
+  transform: translateY(-1px);
+}
+header nav > a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 2px;
+  background: linear-gradient(90deg, #e8c468, #fff1be, #d4a644);
+  border-radius: 999px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 10px rgba(232, 196, 104, 0.7);
+}
+header nav > a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Navbar Dropdown Items */
+header nav .group-hover\:block a {
+  transition: all 0.25s ease !important;
+}
+header nav .group-hover\:block a:hover {
+  transform: translateX(5px);
+  background: rgba(232, 196, 104, 0.14) !important;
+  color: #f3d88c !important;
+}
+
+/* Navbar Phone Pill */
+header a[href^="tel:"] {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+header a[href^="tel:"]:hover {
+  transform: translateY(-2px);
+  border-color: rgba(232, 196, 104, 0.85) !important;
+  background: rgba(21, 61, 46, 0.95) !important;
+  box-shadow: 0 10px 24px -6px rgba(232, 196, 104, 0.35);
+  color: #f3d88c !important;
+}
+header a[href^="tel:"]:hover svg {
+  transform: rotate(-12deg) scale(1.15);
+}
+
+/* 2. ALL BUTTONS & CTAs — 3D Lift, Gold Fill & Animated Icons */
+.btn-gold-luxury,
+.btn-glass-emerald,
+button,
+a.inline-flex,
+a.flex {
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.btn-gold-luxury:hover {
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 16px 36px -6px rgba(232, 196, 104, 0.7), inset 0 1px 2px rgba(255, 255, 255, 0.9) !important;
+}
+.btn-glass-emerald:hover {
+  transform: translateY(-3px) scale(1.02) !important;
+  border-color: rgba(232, 196, 104, 0.85) !important;
+  background: rgba(22, 68, 51, 0.92) !important;
+  box-shadow: 0 14px 30px -6px rgba(0, 0, 0, 0.55), 0 0 22px rgba(232, 196, 104, 0.25) !important;
+  color: #f3d88c !important;
+}
+
+/* Outlined Emerald Buttons (e.g., "Book Basic Clean", "Book Deep Clean", Filter Buttons) Turn Solid Gold on Hover */
+#pricingPackagesGrid button:hover,
+button.rounded-full.bg-\[\#103024\]:hover,
+button.rounded-full.bg-\[\#0e2c21\]:hover,
+.filter-btn:hover,
+.rev-filter-btn:hover {
+  background: linear-gradient(135deg, #f6e09e 0%, #e8c468 55%, #cfa13d 100%) !important;
+  color: #071912 !important;
+  border-color: #fff1be !important;
+  font-weight: 600 !important;
+  transform: translateY(-2.5px) scale(1.02) !important;
+  box-shadow: 0 12px 28px -6px rgba(232, 196, 104, 0.55) !important;
+}
+#pricingPackagesGrid button:hover svg,
+button.rounded-full.bg-\[\#103024\]:hover svg,
+button.rounded-full.bg-\[\#0e2c21\]:hover svg,
+.filter-btn:hover svg,
+.rev-filter-btn:hover svg {
+  color: #071912 !important;
+  stroke: #071912 !important;
+}
+
+/* Button Icons Micro-Animation on Hover */
+.btn-gold-luxury svg,
+.btn-glass-emerald svg,
+button svg,
+a svg {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease, stroke 0.3s ease !important;
+}
+.btn-gold-luxury:hover svg.lucide-arrow-right,
+button:hover svg.lucide-arrow-right,
+a:hover svg.lucide-arrow-right,
+.group:hover svg.lucide-arrow-right {
+  transform: translateX(5px) !important;
+}
+.btn-gold-luxury:hover svg.lucide-calendar,
+.btn-gold-luxury:hover svg.lucide-send,
+.btn-gold-luxury:hover svg.lucide-navigation,
+.btn-gold-luxury:hover svg.lucide-play-circle,
+.btn-gold-luxury:hover svg.lucide-calculator {
+  transform: scale(1.16) rotate(-5deg) !important;
+}
+
+/* 3. ALL ICON BADGES (ANYWHERE ON PAGE OR INSIDE ANY CARD/BANNER) */
+div.w-9.h-9.rounded-full,
+div.w-10.h-10.rounded-full,
+div.w-11.h-11.rounded-full,
+div.w-12.h-12.rounded-full,
+div.w-13.h-13.rounded-full,
+div.w-14.h-14.rounded-full,
+div.w-10.h-10.rounded-xl,
+div.w-11.h-11.rounded-xl,
+div.w-12.h-12.rounded-xl,
+div.w-13.h-13.rounded-2xl,
+div.w-14.h-14.rounded-2xl,
+span.w-9.h-9.rounded-full {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Trigger Icon Gold Illumination when hovering the icon directly OR hovering its parent row, column, or card */
+div.w-9.h-9.rounded-full:hover,
+div.w-10.h-10.rounded-full:hover,
+div.w-11.h-11.rounded-full:hover,
+div.w-12.h-12.rounded-full:hover,
+div.w-13.h-13.rounded-full:hover,
+div.w-14.h-14.rounded-full:hover,
+div.w-10.h-10.rounded-xl:hover,
+div.w-11.h-11.rounded-xl:hover,
+div.w-12.h-12.rounded-xl:hover,
+div.w-13.h-13.rounded-2xl:hover,
+div.w-14.h-14.rounded-2xl:hover,
+.flex.items-center:hover > div.rounded-full,
+.flex.items-center:hover > div.rounded-xl,
+.flex.items-center:hover > div.rounded-2xl,
+.flex.items-start:hover > div.rounded-full,
+.flex.items-start:hover > div.rounded-xl,
+.flex.items-start:hover > div.rounded-2xl,
+.flex.flex-col:hover > div.rounded-full,
+.flex.flex-col:hover > div.rounded-xl,
+.flex.flex-col:hover > div.rounded-2xl,
+#pricingPackagesGrid > div:hover div.w-14.h-14,
+#addonsGrid > button:hover div.w-11.h-11,
+#featured-service div[class*="rounded-[30px]"]:hover div.w-11.h-11,
+div[class*="rounded-[22px]"]:hover > div.w-12.h-12,
+div[class*="rounded-[22px]"]:hover > div.w-13.h-13,
+a[class*="rounded-[22px]"]:hover > div.w-13.h-13 {
+  transform: translateY(-2px) scale(1.13) rotate(-4deg) !important;
+  background: linear-gradient(135deg, #f6e09e 0%, #e8c468 55%, #cfa13d 100%) !important;
+  border-color: #fff1be !important;
+  color: #071912 !important;
+  box-shadow: 0 10px 25px -4px rgba(232, 196, 104, 0.6) !important;
+}
+
+/* Turn inner SVG icon dark emerald when its badge illuminates */
+div.w-9.h-9.rounded-full:hover svg,
+div.w-10.h-10.rounded-full:hover svg,
+div.w-11.h-11.rounded-full:hover svg,
+div.w-12.h-12.rounded-full:hover svg,
+div.w-13.h-13.rounded-full:hover svg,
+div.w-14.h-14.rounded-full:hover svg,
+div.w-10.h-10.rounded-xl:hover svg,
+div.w-11.h-11.rounded-xl:hover svg,
+div.w-12.h-12.rounded-xl:hover svg,
+div.w-13.h-13.rounded-2xl:hover svg,
+div.w-14.h-14.rounded-2xl:hover svg,
+.flex.items-center:hover > div.rounded-full svg,
+.flex.items-center:hover > div.rounded-xl svg,
+.flex.items-center:hover > div.rounded-2xl svg,
+.flex.items-start:hover > div.rounded-full svg,
+.flex.items-start:hover > div.rounded-xl svg,
+.flex.items-start:hover > div.rounded-2xl svg,
+.flex.flex-col:hover > div.rounded-full svg,
+.flex.flex-col:hover > div.rounded-xl svg,
+.flex.flex-col:hover > div.rounded-2xl svg,
+#pricingPackagesGrid > div:hover div.w-14.h-14 svg,
+#addonsGrid > button:hover div.w-11.h-11 svg,
+#featured-service div[class*="rounded-[30px]"]:hover div.w-11.h-11 svg,
+div[class*="rounded-[22px]"]:hover > div.w-12.h-12 svg,
+div[class*="rounded-[22px]"]:hover > div.w-13.h-13 svg,
+a[class*="rounded-[22px]"]:hover > div.w-13.h-13 svg {
+  color: #071912 !important;
+  stroke: #071912 !important;
+  transform: scale(1.08);
+}
+
+/* Standalone inline icons in Hero / Stats / Footer trust rows */
+.flex.items-center.gap-3:hover > svg.lucide,
+.flex.items-start.gap-3:hover > svg.lucide {
+  transform: scale(1.22) rotate(-6deg);
+  filter: drop-shadow(0 0 10px rgba(232, 196, 104, 0.8));
+}
+
+/* 4. CHECKLIST ITEMS (Featured Service, Pricing Packages, Custom Quote, Contact) */
+ul li.flex.items-center {
+  padding: 4px 8px;
+  margin-left: -8px;
+  border-radius: 10px;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer;
+}
+ul li.flex.items-center:hover {
+  transform: translateX(6px);
+  background: rgba(232, 196, 104, 0.12);
+  color: #fff1be !important;
+}
+ul li.flex.items-center > span.w-5.h-5.rounded-full {
+  transition: all 0.28s ease !important;
+}
+ul li.flex.items-center:hover > span.w-5.h-5.rounded-full {
+  background: #e8c468 !important;
+  color: #071912 !important;
+  font-weight: 700 !important;
+  transform: scale(1.18);
+  box-shadow: 0 0 12px rgba(232, 196, 104, 0.65);
+}
+
+/* 5. ALL LUXURY CARDS & BANNERS (22px, 24px, 26px, 28px, 30px, 32px & rounded-2xl) */
+div[class*="rounded-[22px]"],
+div[class*="rounded-[24px]"],
+div[class*="rounded-[26px]"],
+div[class*="rounded-[28px]"],
+div[class*="rounded-[30px]"],
+div[class*="rounded-[32px]"],
+a[class*="rounded-[22px]"] {
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.38s ease,
+              background-color 0.38s ease,
+              box-shadow 0.38s ease !important;
+}
+
+div[class*="rounded-[22px]"]:hover,
+div[class*="rounded-[24px]"]:hover,
+div[class*="rounded-[26px]"]:hover,
+div[class*="rounded-[28px]"]:hover,
+div[class*="rounded-[30px]"]:hover,
+div[class*="rounded-[32px]"]:hover,
+a[class*="rounded-[22px]"]:hover {
+  transform: translateY(-5px);
+  border-color: rgba(232, 196, 104, 0.9) !important;
+  background-color: #143f2e !important;
+  box-shadow: 0 24px 55px -10px rgba(0, 0, 0, 0.7), 0 0 32px -6px rgba(232, 196, 104, 0.28) !important;
+}
+
+/* Featured Service Banner (#featured-service) & Final CTA Banners Image Zoom & Arch Fill Sync on Hover */
+div[class*="rounded-[30px]"] svg path[fill="#0c271d"] {
+  transition: fill 0.38s ease !important;
+}
+div[class*="rounded-[30px]"]:hover svg path[fill="#0c271d"] {
+  fill: #143f2e !important;
+}
+div[class*="rounded-[30px]"] img,
+div[class*="rounded-[28px]"] img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+div[class*="rounded-[30px]"]:hover img,
+div[class*="rounded-[28px]"]:hover img {
+  transform: scale(1.05);
+}
+
+/* Custom Quote Tilted Cream Card inside Personalized Quote Banner (/pricing) */
+div.-rotate-2 {
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer;
+}
+div[class*="rounded-[28px]"]:hover div.-rotate-2,
+div.-rotate-2:hover {
+  transform: rotate(0deg) scale(1.06) translateY(-4px) !important;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.65), 0 0 26px rgba(232, 196, 104, 0.65) !important;
+  border-color: #d4a644 !important;
+}
+div.-rotate-2 ul li:hover {
+  background: rgba(13, 34, 25, 0.08) !important;
+  color: #0d2219 !important;
+}
+
+/* Pricing Package Cards (Basic, Standard, Deep Clean) Enhanced Hover */
+#pricingPackagesGrid > div:hover {
+  transform: translateY(-8px) !important;
+  background: linear-gradient(165deg, #174936 0%, #0e2d22 100%) !important;
+  border-color: #e8c468 !important;
+  box-shadow: 0 28px 65px -10px rgba(0, 0, 0, 0.75), 0 0 36px -4px rgba(232, 196, 104, 0.35) !important;
+}
+#pricingPackagesGrid > div:hover h3 {
+  color: #f3d88c !important;
+}
+
+/* Optional Add-Ons Cards (#addonsGrid) Hover */
+#addonsGrid > button:hover {
+  transform: translateY(-5px) scale(1.03) !important;
+  background-color: #174936 !important;
+  border-color: #e8c468 !important;
+  box-shadow: 0 16px 35px -8px rgba(0, 0, 0, 0.6), 0 0 22px rgba(232, 196, 104, 0.28) !important;
+}
+
+/* "Also Rated On" Bar (Google, Trustpilot, Facebook on /reviews) & Multi-Column Stat Bars */
+div[class*="rounded-[22px]"] > div.flex.items-center,
+div[class*="rounded-[24px]"] > div.flex.items-center {
+  padding: 10px 14px;
+  border-radius: 16px;
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer;
+}
+div[class*="rounded-[22px]"] > div.flex.items-center:hover,
+div[class*="rounded-[24px]"] > div.flex.items-center:hover {
+  transform: translateY(-3px);
+  background: rgba(232, 196, 104, 0.14);
+  box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.45);
+}
+div[class*="rounded-[22px]"] > div.flex.items-center:hover > div.w-9.h-9.rounded-full {
+  transform: scale(1.18) rotate(-6deg) !important;
+  box-shadow: 0 0 20px rgba(232, 196, 104, 0.75) !important;
+}
+
+/* Bottom Information Panel Background Color Shift on Card Hover (Team cards, Video cards, Service cards) */
+.group:hover > div.border-t,
+.group:hover > div.p-4,
+.group:hover > div.p-5 {
+  background-color: #174936 !important;
+  transition: background-color 0.4s ease !important;
+}
+
+/* Benefit Rows & Headings Highlight */
+.flex.items-start.gap-4,
+.flex.items-center.gap-3,
+.flex.items-center.gap-3\.5,
+.flex.items-center.gap-4,
+.flex.flex-col.items-center.text-center {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+}
+.flex.items-start.gap-4:hover {
+  transform: translateX(6px);
+}
+.flex.items-start.gap-4:hover h3,
+.flex.items-start.gap-4:hover h4,
+.flex.flex-col.items-center.text-center:hover h3,
+.flex.flex-col.items-center.text-center:hover h4,
+.group:hover h3,
+.group:hover h4,
+div[class*="rounded-[30px]"]:hover h3 {
+  color: #f3d88c !important;
+  transition: color 0.3s ease;
+}
+
+/* Form Inputs Interactive Hover & Focus Glow */
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: rgba(232, 196, 104, 0.7) !important;
+}
+
+/* 6. FOOTER LINKS, CONTACT ROWS & SOCIAL BUTTONS */
+footer ul li a,
+footer ul li button {
+  display: inline-block;
+  transition: transform 0.25s ease, color 0.25s ease !important;
+}
+footer ul li a:hover,
+footer ul li button:hover {
+  transform: translateX(6px);
+  color: #f3d88c !important;
+}
+
+footer a[href*="facebook.com"],
+footer a[href*="instagram.com"],
+footer a[href*="linkedin.com"],
+footer a[href*="youtube.com"] {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+footer a[href*="facebook.com"]:hover,
+footer a[href*="instagram.com"]:hover,
+footer a[href*="linkedin.com"]:hover,
+footer a[href*="youtube.com"]:hover {
+  transform: translateY(-4px) scale(1.12);
+  box-shadow: 0 10px 22px -4px rgba(232, 196, 104, 0.6);
+}

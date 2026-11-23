@@ -1,0 +1,79 @@
+{
+  "pricing": {
+    "isSamplePricing": true,
+    "currencySymbol": "€",
+    "packages": [
+      {
+        "id": "basic",
+        "name": "Basic Clean",
+        "subtitle": "A quick and essential clean to keep your space fresh and tidy.",
+        "price": 59,
+        "unit": "/ visit",
+        "popular": false,
+        "icon": "home",
+        "features": [
+          "General dusting & surface cleaning",
+          "Vacuuming & floor cleaning",
+          "Kitchen & bathroom refresh",
+          "Up to 2 hours (small spaces)"
+        ],
+        "ctaText": "Book Basic Clean"
+      },
+      {
+        "id": "standard",
+        "name": "Standard Clean",
+        "subtitle": "Our most popular plan for a thorough and consistent clean.",
+        "price": 89,
+        "unit": "/ visit",
+        "popular": true,
+        "badge": "MOST POPULAR",
+        "icon": "sparkles",
+        "features": [
+          "Everything in Basic Clean",
+          "Detailed kitchen & bathroom cleaning",
+          "Interior glass & mirror cleaning",
+          "Up to 4 hours (average homes)"
+        ],
+        "ctaText": "Book Standard Clean"
+      },
+      {
+        "id": "deep",
+        "name": "Deep Clean",
+        "subtitle": "A comprehensive, top-to-bottom clean for a healthier, fresher space.",
+        "price": 149,
+        "unit": "/ visit",
+        "popular": false,
+        "icon": "gem",
+        "features": [
+          "Everything in Standard Clean",
+          "Deep cleaning of high-touch areas",
+          "Appliance exteriors (oven, fridge, etc.)",
+          "Up to 6 hours (larger spaces)"
+        ],
+        "ctaText": "Book Deep Clean"
+      }
+    ],
+    "addons": [
+      { "id": "oven", "name": "Oven Cleaning", "price": 25, "icon": "flame" },
+      { "id": "fridge", "name": "Fridge Cleaning", "price": 20, "icon": "refrigerator" },
+      { "id": "window", "name": "Window Cleaning", "price": 30, "icon": "layout-grid" },
+      { "id": "upholstery", "name": "Upholstery Cleaning", "price": 49, "icon": "armchair" },
+      { "id": "ironing", "name": "Ironing Service", "price": 25, "icon": "shirt" }
+    ]
+  },
+  "contact": {
+    "phone": "+420 600 123 456",
+    "phoneHref": "tel:+420600123456",
+    "whatsappHref": "https://wa.me/420600123456",
+    "email": "hello@cleanora.cz",
+    "addressLine1": "Václavské náměstí 802/56,",
+    "addressLine2": "110 00 Praha 1, Czech Republic",
+    "mapQuery": "Vaclavske+namesti+802/56,+Praha+1,+Czech+Republic",
+    "hours": [
+      { "days": "Monday – Friday", "time": "8:00 AM – 6:00 PM" },
+      { "days": "Saturday", "time": "9:00 AM – 4:00 PM" },
+      { "days": "Sunday", "time": "Closed", "highlight": true }
+    ]
+  }
+}
+
