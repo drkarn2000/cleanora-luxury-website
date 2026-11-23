@@ -196,78 +196,82 @@
     <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(ellipse 80% 60% at 50% 25%, rgba(24,68,52,0.5) 0%, rgba(9,32,24,0.95) 70%, #071912 100%);"></div>
 
     <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch mb-20">
-        <!-- Left 4 Contact Information Cards -->
-        <div class="lg:col-span-5 flex flex-col justify-between space-y-5">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch mb-20 pt-5">
+        <!-- Left 4 Contact Information Cards (Top-Border Straddling Icon & Title Badges) -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
           <!-- Card 1: Call Us -->
-          <a href="tel:+420600123456" class="group rounded-[22px] bg-[#0c271d]/90 border border-[#e8c468]/35 hover:border-[#e8c468] p-6 flex items-center gap-5 transition-all shadow-[0_14px_35px_rgba(0,0,0,0.4)]">
-            <div class="w-13 h-13 rounded-2xl bg-[#113326] border border-[#e8c468]/50 flex items-center justify-center shrink-0">
-              <i data-lucide="phone-call" class="w-6 h-6 text-[#e8c468]"></i>
+          <a href="tel:+420600123456" class="group relative rounded-[22px] bg-[#0c271d]/90 border border-[#e8c468]/40 hover:border-[#e8c468] pt-9 pb-6 px-6 flex items-center transition-all shadow-[0_14px_35px_rgba(0,0,0,0.4)]">
+            <div class="absolute top-0 left-6 -translate-y-1/2 z-20 w-11 h-11 rounded-xl bg-[#0e2c21] border border-[#e8c468]/75 flex items-center justify-center shadow-[0_8px_18px_rgba(0,0,0,0.65)]">
+              <i data-lucide="phone-call" class="w-5 h-5 text-[#e8c468]"></i>
+            </div>
+            <div class="absolute top-0 left-20 -translate-y-1/2 z-20 px-4 py-1.5 rounded-xl bg-[#0e2c21] border border-[#e8c468]/75 text-[13px] font-semibold text-white shadow-[0_8px_18px_rgba(0,0,0,0.65)]">
+              Call Us
             </div>
             <div>
-              <div class="text-[13.5px] font-semibold text-white mb-0.5">Call Us</div>
-              <div class="font-serif-luxury text-[24px] sm:text-[26px] font-semibold text-[#e8c468] leading-tight">+420 600 123 456</div>
-              <div class="text-[12px] text-[#d5ddd8]/75 mt-1">Mon – Fri, 8:00 AM – 6:00 PM</div>
+              <div class="font-serif-luxury text-[26px] sm:text-[28px] font-semibold text-[#e8c468] leading-tight">+420 600 123 456</div>
+              <div class="text-[12.5px] text-[#d5ddd8]/80 mt-1">Mon – Fri, 8:00 AM – 6:00 PM</div>
             </div>
           </a>
 
           <!-- Card 2: Email Us -->
-          <a href="mailto:hello@cleanora.cz" class="group rounded-[22px] bg-[#0c271d]/90 border border-[#e8c468]/35 hover:border-[#e8c468] p-6 flex items-center gap-5 transition-all shadow-[0_14px_35px_rgba(0,0,0,0.4)]">
-            <div class="w-13 h-13 rounded-2xl bg-[#113326] border border-[#e8c468]/50 flex items-center justify-center shrink-0">
-              <i data-lucide="mail" class="w-6 h-6 text-[#e8c468]"></i>
+          <a href="mailto:hello@cleanora.cz" class="group relative rounded-[22px] bg-[#0c271d]/90 border border-[#e8c468]/40 hover:border-[#e8c468] pt-9 pb-6 px-6 flex items-center transition-all shadow-[0_14px_35px_rgba(0,0,0,0.4)]">
+            <div class="absolute top-0 left-6 -translate-y-1/2 z-20 w-11 h-11 rounded-xl bg-[#0e2c21] border border-[#e8c468]/75 flex items-center justify-center shadow-[0_8px_18px_rgba(0,0,0,0.65)]">
+              <i data-lucide="mail" class="w-5 h-5 text-[#e8c468]"></i>
+            </div>
+            <div class="absolute top-0 left-20 -translate-y-1/2 z-20 px-4 py-1.5 rounded-xl bg-[#0e2c21] border border-[#e8c468]/75 text-[13px] font-semibold text-white shadow-[0_8px_18px_rgba(0,0,0,0.65)]">
+              Email Us
             </div>
             <div>
-              <div class="text-[13.5px] font-semibold text-white mb-0.5">Email Us</div>
-              <div class="font-serif-luxury text-[24px] sm:text-[26px] font-semibold text-[#e8c468] leading-tight">hello@cleanora.cz</div>
-              <div class="text-[12px] text-[#d5ddd8]/75 mt-1">We'll reply within 1 business day.</div>
+              <div class="font-serif-luxury text-[26px] sm:text-[28px] font-semibold text-[#e8c468] leading-tight">hello@cleanora.cz</div>
+              <div class="text-[12.5px] text-[#d5ddd8]/80 mt-1">We'll reply within 1 business day.</div>
             </div>
           </a>
 
           <!-- Card 3: Our Location -->
-          <a href="https://www.google.com/maps/search/?api=1&query=Vaclavske+namesti+802/56+Praha+1" target="_blank" rel="noopener noreferrer" class="group rounded-[22px] bg-[#0c271d]/90 border border-[#e8c468]/35 hover:border-[#e8c468] p-6 flex items-center gap-5 transition-all shadow-[0_14px_35px_rgba(0,0,0,0.4)]">
-            <div class="w-13 h-13 rounded-2xl bg-[#113326] border border-[#e8c468]/50 flex items-center justify-center shrink-0">
-              <i data-lucide="map-pin" class="w-6 h-6 text-[#e8c468]"></i>
+          <a href="https://www.google.com/maps/search/?api=1&query=Vaclavske+namesti+802/56+Praha+1" target="_blank" rel="noopener noreferrer" class="group relative rounded-[22px] bg-[#0c271d]/90 border border-[#e8c468]/40 hover:border-[#e8c468] pt-9 pb-6 px-6 flex items-center transition-all shadow-[0_14px_35px_rgba(0,0,0,0.4)]">
+            <div class="absolute top-0 left-6 -translate-y-1/2 z-20 w-11 h-11 rounded-xl bg-[#0e2c21] border border-[#e8c468]/75 flex items-center justify-center shadow-[0_8px_18px_rgba(0,0,0,0.65)]">
+              <i data-lucide="map-pin" class="w-5 h-5 text-[#e8c468]"></i>
             </div>
-            <div>
-              <div class="text-[14.5px] font-semibold text-white mb-1">Our Location</div>
-              <div class="text-[13.5px] text-[#d5ddd8]/90 leading-relaxed">
-                Václavské náměstí 802/56,<br />
-                110 00 Praha 1, Czech Republic
-              </div>
+            <div class="absolute top-0 left-20 -translate-y-1/2 z-20 px-4 py-1.5 rounded-xl bg-[#0e2c21] border border-[#e8c468]/75 text-[13px] font-semibold text-white shadow-[0_8px_18px_rgba(0,0,0,0.65)]">
+              Our Location
+            </div>
+            <div class="text-[13.5px] text-[#d5ddd8]/90 leading-relaxed">
+              Václavské náměstí 802/56,<br />
+              110 00 Praha 1, Czech Republic
             </div>
           </a>
 
           <!-- Card 4: Business Hours -->
-          <div class="rounded-[22px] bg-[#0c271d]/90 border border-[#e8c468]/35 p-6 flex items-start gap-5 shadow-[0_14px_35px_rgba(0,0,0,0.4)]">
-            <div class="w-13 h-13 rounded-2xl bg-[#113326] border border-[#e8c468]/50 flex items-center justify-center shrink-0 mt-0.5">
-              <i data-lucide="clock" class="w-6 h-6 text-[#e8c468]"></i>
+          <div class="group relative rounded-[22px] bg-[#0c271d]/90 border border-[#e8c468]/40 pt-9 pb-6 px-6 flex items-start shadow-[0_14px_35px_rgba(0,0,0,0.4)]">
+            <div class="absolute top-0 left-6 -translate-y-1/2 z-20 w-11 h-11 rounded-xl bg-[#0e2c21] border border-[#e8c468]/75 flex items-center justify-center shadow-[0_8px_18px_rgba(0,0,0,0.65)]">
+              <i data-lucide="clock" class="w-5 h-5 text-[#e8c468]"></i>
             </div>
-            <div class="flex-1">
-              <div class="text-[14.5px] font-semibold text-white mb-2.5">Business Hours</div>
-              <div class="space-y-1.5 text-[13px]">
-                <div class="flex justify-between text-[#d5ddd8]/90">
-                  <span>Monday – Friday</span>
-                  <span class="font-medium text-white">8:00 AM – 6:00 PM</span>
-                </div>
-                <div class="flex justify-between text-[#d5ddd8]/90">
-                  <span>Saturday</span>
-                  <span class="font-medium text-white">9:00 AM – 4:00 PM</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-[#d5ddd8]/90">Sunday</span>
-                  <span class="font-semibold text-[#e8c468]">Closed</span>
-                </div>
+            <div class="absolute top-0 left-20 -translate-y-1/2 z-20 px-4 py-1.5 rounded-xl bg-[#0e2c21] border border-[#e8c468]/75 text-[13px] font-semibold text-white shadow-[0_8px_18px_rgba(0,0,0,0.65)]">
+              Business Hours
+            </div>
+            <div class="w-full space-y-1.5 text-[13px]">
+              <div class="flex justify-between text-[#d5ddd8]/90">
+                <span>Monday – Friday</span>
+                <span class="font-medium text-white">8:00 AM – 6:00 PM</span>
+              </div>
+              <div class="flex justify-between text-[#d5ddd8]/90">
+                <span>Saturday</span>
+                <span class="font-medium text-white">9:00 AM – 4:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[#d5ddd8]/90">Sunday</span>
+                <span class="font-semibold text-[#e8c468]">Closed</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right: Premium Glowing Gold-Bordered Contact Form -->
-        <div class="lg:col-span-7 rounded-[28px] bg-[#0c271d]/95 border-2 border-[#e8c468]/75 p-7 sm:p-10 lg:p-12 contact-form-glow flex flex-col justify-center">
-          <div class="flex items-center gap-3 mb-2.5">
-            <span class="w-7 h-[1px] bg-[#e8c468]/75"></span>
-            <span class="text-[11px] tracking-[0.22em] uppercase text-[#e8c468] font-medium">SEND US A MESSAGE</span>
-            <span class="w-7 h-[1px] bg-[#e8c468]/75"></span>
+        <!-- Right: Premium Glowing Gold-Bordered Contact Form (Top-Border Straddling SEND US A MESSAGE Pill) -->
+        <div class="lg:col-span-7 relative rounded-[28px] bg-[#0c271d]/95 border-2 border-[#e8c468]/75 pt-11 pb-8 px-7 sm:px-10 lg:px-12 contact-form-glow flex flex-col justify-center">
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 px-6 py-2 rounded-full bg-[#0e2c21] border-2 border-[#e8c468] shadow-[0_8px_22px_rgba(0,0,0,0.65)] flex items-center gap-3 whitespace-nowrap">
+            <span class="w-6 h-[1px] bg-[#e8c468]/80"></span>
+            <span class="text-[11px] tracking-[0.22em] uppercase text-[#e8c468] font-semibold">SEND US A MESSAGE</span>
+            <span class="w-6 h-[1px] bg-[#e8c468]/80"></span>
           </div>
 
           <h2 class="font-serif-luxury text-[38px] sm:text-[48px] leading-[1.08] text-white font-normal mb-2">
