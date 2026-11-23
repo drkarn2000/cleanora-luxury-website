@@ -120,7 +120,7 @@ span.w-9.h-9.rounded-full {
               scale 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-/* Trigger Icon Gold Illumination without touching `transform` so centered icons stay dead-center */
+/* Trigger Icon Gold Illumination ONLY on square icon badges (w-9 to w-14), never on text pills */
 div.w-9.h-9.rounded-full:hover,
 div.w-10.h-10.rounded-full:hover,
 div.w-11.h-11.rounded-full:hover,
@@ -132,20 +132,28 @@ div.w-11.h-11.rounded-xl:hover,
 div.w-12.h-12.rounded-xl:hover,
 div.w-13.h-13.rounded-2xl:hover,
 div.w-14.h-14.rounded-2xl:hover,
-.flex.items-center:hover > div.rounded-full,
-.flex.items-center:hover > div.rounded-xl,
-.flex.items-center:hover > div.rounded-2xl,
-.flex.items-start:hover > div.rounded-full,
-.flex.items-start:hover > div.rounded-xl,
-.flex.items-start:hover > div.rounded-2xl,
-.flex.flex-col:hover > div.rounded-full,
-.flex.flex-col:hover > div.rounded-xl,
-.flex.flex-col:hover > div.rounded-2xl,
+.flex.items-center:hover > div.w-9.h-9,
+.flex.items-center:hover > div.w-10.h-10,
+.flex.items-center:hover > div.w-11.h-11,
+.flex.items-center:hover > div.w-12.h-12,
+.flex.items-center:hover > div.w-13.h-13,
+.flex.items-center:hover > div.w-14.h-14,
+.flex.items-start:hover > div.w-10.h-10,
+.flex.items-start:hover > div.w-11.h-11,
+.flex.items-start:hover > div.w-12.h-12,
+.flex.items-start:hover > div.w-13.h-13,
+.flex.flex-col:hover > div.w-10.h-10,
+.flex.flex-col:hover > div.w-11.h-11,
+.flex.flex-col:hover > div.w-12.h-12,
+.flex.flex-col:hover > div.w-13.h-13,
+.flex.flex-col:hover > div.w-14.h-14,
 #pricingPackagesGrid > div:hover div.w-14.h-14,
 #addonsGrid > button:hover div.w-11.h-11,
 #featured-service div[class*="rounded-[30px]"]:hover div.w-11.h-11,
+div[class*="rounded-[22px]"]:hover > div.w-11.h-11,
 div[class*="rounded-[22px]"]:hover > div.w-12.h-12,
 div[class*="rounded-[22px]"]:hover > div.w-13.h-13,
+a[class*="rounded-[22px]"]:hover > div.w-11.h-11,
 a[class*="rounded-[22px]"]:hover > div.w-13.h-13 {
   scale: 1.08;
   background: linear-gradient(135deg, #f6e09e 0%, #e8c468 55%, #cfa13d 100%) !important;
@@ -154,7 +162,7 @@ a[class*="rounded-[22px]"]:hover > div.w-13.h-13 {
   box-shadow: 0 10px 25px -4px rgba(232, 196, 104, 0.6) !important;
 }
 
-/* Turn inner SVG icon dark emerald when its badge illuminates */
+/* Turn inner SVG icon dark emerald when its square icon badge illuminates */
 div.w-9.h-9.rounded-full:hover svg,
 div.w-10.h-10.rounded-full:hover svg,
 div.w-11.h-11.rounded-full:hover svg,
@@ -166,23 +174,49 @@ div.w-11.h-11.rounded-xl:hover svg,
 div.w-12.h-12.rounded-xl:hover svg,
 div.w-13.h-13.rounded-2xl:hover svg,
 div.w-14.h-14.rounded-2xl:hover svg,
-.flex.items-center:hover > div.rounded-full svg,
-.flex.items-center:hover > div.rounded-xl svg,
-.flex.items-center:hover > div.rounded-2xl svg,
-.flex.items-start:hover > div.rounded-full svg,
-.flex.items-start:hover > div.rounded-xl svg,
-.flex.items-start:hover > div.rounded-2xl svg,
-.flex.flex-col:hover > div.rounded-full svg,
-.flex.flex-col:hover > div.rounded-xl svg,
-.flex.flex-col:hover > div.rounded-2xl svg,
+.flex.items-center:hover > div.w-9.h-9 svg,
+.flex.items-center:hover > div.w-10.h-10 svg,
+.flex.items-center:hover > div.w-11.h-11 svg,
+.flex.items-center:hover > div.w-12.h-12 svg,
+.flex.items-center:hover > div.w-13.h-13 svg,
+.flex.items-center:hover > div.w-14.h-14 svg,
+.flex.items-start:hover > div.w-10.h-10 svg,
+.flex.items-start:hover > div.w-11.h-11 svg,
+.flex.items-start:hover > div.w-12.h-12 svg,
+.flex.items-start:hover > div.w-13.h-13 svg,
+.flex.flex-col:hover > div.w-10.h-10 svg,
+.flex.flex-col:hover > div.w-11.h-11 svg,
+.flex.flex-col:hover > div.w-12.h-12 svg,
+.flex.flex-col:hover > div.w-13.h-13 svg,
+.flex.flex-col:hover > div.w-14.h-14 svg,
 #pricingPackagesGrid > div:hover div.w-14.h-14 svg,
 #addonsGrid > button:hover div.w-11.h-11 svg,
 #featured-service div[class*="rounded-[30px]"]:hover div.w-11.h-11 svg,
+div[class*="rounded-[22px]"]:hover > div.w-11.h-11 svg,
 div[class*="rounded-[22px]"]:hover > div.w-12.h-12 svg,
 div[class*="rounded-[22px]"]:hover > div.w-13.h-13 svg,
+a[class*="rounded-[22px]"]:hover > div.w-11.h-11 svg,
 a[class*="rounded-[22px]"]:hover > div.w-13.h-13 svg {
   color: #071912 !important;
   stroke: #071912 !important;
+}
+
+/* High-Contrast Hover for Top-Border Text Pill Badges ("SEND US A MESSAGE", "Call Us", "Email Us", etc.) */
+.contact-form-glow:hover > div.rounded-full,
+a[class*="rounded-[22px]"]:hover > div.left-20,
+div[class*="rounded-[22px]"]:hover > div.left-20 {
+  background: linear-gradient(135deg, #f6e09e 0%, #e8c468 55%, #cfa13d 100%) !important;
+  border-color: #fff1be !important;
+  color: #071912 !important;
+  box-shadow: 0 10px 24px -4px rgba(232, 196, 104, 0.55) !important;
+}
+.contact-form-glow:hover > div.rounded-full span,
+a[class*="rounded-[22px]"]:hover > div.left-20 span,
+div[class*="rounded-[22px]"]:hover > div.left-20 span {
+  color: #071912 !important;
+}
+.contact-form-glow:hover > div.rounded-full span.h-\[1px\] {
+  background-color: #071912 !important;
 }
 
 /* Keep mid-border [Icon + Title] pill on /book dark emerald with gold text & border on card hover */
